@@ -10,7 +10,7 @@ package CodeMainEncapsulation;
  * @author RiosHenao
  */
 public class Act1 extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Actividad3Frame
      */

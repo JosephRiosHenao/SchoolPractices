@@ -7,6 +7,7 @@ package CodeMainEncapsulation;
 
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author RiosHenao
@@ -234,7 +235,6 @@ public class Act2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         Actividad2MediaTecnica.ACT1 acto1 = new Actividad2MediaTecnica.ACT1();
         acto1.setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -243,7 +243,9 @@ public class Act2 extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-
+        Actividad2MediaTecnica.ACT2 Ir = new Actividad2MediaTecnica.ACT2();
+        Ir.setVisible(true);
+        //wenas
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
