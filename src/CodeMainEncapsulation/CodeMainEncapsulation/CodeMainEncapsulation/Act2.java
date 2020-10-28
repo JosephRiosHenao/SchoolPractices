@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CodeMainEncapsulation;
+package CodeMainEncapsulation.CodeMainEncapsulation;
 
 import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author RiosHenao
  */
-public class Act3 extends javax.swing.JFrame {
+public class Act2 extends javax.swing.JFrame {
 
     /**
      * Creates new form Actividad3Frame
      */
-    public Act3() {
+    public Act2() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
@@ -41,11 +42,9 @@ public class Act3 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -119,9 +118,39 @@ public class Act3 extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 204, 153));
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jButton2.setText("Punto 2");
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 102), 5, true));
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setBackground(new java.awt.Color(0, 204, 153));
+        jButton3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jButton3.setText("Punto 4");
+        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 102), 5, true));
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         jButton4.setBackground(new java.awt.Color(0, 204, 153));
         jButton4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton4.setText("Punto 2");
+        jButton4.setText("Punto 3");
         jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 102), 5, true));
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -134,101 +163,33 @@ public class Act3 extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 204, 153));
-        jButton5.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton5.setText("Punto 3");
-        jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 102), 5, true));
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
-            }
-        });
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
-        jButton6.setBackground(new java.awt.Color(0, 204, 153));
-        jButton6.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton6.setText("Punto 4");
-        jButton6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 102), 5, true));
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
-            }
-        });
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
-        jButton7.setBackground(new java.awt.Color(0, 204, 153));
-        jButton7.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton7.setText("Punto 5");
-        jButton7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 102), 5, true));
-        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton7MouseClicked(evt);
-            }
-        });
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
-        jButton8.setBackground(new java.awt.Color(0, 204, 153));
-        jButton8.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton8.setText("Punto 6");
-        jButton8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 102), 5, true));
-        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton8MouseClicked(evt);
-            }
-        });
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(85, Short.MAX_VALUE)
+                .addGap(103, 103, 103)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(71, 71, 71)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(86, 86, 86))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(83, 83, 83))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(44, 44, 44))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -272,7 +233,7 @@ public class Act3 extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        Actividad3MediaTecnica.Punto1Act3 acto1 = new Actividad3MediaTecnica.Punto1Act3();
+        Actividad2MediaTecnica.ACT1 acto1 = new Actividad2MediaTecnica.ACT1();
         acto1.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -280,74 +241,52 @@ public class Act3 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        Actividad2MediaTecnica.ACT2 Ir = new Actividad2MediaTecnica.ACT2();
+        Ir.setVisible(true);
+        //wenas
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        String Nombre = JOptionPane.showInputDialog(this, "Digite su nombre"), GeneroSEX, Fiel;
+        int Edad = Integer.parseInt(JOptionPane.showInputDialog(this, "Digite la edad"));
+        int GeneroINT = Integer.parseInt(JOptionPane.showInputDialog(this, "Digite su genero \n(0/1)\n '0'=Mujer \n '1'=Hombre"));
+        if (GeneroINT==0){
+            GeneroSEX = "Mujer";
+        }else{
+            GeneroSEX = "Hombre";
+        }
+        float Total = Float.parseFloat(JOptionPane.showInputDialog(this, "Digite el Total de la compra a pagar"));
+        int FielINT = JOptionPane.showConfirmDialog(this, "Usted es cliente fiel?");
+        if (FielINT == 0){
+            Fiel = "Si";
+            JOptionPane.showMessageDialog(this, "Nombre: "+Nombre+"\n Edad: "+Edad+"\n Genero: "+GeneroSEX+"\n Valor de Compra: "+(Total-(Total*0.33f))+"\n Cliente fiel?: "+Fiel+ "\n a");
+        }else{
+            Fiel = "No";
+            JOptionPane.showMessageDialog(this, "Nombre: "+Nombre+"\n Edad: "+Edad+"\n Genero: "+GeneroSEX+"\n Valor de Compra: "+Total+"\n Cliente fiel?: "+Fiel+ "\n a");
+        }
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
-        Actividad3MediaTecnica.Punto2Act3 Acto3 = new Actividad3MediaTecnica.Punto2Act3();
+        Actividad2MediaTecnica.ACT3 Acto3 = new Actividad2MediaTecnica.ACT3();
         Acto3.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        // TODO add your handling code here:
-        Actividad3MediaTecnica.Punto3Act3 Acto3 = new Actividad3MediaTecnica.Punto3Act3();
-        Acto3.setVisible(true);
-    }//GEN-LAST:event_jButton5MouseClicked
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        // TODO add your handling code here:
-        int CantidadH, CantidadM, PorcentajeH, PoorcentajeM;
-        int PersonasTotal = Integer.parseInt(JOptionPane.showInputDialog(this, "Digite la cantidad total de personas"));
-        int HombreMujer = Integer.parseInt(JOptionPane.showInputDialog(this, "Usted posee la cantidad de hombres o mujeres?\n 0 = Hombres \n 1 = Mujeres"));
-        if (HombreMujer==0){
-            CantidadH = Integer.parseInt(JOptionPane.showInputDialog(this, "Digite la cantidad de hombres"));
-            CantidadM = PersonasTotal-CantidadH;
-            JOptionPane.showMessageDialog(this, "Trabajadores totales: "+PersonasTotal+"\n Hombres: "+CantidadH+" ("+(CantidadH*100)/PersonasTotal+"%)\n Mujeres: "+CantidadM+"("+(CantidadM*100)/PersonasTotal+"%");
-        }else{
-            CantidadM = Integer.parseInt(JOptionPane.showInputDialog(this, "Digite la cantidad de mujeres"));
-            CantidadH = PersonasTotal-CantidadM;
-            JOptionPane.showMessageDialog(this, "Trabajadores totales: "+PersonasTotal+"\n Hombres: "+CantidadH+" ("+(CantidadH*100)/PersonasTotal+"%)\n Mujeres: "+CantidadM+"("+(CantidadM*100)/PersonasTotal+"%");
-        }
-    }//GEN-LAST:event_jButton6MouseClicked
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-        // TODO add your handling code here:
-        final int CostoBase = 1000000;
-        int MetrosDeseados = Integer.parseInt(JOptionPane.showInputDialog(this, "Dijite cuantos metros cuadrados deseas"));
-        int PrecioFinal = CostoBase * MetrosDeseados;
-        int IngresoInicial = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite el valor inicial que desee pagar de un total de "+PrecioFinal+" pesos"));
-        int PrecioAPagar = PrecioFinal - IngresoInicial;
-        int CuotasApagar = Math.abs(PrecioAPagar/12);
-        String TablaEspaciada = "" ;
-        for (int i = 1; i <= 12; i++) {
-            TablaEspaciada = TablaEspaciada+" Cuota #"+i+" = "+CuotasApagar+" pesos \n";
-        }
-        JOptionPane.showMessageDialog(this, "Usted desea "+MetrosDeseados+" metros cuadrados \n Cuota inicial: "+IngresoInicial+" pesos \n"+TablaEspaciada+"\n Precio Total: "+PrecioFinal+" pesos");
-    }//GEN-LAST:event_jButton7MouseClicked
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        // TODO add your handling code here:
-        float MetrosRequeridos = Float.parseFloat(JOptionPane.showInputDialog(this, "Digite los metros que requiere"));
-        JOptionPane.showMessageDialog(this, "Usted debe pedir "+MetrosRequeridos*39.370+" pulgadas");
-    }//GEN-LAST:event_jButton8MouseClicked
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -366,18 +305,14 @@ public class Act3 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Act3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Act2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Act3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Act2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Act3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Act2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Act3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Act2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -386,18 +321,16 @@ public class Act3 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Act3().setVisible(true);
+                new Act2().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

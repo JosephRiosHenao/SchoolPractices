@@ -183,7 +183,7 @@ public class Menu1 extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
          // TODO add your handling code here:
-        CodeMainEncapsulation.Act1 Volver = new CodeMainEncapsulation.Act1();
+        CodeMainEncapsulation.CodeMainEncapsulation.Act1 Volver = new CodeMainEncapsulation.CodeMainEncapsulation.Act1();
         Volver.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
