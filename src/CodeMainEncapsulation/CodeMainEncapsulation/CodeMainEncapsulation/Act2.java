@@ -281,7 +281,6 @@ public class Act2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         Actividad2MediaTecnica.ACT3 Acto3 = new Actividad2MediaTecnica.ACT3();
         Acto3.setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
