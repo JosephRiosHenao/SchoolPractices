@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Actividad2MediaTecnica;
+package CodeMainEncapsulation.Actividad2MediaTecnica;
 
 import CodeMainEncapsulation.CodeMainEncapsulation.Act2;
 

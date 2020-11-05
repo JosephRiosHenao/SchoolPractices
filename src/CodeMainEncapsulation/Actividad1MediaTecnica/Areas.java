@@ -1,4 +1,4 @@
-package Actividad1MediaTecnica;
+package CodeMainEncapsulation.Actividad1MediaTecnica;
 
 
 import javax.swing.JOptionPane;

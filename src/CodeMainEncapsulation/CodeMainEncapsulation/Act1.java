@@ -172,7 +172,7 @@ public class Act1 extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        Actividad1MediaTecnica.Menu1 ACT1 = new Actividad1MediaTecnica.Menu1();
+        CodeMainEncapsulation.Actividad1MediaTecnica.Menu1 ACT1 = new CodeMainEncapsulation.Actividad1MediaTecnica.Menu1();
         ACT1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked

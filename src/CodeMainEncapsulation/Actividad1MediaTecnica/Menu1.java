@@ -1,4 +1,4 @@
-package Actividad1MediaTecnica;
+package CodeMainEncapsulation.Actividad1MediaTecnica;
 
 
 import javax.swing.JOptionPane;
@@ -167,7 +167,7 @@ public class Menu1 extends javax.swing.JFrame {
                         +" El precio con descuento seria "+PrecioConDescuento+"\n");
                         break;
                     default:
-                      JOptionPane.showMessageDialog(this, "Sera devuelto al inicio...");
+                        JOptionPane.showMessageDialog(this, "Sera devuelto al inicio...");
                 }
         } else {
             JOptionPane.showMessageDialog(this, "Sera devulto al inicio...");

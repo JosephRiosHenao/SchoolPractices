@@ -1,5 +1,4 @@
-
-package CodeMainEncapsulation.CodeMainEncapsulation;
+package Main;
 
 import javax.swing.JOptionPane;
 
@@ -10,6 +9,7 @@ public class Principal {
                     "  Creado por"
                 + "\n  Joseph Rios H"
                 + "\n      10-2");
-        Actividad3Frame.main(args);
+                //CodeMainEncapsulation.CodeMainEncapsulation.Actividad3Frame.main(args);
+                Practices
     }
 }
