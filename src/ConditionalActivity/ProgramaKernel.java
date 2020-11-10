@@ -61,24 +61,63 @@ public class ProgramaKernel{
         }
     }
 
-    public void Metodo1Activity4(){
-        //lea 3 notas decimales y diga cuál es la menor.
-        float num1 = PedirFloat("Ninguna",1,2);
-        float num2 = PedirFloat("Ninguna",2,2);
-        float num3 = PedirFloat("Ninguna",3,2);
-        if (num1>num2){
-            if (num2>num3){
-                JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1+"\nMedio: "+num2+"\nMenor: "+num3);
-            }else{
-                JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1+"\nMedio: "+num3+"\nMenor: "+num2);
-            }
-        }else{
-            if (num1>num3){
-                JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2+"\nMedio: "+num1+"\nMenor: "+num3);
-            }else{
-                JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2+"\nMedio: "+num3+"\nMenor: "+num1);
-            }
+    public void Metodo1Activity4(int Activity){
+        float num1, num2, num3;
+        switch (Activity) {
+            case 1:
+                num1 = PedirFloat("Ninguna",1,2);
+                num2 = PedirFloat("Ninguna",2,2);
+                num3 = PedirFloat("Ninguna",3,2);
+                if ((num1>num3) || (num2>num3)){
+                    if (num1>num2){
+                        if (num2>num3){
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1+"\nMedio: "+num2+"\nMenor: "+num3);
+                        }else{
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1+"\nMedio: "+num3+"\nMenor: "+num2);
+                        }
+                    }else{
+                        if (num1>num3){
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2+"\nMedio: "+num1+"\nMenor: "+num3);
+                        }else{
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2+"\nMedio: "+num3+"\nMenor: "+num1);
+                        }
+                    }
+                }else{
+                    if (num2>num1){
+                        JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num3+"\nMedio: "+num2+"\nMenor: "+num1);
+                    }else{
+                        JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num3+"\nMedio: "+num1+"\nMenor: "+num2);
+                    }
+                }
+                break;
+            case 2:
+                num1 = PedirFloat("Ninguna",1,2);
+                num2 = PedirFloat("Ninguna",2,2);
+                num3 = PedirFloat("Ninguna",3,2);
+                if ((num1>num3) || (num2>num3)){
+                    if (num1>num2){
+                        if (num2>num3){
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1+"\nMedio: "+num2+"\nMenor: "+num3);
+                        }else{
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1+"\nMedio: "+num3+"\nMenor: "+num2);
+                        }
+                    }else{
+                        if (num1>num3){
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2+"\nMedio: "+num1+"\nMenor: "+num3);
+                        }else{
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2+"\nMedio: "+num3+"\nMenor: "+num1);
+                        }
+                    }
+                }else{
+                    if (num2>num1){
+                        JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num3+"\nMedio: "+num2+"\nMenor: "+num1);
+                    }else{
+                        JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num3+"\nMedio: "+num1+"\nMenor: "+num2);
+                    }
+                }
+                break;
         }
+        
     }
 
     public float PedirFloat(String Materia, int Indice, int Program){
