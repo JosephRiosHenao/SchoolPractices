@@ -45,7 +45,7 @@ public class ProgramaKernel{
         }
     }
 
-    public void Metodo1Activity3(){
+    public void Metodo1Activity4(){
         float Num = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite un numero","Pregunta",JOptionPane.QUESTION_MESSAGE));
         boolean Confirmacion = true;
         while (Confirmacion){
@@ -61,8 +61,8 @@ public class ProgramaKernel{
         }
     }
 
-    public void Metodo1Activity4(int Activity){
-        float num1, num2, num3;
+    public void Metodo1Activity5y6(int Activity){
+        Float num1, num2, num3;
         switch (Activity) {
             case 1:
                 num1 = PedirFloat("Ninguna",1,2);
@@ -97,22 +97,22 @@ public class ProgramaKernel{
                 if ((num1>num3) || (num2>num3)){
                     if (num1>num2){
                         if (num2>num3){
-                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1+"\nMedio: "+num2+"\nMenor: "+num3);
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1.intValue()+"\nMedio: "+num2.intValue()+"\nMenor: "+num3.intValue());
                         }else{
-                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1+"\nMedio: "+num3+"\nMenor: "+num2);
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num1.intValue()+"\nMedio: "+num3.intValue()+"\nMenor: "+num2.intValue());
                         }
                     }else{
                         if (num1>num3){
-                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2+"\nMedio: "+num1+"\nMenor: "+num3);
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2.intValue()+"\nMedio: "+num1.intValue()+"\nMenor: "+num3.intValue());
                         }else{
-                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2+"\nMedio: "+num3+"\nMenor: "+num1);
+                            JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num2.intValue()+"\nMedio: "+num3.intValue()+"\nMenor: "+num1.intValue());
                         }
                     }
                 }else{
                     if (num2>num1){
-                        JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num3+"\nMedio: "+num2+"\nMenor: "+num1);
+                        JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num3.intValue()+"\nMedio: "+num2.intValue()+"\nMenor: "+num1.intValue());
                     }else{
-                        JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num3+"\nMedio: "+num1+"\nMenor: "+num2);
+                        JOptionPane.showMessageDialog(null,"El orden de la cade seria\nMayor: "+num3.intValue()+"\nMedio: "+num1.intValue()+"\nMenor: "+num2.intValue());
                     }
                 }
                 break;
