@@ -20,7 +20,7 @@ public class ProgramaKernel{
         boolean Confirmacion = true;
         while (Confirmacion){
             int MenuPromedio = Integer.parseInt(JOptionPane.showInputDialog(null,"\n1. Notas de matemáticas y su promedio. \n2. Notas de informática y su promedio. \n3. El promedio final de las dos áreas. \n4. Re definir \n5. Salir"));
-            if ((MenuPromedio==1)||(MenuPromedio==2)||(MenuPromedio==3)||(MenuPromedio==4)){
+            if ((MenuPromedio==1)||(MenuPromedio==2)||(MenuPromedio==3)||(MenuPromedio==4)||(MenuPromedio==5)){
                 if (MenuPromedio==1){
                     float Resultado = ((Promedio1Mate+Promedio2Mate)/2);
                     JOptionPane.showMessageDialog(null, "Sus notas en matematicas son: \n1."+Promedio1Mate+"\n2."+Promedio2Mate+"\nEl promedio seria "+Resultado,"Resultado",JOptionPane.INFORMATION_MESSAGE);
@@ -136,7 +136,7 @@ public class ProgramaKernel{
             if (Program == 2 && Entero ==true){
                 NumeroFinal = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite un el "+Indice+"° numero"));
                 Confirmacion = false;
-            }else{
+            }else if(Program == 2 && Entero == false){
                 NumeroFinal = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite un el "+Indice+"° numero"));
                 Confirmacion = false;
             }
