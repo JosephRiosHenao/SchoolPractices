@@ -13,10 +13,10 @@ public class ProgramaKernel{
     }
 
     public void Metodo1Activity2(){
-        float Promedio1Mate = PedirFloat("Matematicas", 1,1);
-        float Promedio2Mate = PedirFloat("Matematicas", 2,1);
-        float Promedio1Info = PedirFloat("Informatica", 1,1);
-        float Promedio2Info = PedirFloat("Informatica", 2,1);
+        float Promedio1Mate = PedirFloat("Matematicas", 1,1,false);
+        float Promedio2Mate = PedirFloat("Matematicas", 2,1,false);
+        float Promedio1Info = PedirFloat("Informatica", 1,1,false);
+        float Promedio2Info = PedirFloat("Informatica", 2,1,false);
         boolean Confirmacion = true;
         while (Confirmacion){
             int MenuPromedio = Integer.parseInt(JOptionPane.showInputDialog(null,"\n1. Notas de matemáticas y su promedio. \n2. Notas de informática y su promedio. \n3. El promedio final de las dos áreas. \n4. Re definir \n5. Salir"));
@@ -31,10 +31,10 @@ public class ProgramaKernel{
                     float Resultado = ((Promedio1Info+Promedio2Info+Promedio1Mate+Promedio2Mate)/4);
                     JOptionPane.showMessageDialog(null, "Sus notas en informatica son: \n1."+Promedio1Info+"\n2."+Promedio2Info+"\nSus notas en matematicas son: \n1."+Promedio1Mate+"\n2."+Promedio2Mate+"\nEl promedio seria "+Resultado,"Resultado",JOptionPane.INFORMATION_MESSAGE);
                 }else if (MenuPromedio==4){
-                    Promedio1Mate = PedirFloat("Matematicas", 1,1);
-                    Promedio2Mate = PedirFloat("Matematicas", 2,1);
-                    Promedio1Info = PedirFloat("Informatica", 1,1);
-                    Promedio2Info = PedirFloat("Informatica", 2,1);
+                    Promedio1Mate = PedirFloat("Matematicas", 1,1,false);
+                    Promedio2Mate = PedirFloat("Matematicas", 2,1,false);
+                    Promedio1Info = PedirFloat("Informatica", 1,1,false);
+                    Promedio2Info = PedirFloat("Informatica", 2,1,false);
                 }else{
                     JOptionPane.showMessageDialog(null, "Adios!! :3");
                     System.exit(0);
@@ -46,9 +46,10 @@ public class ProgramaKernel{
     }
 
     public void Metodo1Activity4(){
-        float Num = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite un numero","Pregunta",JOptionPane.QUESTION_MESSAGE));
+        float Num;
         boolean Confirmacion = true;
         while (Confirmacion){
+            Num = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite un numero","Pregunta",JOptionPane.QUESTION_MESSAGE));
             if (Num>=0){
                 JOptionPane.showMessageDialog(null,"Su numero es positivo","Respuesta",JOptionPane.INFORMATION_MESSAGE);
                 Confirmacion = false;
@@ -61,13 +62,13 @@ public class ProgramaKernel{
         }
     }
 
-    public void Metodo1Activity5y6(int Activity){
+    public static void Metodo1Activity5y6(int Activity){
         Float num1, num2, num3;
         switch (Activity) {
             case 1:
-                num1 = PedirFloat("Ninguna",1,2);
-                num2 = PedirFloat("Ninguna",2,2);
-                num3 = PedirFloat("Ninguna",3,2);
+                num1 = PedirFloat("Ninguna",1,2,false);
+                num2 = PedirFloat("Ninguna",2,2,false);
+                num3 = PedirFloat("Ninguna",3,2,false);
                 if ((num1>num3) || (num2>num3)){
                     if (num1>num2){
                         if (num2>num3){
@@ -91,9 +92,9 @@ public class ProgramaKernel{
                 }
                 break;
             case 2:
-                num1 = PedirFloat("Ninguna",1,2);
-                num2 = PedirFloat("Ninguna",2,2);
-                num3 = PedirFloat("Ninguna",3,2);
+                num1 = PedirFloat("Ninguna",1,2,true);
+                num2 = PedirFloat("Ninguna",2,2,true);
+                num3 = PedirFloat("Ninguna",3,2,true);
                 if ((num1>num3) || (num2>num3)){
                     if (num1>num2){
                         if (num2>num3){
@@ -120,7 +121,7 @@ public class ProgramaKernel{
         
     }
 
-    public float PedirFloat(String Materia, int Indice, int Program){
+    public static float PedirFloat(String Materia, int Indice, int Program, boolean Entero){
         float NumeroFinal = 0;
         boolean Confirmacion = true;
         while (Confirmacion){
@@ -132,8 +133,12 @@ public class ProgramaKernel{
                     JOptionPane.showMessageDialog(null,"---Digite una opcion valida---\nDebe ser mayor a 0 y menor a 10","Error",JOptionPane.ERROR_MESSAGE);
                 }
             }
-            if (Program == 2){
+            if (Program == 2 && Entero ==true){
                 NumeroFinal = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite un el "+Indice+"° numero"));
+                Confirmacion = false;
+            }else{
+                NumeroFinal = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite un el "+Indice+"° numero"));
+                Confirmacion = false;
             }
         }
         return NumeroFinal;

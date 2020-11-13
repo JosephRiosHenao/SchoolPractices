@@ -11,7 +11,8 @@ public class Principal {
                 + "\n  Joseph Rios H"
                 + "\n      10-2","Autor",JOptionPane.INFORMATION_MESSAGE);
                 //CodeMainEncapsulation.CodeMainEncapsulation.Actividad3Frame.main(args);
-                ConditionalActivity.Numero2.Metodo1Activity2();
+                //ConditionalActivity.Numero2.Metodo1Activity2();
+                ConditionalActivity.ProgramaKernel.Metodo1Activity5y6(1);
 
     }
 }
