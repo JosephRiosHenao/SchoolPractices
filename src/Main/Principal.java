@@ -12,7 +12,8 @@ public class Principal {
                 + "\n      10-2","Autor",JOptionPane.INFORMATION_MESSAGE);
                 //CodeMainEncapsulation.CodeMainEncapsulation.Actividad3Frame.main(args);
                 //ConditionalActivity.Numero2.Metodo1Activity2();
-                ConditionalActivity.ProgramaKernel.FormatearDinero(10000000000l);
+                /*Long Dinero = Long.parseLong(JOptionPane.showInputDialog(null,"Digite dinero"));
+                JOptionPane.showMessageDialog(null,ConditionalActivity.ProgramaKernel.FormatearDinero(Dinero));*/
 
     }
 }
