@@ -3,8 +3,18 @@ package ConditionalActivity;
 import javax.swing.JOptionPane;
 import java.text.NumberFormat;
 import java.util.Locale;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 
 public class ProgramaKernel{
+    /************************* 
+     * Inicializar Iconos 
+    **************************/
+    Icon icon;
 
     public void Metodo1Activity1(){
         int Numero = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite un numero","´Pregunta",JOptionPane.QUESTION_MESSAGE));
@@ -128,7 +138,6 @@ public class ProgramaKernel{
     }
 
 
-
     public static float PedirFloat(String Materia, int Indice, int Program, boolean Entero){
         float NumeroFinal = 0;
         boolean Confirmacion = true;
@@ -153,13 +162,15 @@ public class ProgramaKernel{
     }
 
     public static String FormatearDinero(long Dinero, boolean MensajePregunta, String Mensaje){
+        Icon icon = new ImageIcon("src/ResourceIMG/Dinero.png");
         String NumeroFinalString = "";
         NumberFormat formatoNumero = NumberFormat.getNumberInstance(new Locale("es","COL"));
         //System.out.println(formatoNumero.format(Dinero));
         if (MensajePregunta == false){
             NumeroFinalString = (formatoNumero.format(Dinero).toString()+"$");
         }else{
-            long DineroConMensaje = Long.parseLong(JOptionPane.showInputDialog(null,Mensaje+"\nNo ingrese puntos\nEl programa lo interpretara solo"));
+            JOptionPane.showMessageDialog(null,Mensaje+"\nNo ingrese puntos\nEl programa lo interpretara solo","Pregunta",JOptionPane.PLAIN_MESSAGE,icon));
+            long DineroConMensaje = Long.parseLong(JOptionPane.showInputDialog(null,Mensaje+"\nNo ingrese puntos\nEl programa lo interpretara solo","Pregunta",JOptionPane.PLAIN_MESSAGE,icon));
             NumeroFinalString = (formatoNumero.format(DineroConMensaje).toString()+"$");
         }
         return NumeroFinalString;
