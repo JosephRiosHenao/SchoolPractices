@@ -206,7 +206,8 @@ public class ProgramaKernel {
                                             Tabla2 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$\n";
                                         }
                                     }
-                                    Tabla2 =Tabla2+"\nPago total: "+DescuentoFinal;
+                                    Tabla2 =Tabla2+"\nPago total: "+DescuentoFinal+"\n";
+                                    Tabla2 += "El enganche es de "+DescuentoFormateado+"$ \n";
                                     //System.out.println(Tabla1);
                                     //System.out.println(Tabla2);
                                     JOptionPane.showMessageDialog(null,Tabla1,"Pagos 1",JOptionPane.PLAIN_MESSAGE);
@@ -250,7 +251,9 @@ public class ProgramaKernel {
                                             Tabla2 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$   Mes"+(o+4)+": "+PagosMensuales+"$   Mes"+(o+5)+": "+PagosMensuales+"$\n";
                                         }
                                     }
-                                    Tabla2 =Tabla2+"\nPago total: "+DescuentoFinal;
+                                    Tabla2 =Tabla2+"\nPago total: "+DescuentoFinal+"\n";
+                                    Tabla2 += "El enganche es de "+DescuentoFormateado+"$ \n";
+
                                     //System.out.println(Tabla1);
                                     //System.out.println(Tabla2);
                                     JOptionPane.showMessageDialog(null,Tabla1,"Pagos 1",JOptionPane.PLAIN_MESSAGE);
