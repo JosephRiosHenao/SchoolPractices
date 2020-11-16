@@ -167,7 +167,7 @@ public class ProgramaKernel {
         boolean cicloSeleccion = true, cicloSeleccion2 = true;
         long Ingresos;
         String IngresosFormato;
-        String Tabla = "Los pagos corresponderian asi: \n\n";
+        String Tabla1 = "Los pagos de los primeros 4 años: \n\n", Tabla2 = "Los ultimos pagos: \n\n";
         while (cicloSeleccion){
             Ingresos = PedirNumeroDinero("Digite sus ingresos mensuales", 100, 100);
             IngresosFormato = FormatearDinero(Ingresos);
@@ -184,22 +184,33 @@ public class ProgramaKernel {
                                 case 0:
                                     cicloSeleccion2 = false;
                                     double Descuento = IngresosCasa * 0.3;
+                                    String DescuentoFormateado = FormatearDinero((long)Descuento);
+                                    Tabla1 += "El enganche es de "+DescuentoFormateado+"$ \n";
                                     long DescuentoFinal = (long) (IngresosCasa - Descuento);
                                     System.out.println(DescuentoFinal);
                                     String PagosMensuales = FormatearDinero(DescuentoFinal/84);
                                     System.out.println(PagosMensuales);
                                     String PagosAnuales = FormatearDinero(DescuentoFinal/7);
                                     System.out.println(PagosAnuales);
-                                    for (int i = 1;i<=7;++i){
-                                        Tabla += "Año "+i+": "+PagosAnuales+"\n\n";
-                                        System.out.println(Tabla);
-                                        for (int o = 1;o<=12;++o){
-                                            Tabla += "\tMes"+o+": "+PagosMensuales+"\n";
+                                    for (int i = 1;i<=4;i++){
+                                        Tabla1 += "\nAño "+i+": "+PagosAnuales+"$\n";
+                                        //System.out.println(Tabla);
+                                        for (int o = 1;o<=12;o+=4){
+                                            Tabla1 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$\n";
                                         }
                                     }
-                                    Tabla =Tabla+"\nPago total: "+DescuentoFinal;
-                                    System.out.println(Tabla);
-                                    JOptionPane.showMessageDialog(null,Tabla,"Pagos",JOptionPane.PLAIN_MESSAGE);
+                                    for (int i = 4;i<=7;i++){
+                                        Tabla2 += "\nAño "+i+": "+PagosAnuales+"$\n";
+                                        //System.out.println(Tabla);
+                                        for (int o = 1;o<=12;o+=4){
+                                            Tabla2 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$\n";
+                                        }
+                                    }
+                                    Tabla2 =Tabla2+"\nPago total: "+DescuentoFinal;
+                                    //System.out.println(Tabla1);
+                                    //System.out.println(Tabla2);
+                                    JOptionPane.showMessageDialog(null,Tabla1,"Pagos 1",JOptionPane.PLAIN_MESSAGE);
+                                    JOptionPane.showMessageDialog(null,Tabla2,"Pagos 2",JOptionPane.PLAIN_MESSAGE);
                                 break;
                                 case 2:
                                     System.exit(0);
@@ -207,7 +218,49 @@ public class ProgramaKernel {
                             }
                         }
                     }else{
-                        
+                        while (cicloSeleccion2){
+                            Long IngresosCasa = PedirNumeroDinero("Digite el valor de la propiedad a comprar", 130, 130);
+                            String IngresosCasaFormato = FormatearDinero(IngresosCasa);
+                            int Eleccion2 = JOptionPane.showConfirmDialog(null, "El valor de la propiedad es: " + IngresosCasaFormato + "$ ??");
+                            switch (Eleccion2){
+                                case 0:
+                                    Tabla1 = "Los pagos de los primeros 5 años: \n\n";
+                                    Tabla2 = "Los ultimos 5 años de pagos: \n\n";
+                                    cicloSeleccion2 = false;
+                                    double Descuento = IngresosCasa * 0.15;
+                                    String DescuentoFormateado = FormatearDinero((long)Descuento);
+                                    Tabla1 += "El enganche es de "+DescuentoFormateado+"$ \n";
+                                    long DescuentoFinal = (long) (IngresosCasa - Descuento);
+                                    System.out.println(DescuentoFinal);
+                                    String PagosMensuales = FormatearDinero(DescuentoFinal/84);
+                                    System.out.println(PagosMensuales);
+                                    String PagosAnuales = FormatearDinero(DescuentoFinal/7);
+                                    System.out.println(PagosAnuales);
+                                    for (int i = 1;i<=5;i++){
+                                        Tabla1 += "\nAño "+i+": "+PagosAnuales+"$\n";
+                                        //System.out.println(Tabla);
+                                        for (int o = 1;o<=12;o+=6){
+                                            Tabla1 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$   Mes"+(o+4)+": "+PagosMensuales+"$   Mes"+(o+5)+": "+PagosMensuales+"$\n";
+                                        }
+                                    }
+                                    for (int i = 1;i<=5;i++){
+                                        Tabla2 += "\nAño "+i+": "+PagosAnuales+"$\n";
+                                        //System.out.println(Tabla);
+                                        for (int o = 1;o<=12;o+=6){
+                                            Tabla2 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$   Mes"+(o+4)+": "+PagosMensuales+"$   Mes"+(o+5)+": "+PagosMensuales+"$\n";
+                                        }
+                                    }
+                                    Tabla2 =Tabla2+"\nPago total: "+DescuentoFinal;
+                                    //System.out.println(Tabla1);
+                                    //System.out.println(Tabla2);
+                                    JOptionPane.showMessageDialog(null,Tabla1,"Pagos 1",JOptionPane.PLAIN_MESSAGE);
+                                    JOptionPane.showMessageDialog(null,Tabla2,"Pagos 2",JOptionPane.PLAIN_MESSAGE);
+                                break;
+                                case 2:
+                                    System.exit(0);
+                                break;
+                            }
+                        }
                     }
                 break;
                 case 2:
