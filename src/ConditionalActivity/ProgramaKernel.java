@@ -233,9 +233,9 @@ public class ProgramaKernel {
                                     Tabla1 += "El enganche es de "+DescuentoFormateado+"$ \n";
                                     long DescuentoFinal = (long) (IngresosCasa - Descuento);
                                     System.out.println(DescuentoFinal);
-                                    String PagosMensuales = FormatearDinero(DescuentoFinal/84);
+                                    String PagosMensuales = FormatearDinero(DescuentoFinal/120);
                                     System.out.println(PagosMensuales);
-                                    String PagosAnuales = FormatearDinero(DescuentoFinal/7);
+                                    String PagosAnuales = FormatearDinero(DescuentoFinal/10);
                                     System.out.println(PagosAnuales);
                                     for (int i = 1;i<=5;i++){
                                         Tabla1 += "\nAño "+i+": "+PagosAnuales+"$\n";
