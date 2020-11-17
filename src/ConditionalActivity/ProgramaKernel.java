@@ -70,16 +70,18 @@ public class ProgramaKernel {
         }
     }
 
-    public void Metodo1Activity3(){
+    public static void Metodo1Activity3(){
+        Icon CelularBase = Render.icono("/resources/IMG/CelularBase.png",50,60);
+
         int Seleccion, SeleccionCaracteristica;
         Object[] Celulares = {"Samsung Galaxy","Huawei P9","IPhone 7","Salir"};
         Object[] DetallesOptions = {"1° Caracteristica","2° Caracteristica","Volver"};
         boolean Ciclo = true;
         while (Ciclo){
-            Seleccion = JOptionPane.showOptionDialog(null,"Seleccione el celular a visualizar","Seleccion de Modelo",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/CelularBase.png",50,60),Celulares,3);
+            Seleccion = JOptionPane.showOptionDialog(null,"Seleccione el celular a visualizar","Seleccion de Modelo",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,CelularBase,Celulares,3);
             switch (Seleccion){
                 case 0://samsung galaxy
-                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60),DetallesOptions,2);
+                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Samsung.png",50,60),DetallesOptions,2);
                     switch (SeleccionCaracteristica){
                         case 0:
                             JOptionPane.showMessageDialog(null,"7 Caracteristicas del modelo Galaxy s20 (1)\n\n"
@@ -89,7 +91,7 @@ public class ProgramaKernel {
                             +"\t-Carga inalámbrica (15W)\n"
                             +"\t-Carga rápida (25W)\n"
                             +"\t-Parlantes stereo\n"
-                            +"\t-Estabilización óptica de imagen","7 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60));
+                            +"\t-Estabilización óptica de imagen","7 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Samsung.png",50,60));
                         break;
                         case 1:
                             JOptionPane.showMessageDialog(null,"7 Caracteristicas del modelo Galaxy s20 (2)\n\n"
@@ -99,14 +101,14 @@ public class ProgramaKernel {
                             +"\t-Refresco 120Hz\n"
                             +"\t-Pantalla Gorilla Glass 6\n"
                             +"\t-Pantalla AMOLED\n"
-                            +"\t-Excelente densidad de pixels (563ppi)\n","7 Caracteristicas (2)", JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60));
+                            +"\t-Excelente densidad de pixels (563ppi)\n","7 Caracteristicas (2)", JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Samsung.png",50,60));
                         break;
                         default:
                         break;
                     }
                 break;
                 case 1://huawei p9
-                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Huawei.png",50,60),DetallesOptions,2);
+                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Huawei.png",50,60),DetallesOptions,2);
                     switch (SeleccionCaracteristica){
                         case 0:
                             JOptionPane.showMessageDialog(null,"6 Caracteristicas del modelo Huawei P9 (1)\n\n"
@@ -115,7 +117,7 @@ public class ProgramaKernel {
                             +"\t-Lector de huellas dactilares\n"
                             +"\t-Procesador Kirin 955 de ocho núcleos\n"
                             +"\t-3/4 GB de RAM\n"
-                            +"\t-32 GB de memoria interna (en Europa), 64 GB en otras partes del mundo\n","6 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Huawei.png",50,60));
+                            +"\t-32 GB de memoria interna (en Europa), 64 GB en otras partes del mundo\n","6 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Huawei.png",50,60));
                         break;
                         case 1:
                             JOptionPane.showMessageDialog(null,"6 Caracteristicas del modelo Huawei P9 (2)\n\n"
@@ -124,23 +126,25 @@ public class ProgramaKernel {
                             +"\t-Cámara frontal de ocho megapíxeles\n"
                             +"\t-Batería de 3.000 mAh de capacidad\n"
                             +"\t-Puerto USB Tipo-C\n"
-                            +"\t-Disponible en seis acabados: gris, plata (en dos variantes), dorado (en dos variantes) y rosa\n","6 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Huawei.png",50,60));
+                            +"\t-Disponible en seis acabados: gris, plata (en dos variantes), dorado (en dos variantes) y rosa\n","6 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Huawei.png",50,60));
                         break;
                         default:
                         break;
                     }
                 break;
                 case 2://iphone 7
-                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/IPhone.png",50,60),DetallesOptions,2);
+                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/IPhone.png",50,60),DetallesOptions,2);
                     switch (SeleccionCaracteristica){
                         case 0:
                             JOptionPane.showMessageDialog(null,"3 Caracteristicas del modelo IPhone 7\n\n"
                             +"\t-Estabilización óptica de imagen\n"
                             +"\t-Cámara de alta resolución (12MP)\n"
-                            +"\t-Delgado (7.1mm)\n","3 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/IPhone.png",50,60));
+                            +"\t-Delgado (7.1mm)\n","3 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/IPhone.png",50,60));
                         break;
                         case 1:
-
+                            JOptionPane.showMessageDialog(null,"2 Caracteristicas del modelo IPhone 7\n\n"
+                            +"\t-Resistente al agua (IP67)\n"
+                            +"\t-Buena densidad de pixels (326ppi)\n","2 Caracteristicas (2)",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/IPhone.png",50,60));
                         break;
                         default:
                         break;
