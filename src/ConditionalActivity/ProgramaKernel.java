@@ -106,23 +106,41 @@ public class ProgramaKernel {
                     }
                 break;
                 case 1://huawei p9
-                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60),DetallesOptions,2);
+                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Huawei.png",50,60),DetallesOptions,2);
                     switch (SeleccionCaracteristica){
                         case 0:
-
+                            JOptionPane.showMessageDialog(null,"6 Caracteristicas del modelo Huawei P9 (1)\n\n"
+                            +"\t-Pantalla IPS de 5,2 pulgadas con resolución Full HD\n"
+                            +"\t-Medidas de 145 x 70,9 x 6,95 milímetros\n"
+                            +"\t-Lector de huellas dactilares\n"
+                            +"\t-Procesador Kirin 955 de ocho núcleos\n"
+                            +"\t-3/4 GB de RAM\n"
+                            +"\t-32 GB de memoria interna (en Europa), 64 GB en otras partes del mundo\n","6 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Huawei.png",50,60));
                         break;
                         case 1:
+                            JOptionPane.showMessageDialog(null,"6 Caracteristicas del modelo Huawei P9 (2)\n\n"
+                            +"\t-Android 6.0 Marshmallow con EMUI 4.1\n"
+                            +"\t-Doble-cámara principal de 12 megapíxeles\n"
+                            +"\t-Cámara frontal de ocho megapíxeles\n"
+                            +"\t-Batería de 3.000 mAh de capacidad\n"
+                            +"\t-Puerto USB Tipo-C\n"
+                            +"\t-Disponible en seis acabados: gris, plata (en dos variantes), dorado (en dos variantes) y rosa\n","6 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Huawei.png",50,60));
                         break;
                         default:
                         break;
                     }
                 break;
                 case 2://iphone 7
-                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60),DetallesOptions,2);
+                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/IPhone.png",50,60),DetallesOptions,2);
                     switch (SeleccionCaracteristica){
                         case 0:
+                            JOptionPane.showMessageDialog(null,"3 Caracteristicas del modelo IPhone 7\n\n"
+                            +"\t-Estabilización óptica de imagen\n"
+                            +"\t-Cámara de alta resolución (12MP)\n"
+                            +"\t-Delgado (7.1mm)\n","3 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/IPhone.png",50,60));
                         break;
                         case 1:
+
                         break;
                         default:
                         break;
