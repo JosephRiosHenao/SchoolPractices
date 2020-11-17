@@ -71,7 +71,33 @@ public class ProgramaKernel {
     }
 
     public void Metodo1Activity3(){
-        
+        int Seleccion, SeleccionCaracteristica;
+        Object[] Celulares = {"Samsung Galaxy","Huawei P9","IPhone 7","Salir"};
+        Object[] DetallesOptions = {"1° Caracteristica","2° Caracteristica","Volver"};
+        boolean Ciclo = true;
+        while (Ciclo){
+            Seleccion = JOptionPane.showOptionDialog(null,"Seleccione el celular a visualizar","Seleccion de Modelo",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/CelularBase.png",50,60),Celulares,3);
+            switch (Seleccion){
+                case 0:
+                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60),DetallesOptions,2);
+                    switch (SeleccionCaracteristica){
+                        case 0:
+                        break;
+                        case 1:
+                        break;
+                        default:
+                        break;
+                    }
+                break;
+                case 1:
+                break;
+                case 2:
+                break;
+                default:
+                    Ciclo = false;
+                break;
+            }
+        }
     }
 
     public void Metodo1Activity4() {
