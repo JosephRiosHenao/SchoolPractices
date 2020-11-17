@@ -13,6 +13,6 @@ public class Principal {
                 //CodeMainEncapsulation.CodeMainEncapsulation.Actividad3Frame.main(args);
                 //ConditionalActivity.Numero2.Metodo1Activity2();
                 /*Long Dinero = Long.parseLong(JOptionPane.showInputDialog(null,"Digite dinero"));*/
-                ConditionalActivity.ProgramaKernel.Metodo1Activity7();
+                ConditionalActivity.ProgramaKernel.Metodo1Activity8();
     }
 }

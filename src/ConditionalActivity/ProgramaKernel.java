@@ -70,6 +70,10 @@ public class ProgramaKernel {
         }
     }
 
+    public void Metodo1Activity3(){
+        
+    }
+
     public void Metodo1Activity4() {
         float Num;
         boolean Confirmacion = true;
@@ -253,7 +257,6 @@ public class ProgramaKernel {
                                     }
                                     Tabla2 =Tabla2+"\nPago total: "+DescuentoFinal+"\n";
                                     Tabla2 += "El enganche es de "+DescuentoFormateado+"$ \n";
-
                                     //System.out.println(Tabla1);
                                     //System.out.println(Tabla2);
                                     JOptionPane.showMessageDialog(null,Tabla1,"Pagos 1",JOptionPane.PLAIN_MESSAGE);
@@ -271,6 +274,43 @@ public class ProgramaKernel {
                 break;
             }
         }
+    }
+
+    public static void Metodo1Activity8(){
+        Icon IconoHombre = Render.icono("/resources/IMG/Hombre.png",50,50);
+        Icon IconoMujer = Render.icono("/resources/IMG/Mujer.png",50,50);
+        Icon IconoGenero = Render.icono("/resources/IMG/Genero.png",50,50);
+        Icon IconoCorazonPulsaciones = Render.icono("/resources/IMG/CorazonPulsaciones.png",50,50);
+
+        Object[] GeneroOptions = {"Hombre","Mujer"};
+        Color ColorSeleccionado;
+
+        int Edad;
+        float ResultadoPulsaciones;
+        int Genero = JOptionPane.showOptionDialog(null, "Seleccione su genero", "Seleccion de genero",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, IconoGenero, GeneroOptions, 0);
+        switch (Genero){
+            case 0: //HOMBRE
+                ColorSeleccionado = new Color(113, 208, 252);
+                UIManager.put("OptionPane.background", ColorSeleccionado);
+                UIManager.put("Panel.background", ColorSeleccionado);
+                Edad = Integer.parseInt(JOptionPane.showInputDialog(null,new JLabel("Digite su edad",IconoHombre,JLabel.CENTER),"Edad",JOptionPane.PLAIN_MESSAGE));
+                ResultadoPulsaciones = (210 - Edad);
+                ResultadoPulsaciones = ResultadoPulsaciones/10;
+                JOptionPane.showMessageDialog(null,"Sus pulsaciones cada 10 segundos son: "+ResultadoPulsaciones,"Pulsaciones",JOptionPane.PLAIN_MESSAGE,IconoCorazonPulsaciones);
+            break;
+            case 1: //MUJER
+                ColorSeleccionado = new Color(252, 113, 203);
+                UIManager.put("OptionPane.background", ColorSeleccionado);
+                UIManager.put("Panel.background", ColorSeleccionado);
+                Edad = Integer.parseInt(JOptionPane.showInputDialog(null,new JLabel("Digite su edad",IconoMujer,JLabel.CENTER),"Edad",JOptionPane.PLAIN_MESSAGE));
+                ResultadoPulsaciones = (220 - Edad);
+                ResultadoPulsaciones = ResultadoPulsaciones/10;
+                JOptionPane.showMessageDialog(null,"Sus pulsaciones cada 10 segundos son: "+ResultadoPulsaciones,"Pulsaciones",JOptionPane.PLAIN_MESSAGE,IconoCorazonPulsaciones);
+            break;
+        }
+        UIManager.put("OptionPane.background", null);
+        UIManager.put("Panel.background", null);
     }
 
     public static float PedirFloat(String Materia, int Indice, int Program, boolean Entero) {
@@ -316,10 +356,9 @@ public class ProgramaKernel {
 
     public static Long PedirNumeroDinero(String Mensaje, int x, int y) {
 
-        UIManager UI = null;
-        Color ColorAmarillo = new Color(252, 194, 027);
-        UI.put("OptionPane.background", ColorAmarillo);
-        UI.put("Panel.background", ColorAmarillo);
+        Color ColorSeleccionado = new Color(252, 194, 027);
+        UIManager.put("OptionPane.background", ColorSeleccionado);
+        UIManager.put("Panel.background", ColorSeleccionado);
         Icon iconorRender = Render.icono("/resources/IMG/Dinero.png", x, y);
 
         long Dinero = Long.parseLong(
@@ -331,8 +370,8 @@ public class ProgramaKernel {
                 +"<td>"+Mensaje+"</td></html>",
                 iconorRender,JLabel.CENTER),"Pregunta",JOptionPane.DEFAULT_OPTION));
                 
-        UI.put("OptionPane.background", null);
-        UI.put("Panel.background", null);
+        UIManager.put("OptionPane.background", null);
+        UIManager.put("Panel.background", null);
         return Dinero;
     }
 }
