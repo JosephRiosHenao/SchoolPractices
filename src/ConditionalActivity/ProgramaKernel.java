@@ -7,6 +7,11 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import javax.swing.Icon;
 import javax.swing.JLabel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.general.DefaultPieDataset;
+import javax.swing.JFrame;
 
 public class ProgramaKernel {
     static Main.RenderImagesClass Render = new Main.RenderImagesClass();
@@ -394,6 +399,127 @@ public class ProgramaKernel {
         }
         UIManager.put("OptionPane.background", null);
         UIManager.put("Panel.background", null);
+    }
+
+    public static void Metodo1Activity9(){
+        String iteradosString = "";
+        String[] CantidadDeVotosFormateados;
+        boolean CorrectoPorcentaje, CantidadCorrectaDeRepresentantes;
+        int Porcentaje = 100, CantidadTotalDeVotos = 0, SeleccionFinal, NumeroDeNombres;
+        int[] CantidadDeVotos;
+        int Personalizacion = JOptionPane.showConfirmDialog(null,"Desea usar valores personalizados?","Pregunta",JOptionPane.YES_NO_OPTION);
+        switch (Personalizacion){
+            case 0://si
+                CantidadCorrectaDeRepresentantes = true;
+                while (CantidadCorrectaDeRepresentantes){
+                    NumeroDeNombres = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite la cantidad de candidatos a representante"));
+                    if (NumeroDeNombres>=2){
+                        CantidadCorrectaDeRepresentantes = false;
+                        String[] Nombres = new String[NumeroDeNombres];
+                        CantidadDeVotosFormateados = new String[NumeroDeNombres];
+                        CantidadDeVotos = new int[NumeroDeNombres];
+                        for (int i = 0; i < NumeroDeNombres; i++) {
+                            int o = i+1;
+                            Nombres[i] = JOptionPane.showInputDialog(null, "Digite el nombre del "+(o)+"° candidato");
+                        }
+                        Object[] SeleccionAveriguar = { "Averiguar porcentajes", "Averiguar cantidad" };
+                        int Averiguar = JOptionPane.showOptionDialog(null, "Seleccione lo que desea realizar", "Seleccionando Modo",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+                                Render.icono("/resources/IMG/GraficaPastel.png", 100, 100), SeleccionAveriguar, 0);
+                        switch (Averiguar){
+                            case 0://digitar cantidad
+                                CorrectoPorcentaje = true;
+                                while (CorrectoPorcentaje){
+                                    iteradosString = "";
+                                    for (int i = 0;i < NumeroDeNombres; i++){
+                                        CantidadDeVotos[i] = Integer.parseInt(JOptionPane.showInputDialog(null,"Cuantas personas votaron por "+Nombres[i]+"?\n No digite puntos"));
+                                        CantidadTotalDeVotos += CantidadDeVotos[i];
+                                        CantidadDeVotosFormateados[i] = FormatearDinero(CantidadDeVotos[i]);
+                                        iteradosString += ("- "+Nombres[i]+" tiene "+CantidadDeVotosFormateados[i]+" votos\n");
+                                    }
+                                    iteradosString += "\nDesea continuar? o volver a asignar votos";
+                                    SeleccionFinal = JOptionPane.showConfirmDialog(null, iteradosString,"Continuar?",JOptionPane.YES_NO_OPTION);
+                                    switch (SeleccionFinal){
+                                        case 0:
+                                            CorrectoPorcentaje = false;
+                                            //metodo
+                                        break;
+                                        case 1:
+                                        break;
+                                    }
+                                }
+                            break;
+                            case 1://digitar porcentaje
+                                CorrectoPorcentaje = true;
+                                while (CorrectoPorcentaje){
+                                    CantidadTotalDeVotos = 0;
+                                    Porcentaje = 100;
+                                    iteradosString = "";
+                                    for (int i = 0;i < NumeroDeNombres; i++){
+                                        CantidadDeVotos[i] = Integer.parseInt(JOptionPane.showInputDialog(null,"Cuanto porcentaje tiene "+Nombres[i]+"\nTodavia le queda ("+Porcentaje+"%)\nSolo se acepta enteros"));
+                                        CantidadTotalDeVotos += CantidadDeVotos[i];
+                                        Porcentaje -= CantidadDeVotos[i];
+                                        iteradosString += "- "+Nombres[i] + " tiene un " + CantidadDeVotos[i] + "%\n";
+                                    }
+                                    iteradosString += "\nDesea continuar? o volver a asignar porcentajes";
+                                    if (CantidadTotalDeVotos == 100 && Porcentaje == 0) {
+                                        SeleccionFinal = JOptionPane.showConfirmDialog(null, iteradosString,"Continuar?",JOptionPane.YES_NO_OPTION);
+                                        switch (SeleccionFinal){
+                                            case 0:
+                                                CorrectoPorcentaje = false;
+                                                //metodo
+                                            break;
+                                            case 1:
+                                                Porcentaje = 100;
+                                            break;
+                                        }
+                                    }else{
+                                        JOptionPane.showMessageDialog(null,"Hubo un error en su porcentaje, digite uno valido");
+                                        Porcentaje = 100;
+                                    }
+                                }
+                            break;
+                        }
+                    }else{
+                        JOptionPane.showMessageDialog(null,"Los candidatos deben ser minimo 2","Advertencia",JOptionPane.WARNING_MESSAGE);
+                    }
+                }
+
+            break;
+            case 1://no
+                GenerarStadisticaDefaulAct9();
+            break;
+        }
+    }
+
+    public static void GenerarStadisticaDefaulAct9() {
+        int TotalDeEstudiantes = 60;
+        double Ana = (TotalDeEstudiantes*0.25);
+        double Luz = (TotalDeEstudiantes*0.10);
+        double Ruth = (TotalDeEstudiantes*0.05);
+        double Vero = (TotalDeEstudiantes*0.60);
+        DefaultPieDataset dataset = new DefaultPieDataset();
+        dataset.setValue("Ana",Ana);
+        dataset.setValue("Luz",Luz);
+        dataset.setValue("Ruth",Ruth);
+        dataset.setValue("Vero",Vero);
+        
+        JFreeChart chart = ChartFactory.createPieChart(// char t
+                "Votacion de representante",// title                                                                     
+                dataset, // data
+                true, // include legend
+                true, false);
+        
+        ChartPanel panel= new ChartPanel(chart);
+        
+        //Creamos la ventana
+        JFrame ventana = new JFrame("Grafica");
+        ventana.setVisible(true);
+        ventana.setSize(800, 600);
+        ventana.setLocationRelativeTo(null);
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        ventana.add(panel);
     }
 
     public static float PedirFloat(String Materia, int Indice, int Program, boolean Entero) {

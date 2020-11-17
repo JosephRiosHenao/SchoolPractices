@@ -4,5 +4,15 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
+    },
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Users\\RiosHenao\\Desktop\\jfreechart-1.0.19\\lib\\jcommon-1.0.23.jar",
+            "c:\\Users\\RiosHenao\\Desktop\\jfreechart-1.0.19\\lib\\jfreechart-1.0.19.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\RiosHenao\\Desktop\\jfreechart-1.0.19\\lib\\jfreechart-1.0.19-swt.jar"
+        ]
     }
 }
