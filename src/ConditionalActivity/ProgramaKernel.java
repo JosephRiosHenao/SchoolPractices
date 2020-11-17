@@ -78,7 +78,46 @@ public class ProgramaKernel {
         while (Ciclo){
             Seleccion = JOptionPane.showOptionDialog(null,"Seleccione el celular a visualizar","Seleccion de Modelo",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/CelularBase.png",50,60),Celulares,3);
             switch (Seleccion){
-                case 0:
+                case 0://samsung galaxy
+                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60),DetallesOptions,2);
+                    switch (SeleccionCaracteristica){
+                        case 0:
+                            JOptionPane.showMessageDialog(null,"7 Caracteristicas del modelo Galaxy s20 (1)\n\n"
+                            +"\t-Conectividad 5G\n"
+                            +"\t-Resistente al agua (IP68)\n"
+                            +"\t-Lector de huellas embebido en pantalla\n"
+                            +"\t-Carga inalámbrica (15W)\n"
+                            +"\t-Carga rápida (25W)\n"
+                            +"\t-Parlantes stereo\n"
+                            +"\t-Estabilización óptica de imagen","7 Caracteristicas (1)",JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60));
+                        break;
+                        case 1:
+                            JOptionPane.showMessageDialog(null,"7 Caracteristicas del modelo Galaxy s20 (2)\n\n"
+                            +"\t-Zoom óptico 3X\n"
+                            +"\t-Cámara triple de alta resolución (12MP+64MP+12MP)\n"
+                            +"\t-Amplia memoria RAM (8/12GB)\n"
+                            +"\t-Refresco 120Hz\n"
+                            +"\t-Pantalla Gorilla Glass 6\n"
+                            +"\t-Pantalla AMOLED\n"
+                            +"\t-Excelente densidad de pixels (563ppi)\n","7 Caracteristicas (2)", JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60));
+                        break;
+                        default:
+                        break;
+                    }
+                break;
+                case 1://huawei p9
+                    SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60),DetallesOptions,2);
+                    switch (SeleccionCaracteristica){
+                        case 0:
+
+                        break;
+                        case 1:
+                        break;
+                        default:
+                        break;
+                    }
+                break;
+                case 2://iphone 7
                     SeleccionCaracteristica = JOptionPane.showOptionDialog(null,"Qué desea vizualizar?","Seleccion",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("resources/IMG/Samsung.png",50,60),DetallesOptions,2);
                     switch (SeleccionCaracteristica){
                         case 0:
@@ -89,11 +128,7 @@ public class ProgramaKernel {
                         break;
                     }
                 break;
-                case 1:
-                break;
-                case 2:
-                break;
-                default:
+                default://volver a seleccionar
                     Ciclo = false;
                 break;
             }
