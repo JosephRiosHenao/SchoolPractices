@@ -17,14 +17,22 @@ public class ProgramaKernel {
     static Main.RenderImagesClass Render = new Main.RenderImagesClass();
 
     public static void Metodo1Activity1() {
-        int Numero = Integer.parseInt(
-                JOptionPane.showInputDialog(null, "Digite un numero", "´Pregunta", JOptionPane.QUESTION_MESSAGE));
-        if ((Numero % 2) == 0) {
-            JOptionPane.showMessageDialog(null, "Tu numero " + Numero + " es par", "Resultado",
-                    JOptionPane.INFORMATION_MESSAGE);
-        } else
-            JOptionPane.showMessageDialog(null, "Tu numero " + Numero + " es par", "Resultado",
-                    JOptionPane.ERROR_MESSAGE);
+        boolean Confirmacion = true;
+        while (Confirmacion){
+            float Numero = Float.parseFloat(
+                JOptionPane.showInputDialog(null, "Digite un numero\n(Rango max de -1000 a 1000 y sin puntos)", "´Pregunta", JOptionPane.QUESTION_MESSAGE));
+                if (Numero>=-1000&&Numero<=1000 ){
+                    Confirmacion = false;
+                    if ((Numero % 2) == 0) {
+                        JOptionPane.showMessageDialog(null, "Tu numero " + Numero + " es par", "Resultado",
+                            JOptionPane.INFORMATION_MESSAGE);
+                    } else
+                        JOptionPane.showMessageDialog(null, "Tu numero " + Numero + " es par", "Resultado",
+                            JOptionPane.ERROR_MESSAGE);
+                }else{
+                    JOptionPane.showMessageDialog(null,"Digite un dato valido","Advertencia",JOptionPane.WARNING_MESSAGE);
+                }
+        }
     }
 
     public static void Metodo1Activity2() {
@@ -36,8 +44,7 @@ public class ProgramaKernel {
         while (Confirmacion) {
             int MenuPromedio = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "\n1. Notas de matemáticas y su promedio. \n2. Notas de informática y su promedio. \n3. El promedio final de las dos áreas. \n4. Re definir \n5. Salir"));
-            if ((MenuPromedio == 1) || (MenuPromedio == 2) || (MenuPromedio == 3) || (MenuPromedio == 4)
-                    || (MenuPromedio == 5)) {
+            if (MenuPromedio>=1&&MenuPromedio<=5) {
                 if (MenuPromedio == 1) {
                     float Resultado = ((Promedio1Mate + Promedio2Mate) / 2);
                     JOptionPane
@@ -65,8 +72,7 @@ public class ProgramaKernel {
                     Promedio1Info = PedirFloat("Informatica", 1, 1, false);
                     Promedio2Info = PedirFloat("Informatica", 2, 1, false);
                 } else {
-                    JOptionPane.showMessageDialog(null, "Adios!! :3");
-                    System.exit(0);
+                    Confirmacion = false;
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "---Digite una opcion valida---", "Error",
@@ -167,15 +173,15 @@ public class ProgramaKernel {
         boolean Confirmacion = true;
         while (Confirmacion) {
             Num = Float.parseFloat(
-                    JOptionPane.showInputDialog(null, "Digite un numero", "Pregunta", JOptionPane.QUESTION_MESSAGE));
-            if (Num >= 0) {
+                    JOptionPane.showInputDialog(null, "Digite un numero\n(Numero max: -1000 a 1000 y sin puntos)\n\nDigite 0 para salir", "Pregunta", JOptionPane.QUESTION_MESSAGE));
+            if (Num == 0){
+                Confirmacion = false;
+            } else if (Num > 0) {
                 JOptionPane.showMessageDialog(null, "Su numero es positivo", "Respuesta",
                         JOptionPane.INFORMATION_MESSAGE);
-                Confirmacion = false;
-            } else if (Num <= -1) {
+            } else if (Num < 0) {
                 JOptionPane.showMessageDialog(null, "Su numero es negativo", "Respuesta",
                         JOptionPane.INFORMATION_MESSAGE);
-                Confirmacion = false;
             } else {
                 JOptionPane.showMessageDialog(null,
                         "Ocurrio un error en el programa\nVuelve a digitar un numero para evitar problemas", "Error",
@@ -187,7 +193,7 @@ public class ProgramaKernel {
     public static void Metodo1Activity5y6(int Activity) {
         Float num1, num2, num3;
         switch (Activity) {
-            case 1:
+            case 5:
                 num1 = PedirFloat("Ninguna", 1, 2, false);
                 num2 = PedirFloat("Ninguna", 2, 2, false);
                 num3 = PedirFloat("Ninguna", 3, 2, false);
@@ -219,7 +225,7 @@ public class ProgramaKernel {
                     }
                 }
                 break;
-            case 2:
+            case 6:
                 num1 = PedirFloat("Ninguna", 1, 2, true);
                 num2 = PedirFloat("Ninguna", 2, 2, true);
                 num3 = PedirFloat("Ninguna", 3, 2, true);
@@ -306,7 +312,8 @@ public class ProgramaKernel {
                                     JOptionPane.showMessageDialog(null,Tabla2,"Pagos 2",JOptionPane.PLAIN_MESSAGE);
                                 break;
                                 case 2:
-                                    System.exit(0);
+                                    cicloSeleccion2 = false;
+                                    cicloSeleccion = false;
                                 break;
                             }
                         }
@@ -351,14 +358,15 @@ public class ProgramaKernel {
                                     JOptionPane.showMessageDialog(null,Tabla2,"Pagos 2",JOptionPane.PLAIN_MESSAGE);
                                 break;
                                 case 2:
-                                    System.exit(0);
+                                    cicloSeleccion2 = false;
+                                    cicloSeleccion = false;
                                 break;
                             }
                         }
                     }
                 break;
                 case 2:
-                    System.exit(0);
+                    cicloSeleccion = false;
                 break;
             }
         }
@@ -370,13 +378,16 @@ public class ProgramaKernel {
         Icon IconoGenero = Render.icono("/resources/IMG/Genero.png",50,50);
         Icon IconoCorazonPulsaciones = Render.icono("/resources/IMG/CorazonPulsaciones.png",50,50);
 
-        Object[] GeneroOptions = {"Hombre","Mujer"};
+        Object[] GeneroOptions = {"Hombre","Mujer","Volver"};
         Color ColorSeleccionado;
 
         int Edad;
         float ResultadoPulsaciones;
+        boolean Confirmacion = true;
+        
+        while (Confirmacion){
         int Genero = JOptionPane.showOptionDialog(null, "Seleccione su genero", "Seleccion de genero",
-                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, IconoGenero, GeneroOptions, 0);
+            JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, IconoGenero, GeneroOptions, 0);
         switch (Genero){
             case 0: //HOMBRE
                 ColorSeleccionado = new Color(113, 208, 252);
@@ -396,6 +407,10 @@ public class ProgramaKernel {
                 ResultadoPulsaciones = ResultadoPulsaciones/10;
                 JOptionPane.showMessageDialog(null,"Sus pulsaciones cada 10 segundos son: "+ResultadoPulsaciones,"Pulsaciones",JOptionPane.PLAIN_MESSAGE,IconoCorazonPulsaciones);
             break;
+            default:
+                Confirmacion = false;
+            break;
+            }
         }
         UIManager.put("OptionPane.background", null);
         UIManager.put("Panel.background", null);
@@ -422,7 +437,7 @@ public class ProgramaKernel {
                             int o = i+1;
                             Nombres[i] = JOptionPane.showInputDialog(null, "Digite el nombre del "+(o)+"° candidato");
                         }
-                        Object[] SeleccionAveriguar = { "Averiguar porcentajes", "Averiguar cantidad" };
+                        Object[] SeleccionAveriguar = { "Tengo Cantidad", "Tengo Porcentajes" };
                         int Averiguar = JOptionPane.showOptionDialog(null, "Seleccione lo que desea realizar", "Seleccionando Modo",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
                                 Render.icono("/resources/IMG/GraficaPastel.png", 100, 100), SeleccionAveriguar, 0);
@@ -582,8 +597,18 @@ public class ProgramaKernel {
         float NumeroFinal = 0;
         boolean Confirmacion = true;
         while (Confirmacion) {
-            if (Program == 1) {
+            if (Program == 1 && Entero == true) {
                 NumeroFinal = Integer.parseInt(JOptionPane.showInputDialog(null,
+                        "Digite su promedio " + Indice + " de la materia " + Materia));
+                if (NumeroFinal >= 0 && NumeroFinal <= 10) {
+                    Confirmacion = false;
+                } else {
+                    JOptionPane.showMessageDialog(null,
+                            "---Digite una opcion valida---\nDebe ser mayor a 0 y menor a 10", "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            } else if (Program == 1 && Entero == false){
+                NumeroFinal = Float.parseFloat(JOptionPane.showInputDialog(null,
                         "Digite su promedio " + Indice + " de la materia " + Materia));
                 if (NumeroFinal >= 0 && NumeroFinal <= 10) {
                     Confirmacion = false;

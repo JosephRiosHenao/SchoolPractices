@@ -18,7 +18,7 @@ public class MenuActivity {
             +"\t8- Punto 8\n"
             +"\t9- Punto 9\n"
             +"\t10- Salir\n"
-            +"\nDigite la el indice al que desea entrar"));
+            +"\nDigite el indice al que desea entrar"));
             if (Menu>=1 && Menu <=10){
                 switch (Menu){
                     case 1:
@@ -58,5 +58,6 @@ public class MenuActivity {
             
         }
         JOptionPane.showMessageDialog(null,"Adios!! :3");
+        System.exit(0);
     }
 }
