@@ -16,7 +16,7 @@ import javax.swing.JFrame;
 public class ProgramaKernel {
     static Main.RenderImagesClass Render = new Main.RenderImagesClass();
 
-    public void Metodo1Activity1() {
+    public static void Metodo1Activity1() {
         int Numero = Integer.parseInt(
                 JOptionPane.showInputDialog(null, "Digite un numero", "´Pregunta", JOptionPane.QUESTION_MESSAGE));
         if ((Numero % 2) == 0) {
@@ -27,7 +27,7 @@ public class ProgramaKernel {
                     JOptionPane.ERROR_MESSAGE);
     }
 
-    public void Metodo1Activity2() {
+    public static void Metodo1Activity2() {
         float Promedio1Mate = PedirFloat("Matematicas", 1, 1, false);
         float Promedio2Mate = PedirFloat("Matematicas", 2, 1, false);
         float Promedio1Info = PedirFloat("Informatica", 1, 1, false);
@@ -162,7 +162,7 @@ public class ProgramaKernel {
         }
     }
 
-    public void Metodo1Activity4() {
+    public static void Metodo1Activity4() {
         float Num;
         boolean Confirmacion = true;
         while (Confirmacion) {
@@ -442,7 +442,7 @@ public class ProgramaKernel {
                                     switch (SeleccionFinal){
                                         case 0:
                                             CorrectoPorcentaje = false;
-                                            //metodo
+                                            GenerarStadisticaSegunCantidad(Nombres,NumeroDeNombres,CantidadDeVotos);
                                         break;
                                         case 1:
                                         break;
@@ -467,7 +467,7 @@ public class ProgramaKernel {
                                         switch (SeleccionFinal){
                                             case 0:
                                                 CorrectoPorcentaje = false;
-                                                //metodo
+                                                GenerarStadisticaSegunPorcentaje(Nombres,NumeroDeNombres,CantidadDeVotos);
                                             break;
                                             case 1:
                                                 Porcentaje = 100;
@@ -490,6 +490,62 @@ public class ProgramaKernel {
                 GenerarStadisticaDefaulAct9();
             break;
         }
+    }
+
+    public static void GenerarStadisticaSegunPorcentaje(String[] Nombres, int Total, int[] Porcentajes){
+        DefaultPieDataset dataset = new DefaultPieDataset();
+        //double[] PorcentajesGrafica = new double[Total];
+
+        for (int i = 0;i < Total; i++){
+            //PorcentajesGrafica[i]=(Porcentajes[i]*Total)/100;
+            //dataset.setValue(Nombres[i],PorcentajesGrafica[i]);
+            dataset.setValue(Nombres[i],Porcentajes[i]);
+        }
+
+        JFreeChart chart = ChartFactory.createPieChart(// char t
+        "Votacion de representante",// title                                                                     
+        dataset, // data
+        true, // include legend
+        true, false);
+
+        ChartPanel panel= new ChartPanel(chart);
+
+        //Creamos la ventana
+        JFrame ventana = new JFrame("Grafica");
+        ventana.setVisible(true);
+        ventana.setSize(800, 600);
+        ventana.setLocationRelativeTo(null);
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        ventana.add(panel);
+    }
+
+    public static void GenerarStadisticaSegunCantidad(String[] Nombres, int Total, int[] Votos){
+        DefaultPieDataset dataset = new DefaultPieDataset();
+        double[] VotosGrafica = new double[Total];
+
+        for (int i = 0;i < Total; i++){
+            VotosGrafica[i]=(Votos[i]*100)/Total;
+            dataset.setValue(Nombres[i],VotosGrafica[i]);
+        }
+
+        JFreeChart chart = ChartFactory.createPieChart(// char t
+        "Votacion de representante",// title                                                                     
+        dataset, // data
+        true, // include legend
+        true, false);
+
+        ChartPanel panel= new ChartPanel(chart);
+
+        //Creamos la ventana
+        JFrame ventana = new JFrame("Grafica");
+        ventana.setVisible(true);
+        ventana.setSize(800, 600);
+        ventana.setLocationRelativeTo(null);
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        ventana.add(panel);
+
     }
 
     public static void GenerarStadisticaDefaulAct9() {
