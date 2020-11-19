@@ -27,7 +27,7 @@ public class ProgramaKernel {
                         JOptionPane.showMessageDialog(null, "Tu numero " + Numero + " es par", "Resultado",
                             JOptionPane.INFORMATION_MESSAGE);
                     } else
-                        JOptionPane.showMessageDialog(null, "Tu numero " + Numero + " es par", "Resultado",
+                        JOptionPane.showMessageDialog(null, "Tu numero " + Numero + " es impar", "Resultado",
                             JOptionPane.ERROR_MESSAGE);
                 }else{
                     JOptionPane.showMessageDialog(null,"Digite un dato valido","Advertencia",JOptionPane.WARNING_MESSAGE);
@@ -49,22 +49,22 @@ public class ProgramaKernel {
                     float Resultado = ((Promedio1Mate + Promedio2Mate) / 2);
                     JOptionPane
                             .showMessageDialog(null,
-                                    "Sus notas en matematicas son: \n1." + Promedio1Mate + "\n2." + Promedio2Mate
-                                            + "\nEl promedio seria " + Resultado,
+                                    "Sus notas en matematicas son: \n1)" + Promedio1Mate + "\n2)" + Promedio2Mate
+                                            + "\nEl promedio seria: " + Resultado,
                                     "Resultado", JOptionPane.INFORMATION_MESSAGE);
                 } else if (MenuPromedio == 2) {
                     float Resultado = ((Promedio1Info + Promedio2Info) / 2);
                     JOptionPane
                             .showMessageDialog(null,
-                                    "Sus notas en informatica son: \n1." + Promedio1Info + "\n2." + Promedio2Info
-                                            + "\nEl promedio seria " + Resultado,
+                                    "Sus notas en informatica son: \n1)" + Promedio1Info + "\n2)" + Promedio2Info
+                                            + "\nEl promedio seria: " + Resultado,
                                     "Resultado", JOptionPane.INFORMATION_MESSAGE);
                 } else if (MenuPromedio == 3) {
                     float Resultado = ((Promedio1Info + Promedio2Info + Promedio1Mate + Promedio2Mate) / 4);
                     JOptionPane.showMessageDialog(null,
-                            "Sus notas en informatica son: \n1." + Promedio1Info + "\n2." + Promedio2Info
-                                    + "\nSus notas en matematicas son: \n1." + Promedio1Mate + "\n2." + Promedio2Mate
-                                    + "\nEl promedio seria " + Resultado,
+                            "Sus notas en informatica son: \n1)" + Promedio1Info + "\n2)" + Promedio2Info
+                                    + "\nSus notas en matematicas son: \n1)" + Promedio1Mate + "\n2)" + Promedio2Mate
+                                    + "\nEl promedio seria: " + Resultado,
                             "Resultado", JOptionPane.INFORMATION_MESSAGE);
                 } else if (MenuPromedio == 4) {
                     Promedio1Mate = PedirFloat("Matematicas", 1, 1, false);
@@ -269,7 +269,7 @@ public class ProgramaKernel {
         while (cicloSeleccion){
             Ingresos = PedirNumeroDinero("Digite sus ingresos mensuales", 100, 100);
             IngresosFormato = FormatearDinero(Ingresos);
-            int Eleccion = JOptionPane.showConfirmDialog(null, "Sus ingresos mensuales son: " + IngresosFormato + "$ ??");
+            int Eleccion = JOptionPane.showConfirmDialog(null, "Sus ingresos mensuales son: $" + IngresosFormato + "?");
             switch (Eleccion){
                 case 0:
                     cicloSeleccion = false;
@@ -277,35 +277,36 @@ public class ProgramaKernel {
                         while (cicloSeleccion2){
                             Long IngresosCasa = PedirNumeroDinero("Digite el valor de la propiedad a comprar", 130, 130);
                             String IngresosCasaFormato = FormatearDinero(IngresosCasa);
-                            int Eleccion2 = JOptionPane.showConfirmDialog(null, "El valor de la propiedad es: " + IngresosCasaFormato + "$ ??");
+                            int Eleccion2 = JOptionPane.showConfirmDialog(null, "El valor de la propiedad es: $" + IngresosCasaFormato + "?");
                             switch (Eleccion2){
                                 case 0:
                                     cicloSeleccion2 = false;
                                     double Descuento = IngresosCasa * 0.3;
                                     String DescuentoFormateado = FormatearDinero((long)Descuento);
-                                    Tabla1 += "El enganche es de "+DescuentoFormateado+"$ \n";
+                                    Tabla1 += "El enganche es de $"+DescuentoFormateado+"\n";
                                     long DescuentoFinal = (long) (IngresosCasa - Descuento);
+                                    String DescuentoFinalFormateado = FormatearDinero(DescuentoFinal);
                                     System.out.println(DescuentoFinal);
                                     String PagosMensuales = FormatearDinero(DescuentoFinal/84);
                                     System.out.println(PagosMensuales);
                                     String PagosAnuales = FormatearDinero(DescuentoFinal/7);
                                     System.out.println(PagosAnuales);
                                     for (int i = 1;i<=4;i++){
-                                        Tabla1 += "\nAño "+i+": "+PagosAnuales+"$\n";
+                                        Tabla1 += "\nAño "+i+": $"+PagosAnuales+"\n";
                                         //System.out.println(Tabla);
                                         for (int o = 1;o<=12;o+=4){
-                                            Tabla1 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$\n";
+                                            Tabla1 += "\tMes"+(o)+": $"+PagosMensuales+"   Mes"+(o+1)+": $"+PagosMensuales+"   Mes"+(o+2)+": $"+PagosMensuales+"   Mes"+(o+3)+": $"+PagosMensuales+"\n";
                                         }
                                     }
                                     for (int i = 4;i<=7;i++){
-                                        Tabla2 += "\nAño "+i+": "+PagosAnuales+"$\n";
+                                        Tabla2 += "\nAño "+i+": $"+PagosAnuales+"\n";
                                         //System.out.println(Tabla);
                                         for (int o = 1;o<=12;o+=4){
-                                            Tabla2 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$\n";
+                                            Tabla2 += "\tMes"+(o)+": $"+PagosMensuales+"   Mes"+(o+1)+": $"+PagosMensuales+"   Mes"+(o+2)+": $"+PagosMensuales+"   Mes"+(o+3)+": $"+PagosMensuales+"\n";
                                         }
                                     }
-                                    Tabla2 =Tabla2+"\nPago total: "+DescuentoFinal+"\n";
-                                    Tabla2 += "El enganche es de "+DescuentoFormateado+"$ \n";
+                                    Tabla2 =Tabla2+"\nPago total: $"+DescuentoFinalFormateado+"\n";
+                                    Tabla2 += "El enganche es de $"+DescuentoFormateado+"\n";
                                     //System.out.println(Tabla1);
                                     //System.out.println(Tabla2);
                                     JOptionPane.showMessageDialog(null,Tabla1,"Pagos 1",JOptionPane.PLAIN_MESSAGE);
@@ -321,7 +322,7 @@ public class ProgramaKernel {
                         while (cicloSeleccion2){
                             Long IngresosCasa = PedirNumeroDinero("Digite el valor de la propiedad a comprar", 130, 130);
                             String IngresosCasaFormato = FormatearDinero(IngresosCasa);
-                            int Eleccion2 = JOptionPane.showConfirmDialog(null, "El valor de la propiedad es: " + IngresosCasaFormato + "$ ??");
+                            int Eleccion2 = JOptionPane.showConfirmDialog(null, "El valor de la propiedad es: $" + IngresosCasaFormato + "?");
                             switch (Eleccion2){
                                 case 0:
                                     Tabla1 = "Los pagos de los primeros 5 años: \n\n";
@@ -329,29 +330,30 @@ public class ProgramaKernel {
                                     cicloSeleccion2 = false;
                                     double Descuento = IngresosCasa * 0.15;
                                     String DescuentoFormateado = FormatearDinero((long)Descuento);
-                                    Tabla1 += "El enganche es de "+DescuentoFormateado+"$ \n";
+                                    Tabla1 += "El enganche es de $"+DescuentoFormateado+"\n";
                                     long DescuentoFinal = (long) (IngresosCasa - Descuento);
+                                    String DescuentoFinalFormateado = FormatearDinero(DescuentoFinal);
                                     System.out.println(DescuentoFinal);
                                     String PagosMensuales = FormatearDinero(DescuentoFinal/120);
                                     System.out.println(PagosMensuales);
                                     String PagosAnuales = FormatearDinero(DescuentoFinal/10);
                                     System.out.println(PagosAnuales);
                                     for (int i = 1;i<=5;i++){
-                                        Tabla1 += "\nAño "+i+": "+PagosAnuales+"$\n";
+                                        Tabla1 += "\nAño "+i+": $"+PagosAnuales+"\n";
                                         //System.out.println(Tabla);
                                         for (int o = 1;o<=12;o+=6){
-                                            Tabla1 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$   Mes"+(o+4)+": "+PagosMensuales+"$   Mes"+(o+5)+": "+PagosMensuales+"$\n";
+                                            Tabla1 += "\tMes"+(o)+": $"+PagosMensuales+"   Mes"+(o+1)+": $"+PagosMensuales+"   Mes"+(o+2)+": $"+PagosMensuales+"   Mes"+(o+3)+": $"+PagosMensuales+"   Mes"+(o+4)+": $"+PagosMensuales+"   Mes"+(o+5)+": $"+PagosMensuales+"\n";
                                         }
                                     }
                                     for (int i = 1;i<=5;i++){
-                                        Tabla2 += "\nAño "+i+": "+PagosAnuales+"$\n";
+                                        Tabla2 += "\nAño "+i+": $"+PagosAnuales+"\n";
                                         //System.out.println(Tabla);
                                         for (int o = 1;o<=12;o+=6){
-                                            Tabla2 += "\tMes"+(o)+": "+PagosMensuales+"$   Mes"+(o+1)+": "+PagosMensuales+"$   Mes"+(o+2)+": "+PagosMensuales+"$   Mes"+(o+3)+": "+PagosMensuales+"$   Mes"+(o+4)+": "+PagosMensuales+"$   Mes"+(o+5)+": "+PagosMensuales+"$\n";
+                                            Tabla2 += "\tMes"+(o)+": $"+PagosMensuales+"   Mes"+(o+1)+": $"+PagosMensuales+"   Mes"+(o+2)+": $"+PagosMensuales+"   Mes"+(o+3)+": $"+PagosMensuales+"   Mes"+(o+4)+": $"+PagosMensuales+"   Mes"+(o+5)+": $"+PagosMensuales+"\n";
                                         }
                                     }
-                                    Tabla2 =Tabla2+"\nPago total: "+DescuentoFinal+"\n";
-                                    Tabla2 += "El enganche es de "+DescuentoFormateado+"$ \n";
+                                    Tabla2 =Tabla2+"\nPago total: $"+DescuentoFinalFormateado+"\n";
+                                    Tabla2 += "El enganche es de $"+DescuentoFormateado+"\n";
                                     //System.out.println(Tabla1);
                                     //System.out.println(Tabla2);
                                     JOptionPane.showMessageDialog(null,Tabla1,"Pagos 1",JOptionPane.PLAIN_MESSAGE);
@@ -599,7 +601,7 @@ public class ProgramaKernel {
         while (Confirmacion) {
             if (Program == 1 && Entero == true) {
                 NumeroFinal = Integer.parseInt(JOptionPane.showInputDialog(null,
-                        "Digite su promedio " + Indice + " de la materia " + Materia));
+                        "Digite su nota " + Indice + " de la materia " + Materia));
                 if (NumeroFinal >= 0 && NumeroFinal <= 10) {
                     Confirmacion = false;
                 } else {
@@ -609,7 +611,7 @@ public class ProgramaKernel {
                 }
             } else if (Program == 1 && Entero == false){
                 NumeroFinal = Float.parseFloat(JOptionPane.showInputDialog(null,
-                        "Digite su promedio " + Indice + " de la materia " + Materia));
+                        "Digite su nota " + Indice + " de la materia " + Materia));
                 if (NumeroFinal >= 0 && NumeroFinal <= 10) {
                     Confirmacion = false;
                 } else {
