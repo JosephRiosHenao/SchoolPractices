@@ -15,5 +15,6 @@ public class Principal {
                 /*Long Dinero = Long.parseLong(JOptionPane.showInputDialog(null,"Digite dinero"));*/
                 //ConditionalActivity.ProgramaKernel.Metodo1Activity3();
                 ConditionalActivity.MenuActivity.MenuActivityConditional();
+                //Practique XAMMP y MySQL
     }
 }
