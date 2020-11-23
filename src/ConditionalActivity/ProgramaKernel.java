@@ -666,4 +666,5 @@ public class ProgramaKernel {
         UIManager.put("Panel.background", null);
         return Dinero;
     }
-}
+}   
+//670
