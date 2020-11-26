@@ -509,6 +509,25 @@ public class ProgramaKernel {
         }
     }
 
+    public static void Metodo1Activity10(){
+        String Mensaje="";
+        float[] numero = new float[2];
+        for (int i = 0; i<2; i++){
+            numero[i]=Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el "+i+"° numero: "));
+        }
+        if (numero[0]==numero[1]){
+            Mensaje = numero[0]+" x "+numero[1]+" = "+(numero[0]*numero[1]);
+        }else if(numero[0]>numero[1]){
+            Mensaje = numero[0]+" - "+numero[1]+" = "+(numero[0]-numero[1]);
+        }else{
+            Mensaje = numero[0]+" + "+numero[1]+" = "+(numero[0]+numero[1]);
+        }
+        JOptionPane.showMessageDialog(null, Mensaje);
+    }
+
+    public static void Metodo1Activity11(){
+        int Tipo = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite el tipo de cliente que sos"));
+    }
     public static void GenerarStadisticaSegunPorcentaje(String[] Nombres, int Total, int[] Porcentajes){
         DefaultPieDataset dataset = new DefaultPieDataset();
         //double[] PorcentajesGrafica = new double[Total];
