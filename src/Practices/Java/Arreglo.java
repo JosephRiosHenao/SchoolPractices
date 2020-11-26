@@ -1,3 +1,4 @@
+package Practices.Java;
 import java.util.Scanner;
 
 public class Arreglo {
