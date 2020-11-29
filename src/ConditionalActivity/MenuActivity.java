@@ -17,9 +17,12 @@ public class MenuActivity {
             +"\t7- Punto 7\n"
             +"\t8- Punto 8\n"
             +"\t9- Punto 9\n"
-            +"\t10- Salir\n"
+            +"\t10- Punto 10\n"
+            +"\t11- Punto 11\n"
+            +"\t12- Punto 12\n"
+            +"\t13- Salir\n"
             +"\nDigite el indice al que desea entrar"));
-            if (Menu>=1 && Menu <=10){
+            if (Menu>=1 && Menu <=13){
                 switch (Menu){
                     case 1:
                         ProgramaKernel.Metodo1Activity1();
@@ -48,7 +51,16 @@ public class MenuActivity {
                     case 9:
                         ProgramaKernel.Metodo1Activity9();
                     break;
-                    case 10://salir
+                    case 10:
+                        ProgramaKernel.Metodo1Activity10();
+                    break;
+                    case 11:
+                        ProgramaKernel.Metodo1Activity11();
+                    break;
+                    case 12:
+                        ProgramaKernel.Metodo1Activity12();
+                    break;
+                    default://salir
                         CicloMenu = false;
                     break;
                 }

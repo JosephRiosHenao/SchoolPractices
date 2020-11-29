@@ -1,4 +1,4 @@
-package Practices.Java;
+package ParqueSoft.Algoritmos;
 
 import javax.swing.JOptionPane;
 

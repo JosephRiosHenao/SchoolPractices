@@ -1,4 +1,4 @@
-package Practices.Java;
+package ParqueSoft.Algoritmos;
 import java.util.Scanner;
 
 public class Arreglo {

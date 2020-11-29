@@ -3,6 +3,7 @@ package ConditionalActivity;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import java.awt.Color;
+import java.nio.LongBuffer;
 import java.text.NumberFormat;
 import java.util.Locale;
 import javax.swing.Icon;
@@ -11,6 +12,9 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.general.DefaultPieDataset;
+
+import ParqueSoft.Algoritmos.Menu;
+
 import javax.swing.JFrame;
 
 public class ProgramaKernel {
@@ -526,8 +530,99 @@ public class ProgramaKernel {
     }
 
     public static void Metodo1Activity11(){
-        int Tipo = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite el tipo de cliente que sos"));
+        int Tipo;
+        float Descuento;
+        boolean ConfirmacionTipo = true;
+        while (ConfirmacionTipo) {
+            Tipo = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite el tipo de cliente que sos"));
+            if (Tipo >= 1 || Tipo <=3){
+                ConfirmacionTipo = false;
+                String DineroFormateado = "";
+                long Dinero = PedirNumeroDinero("Digite el valor de su compra", 80, 80);
+                if (Tipo==1){
+                    Descuento = 0.1f;
+                }else if (Tipo==2){
+                    Descuento = 0.05f;
+                }else{
+                    Descuento = 0.03f;
+                }
+                float ResultadoARestar = Dinero * Descuento;
+                long TotalAPagar = (long)(Dinero - ResultadoARestar);
+                DineroFormateado = FormatearDinero(TotalAPagar);
+                String DescuentoFormateado = FormatearDinero((long)ResultadoARestar);
+                String CompraFormateada = FormatearDinero(Dinero);
+                JOptionPane.showMessageDialog(null,""
+                +"Tu compra es de: $"+CompraFormateada+"\n"
+                +"Tu descuento es de: $"+DescuentoFormateado+"\n"
+                +"Tienes que pagar: $"+DineroFormateado+"\n");
+            }else{
+                JOptionPane.showMessageDialog(null,
+                "Ocurrio un error en el programa\nVuelve a digitar el numero\nAcuerdece que solo hay 3 tipos de usuarios", "Error",
+                JOptionPane.ERROR_MESSAGE);            
+            }
+        }
+
     }
+
+    public static void Metodo1Activity12(){
+        int Menu;
+        double[] Numero = new double[5];
+        boolean ConfirmacionMenu = true;
+        while (ConfirmacionMenu){
+            Menu = Integer.parseInt(JOptionPane.showInputDialog("***MENÚ***\n"
+            + "Seleccione una figura geométrica \n"
+            + "1. Rectángulo\n"
+            + "2. triángulo\n"
+            + "3. Círculo\n"
+            + "4. Cuadrado \n"
+            + "5. Salir\n"));
+            if (Menu>=1 || Menu<=5){
+                switch (Menu){
+                    case 1:
+                        Numero[1]=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor del lado A del rectángulo "));
+                        Numero[2]=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor del lado B del rectángulo "));
+                        Numero[0]=Numero[1]*Numero[2];
+                        JOptionPane.showMessageDialog(null,"El área de rectángulo es de : " + Numero[0]+"\n A = "+Numero[1]+"\n B = "+Numero[2],"Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaRectangulo.jpg",250,250));
+                        JOptionPane.showMessageDialog(null,"La fórmula utilizada para hallar el área del rectángulo fue la siguiente\n" +"\n A = "+Numero[1]+"\n B = "+Numero[2]+"\n"
+                                + "Area = a*b ","Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaRectangulo.jpg",250,250));
+                    break;
+                    case 2:
+                        Numero[1]=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor de la base del triángulo : "));
+                        Numero[2]=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor de la Altura del triángulo : "));
+                        Numero[0]=(Numero[1]*Numero[2])/2;
+                        JOptionPane.showMessageDialog(null,"EL área del triángulo es de : " + Numero[0]+"\n B = "+Numero[1]+"\n H = "+Numero[2],"Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaTriangulo.png",250,250));
+                        JOptionPane.showMessageDialog(null, "La formula que se utilizó para hallar el área del triángulo fue la siguiente \n"+"B = "+Numero[1]+"\n H = "+Numero[2]
+                                + "Area = b*h / 2","Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaTriangulo.png",250,250));
+                                
+                    break;
+                    case 3:
+                        final double PI = 3.1415;
+                        Numero[1]=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor del radio del círculo : "));
+                        Numero[2]=Numero[1]*Numero[1];
+                        Numero[0]=PI*Numero[2];
+                        JOptionPane.showMessageDialog(null,"El área del círculo es de : "+ Numero[0]+"\n r = "+Numero[1]+"\n r2 = "+Numero[2],"Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaCirculo.jpg",250,250));
+                        JOptionPane.showMessageDialog(null,"La formula que se utilizó para conocer el área del círculo fue la siguiente \n"+"r = "+Numero[1]+"\n r2 = "+Numero[2]
+                                 + "Area = pi * (r)*(r)","Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaCirculo.jpg",250,250));
+                    break;
+                    case 4:
+                        Numero[1]=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor de los lados del cuadrado "));
+                        Numero[0]= Numero[1]*Numero[1];
+                        JOptionPane.showMessageDialog(null,"El área del cuadrado es de : " +Numero[0]+"\nB = "+Numero[1]+"\nH = "+Numero[1],"Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaCuadrado.jpg",250,250));
+                        JOptionPane.showMessageDialog(null, "La formula que se utiliza para conocer el área del cuadrado es la siguiente : \n"+"B = "+Numero[1]+"\nH = "+Numero[1]+"\n"
+                                + "Área = a*a","Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaCuadrado.jpg",250,250));
+                    break;
+                    default:
+                        ConfirmacionMenu = false;       
+                    break;
+                }
+            }else{
+                JOptionPane.showMessageDialog(null,
+                "Ocurrio un error en el programa\nDigite un numero valido", "Error",
+                JOptionPane.ERROR_MESSAGE);     
+            }
+        }
+    }
+        
     public static void GenerarStadisticaSegunPorcentaje(String[] Nombres, int Total, int[] Porcentajes){
         DefaultPieDataset dataset = new DefaultPieDataset();
         //double[] PorcentajesGrafica = new double[Total];
