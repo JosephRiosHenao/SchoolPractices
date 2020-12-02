@@ -1,4 +1,4 @@
-package Main;
+package MainCode;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;

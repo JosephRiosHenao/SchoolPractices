@@ -1,4 +1,4 @@
-package Main;
+package MainCode;
 
 import java.io.*;
 

@@ -18,7 +18,7 @@ import ParqueSoft.Algoritmos.Menu;
 import javax.swing.JFrame;
 
 public class ProgramaKernel {
-    static Main.RenderImagesClass Render = new Main.RenderImagesClass();
+    static MainCode.RenderImagesClass Render = new MainCode.RenderImagesClass();
 
     public static void Metodo1Activity1() {
         boolean Confirmacion = true;
@@ -517,7 +517,7 @@ public class ProgramaKernel {
         String Mensaje="";
         float[] numero = new float[2];
         for (int i = 0; i<2; i++){
-            numero[i]=Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el "+i+"° numero: "));
+            numero[i]=Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el "+(i+1)+"° numero: "));
         }
         if (numero[0]==numero[1]){
             Mensaje = numero[0]+" x "+numero[1]+" = "+(numero[0]*numero[1]);
@@ -535,7 +535,7 @@ public class ProgramaKernel {
         boolean ConfirmacionTipo = true;
         while (ConfirmacionTipo) {
             Tipo = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite el tipo de cliente que sos"));
-            if (Tipo >= 1 || Tipo <=3){
+            if (Tipo >= 1 && Tipo <=3){
                 ConfirmacionTipo = false;
                 String DineroFormateado = "";
                 long Dinero = PedirNumeroDinero("Digite el valor de su compra", 80, 80);
@@ -592,7 +592,7 @@ public class ProgramaKernel {
                         Numero[0]=(Numero[1]*Numero[2])/2;
                         JOptionPane.showMessageDialog(null,"EL área del triángulo es de : " + Numero[0]+"\n B = "+Numero[1]+"\n H = "+Numero[2],"Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaTriangulo.png",250,250));
                         JOptionPane.showMessageDialog(null, "La formula que se utilizó para hallar el área del triángulo fue la siguiente \n"+"B = "+Numero[1]+"\n H = "+Numero[2]
-                                + "Area = b*h / 2","Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaTriangulo.png",250,250));
+                                + "\nArea = b*h / 2","Formula",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/AreaTriangulo.png",250,250));
                                 
                     break;
                     case 3:
