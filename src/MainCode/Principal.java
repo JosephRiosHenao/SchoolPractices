@@ -15,6 +15,7 @@ public class Principal {
                 Long Dinero = Long.parseLong(JOptionPane.showInputDialog(null,"Digite dinero"));*/
                 //ConditionalActivity.ProgramaKernel.Metodo1Activity3();
                 //ConditionalActivity.MenuActivity.MenuActivityConditional();
-                ConditionalActivity.SistemaDeEmpleados.Inicializar();
+                ConditionalActivity.SistemaDeEmpleados A = new ConditionalActivity.SistemaDeEmpleados();
+                A.Seccion();
     }
 }
