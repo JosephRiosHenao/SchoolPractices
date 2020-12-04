@@ -52,13 +52,38 @@ public class SistemaDeEmpleados {
         JOptionPane.showMessageDialog(null, MensajeAMostrar, "Informacion",JOptionPane.PLAIN_MESSAGE,new ImageIcon(new ImageIcon(getClass().getResource("/resources/IMG/InformationList.jpg")).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH)));
     }
     public void Nomina(){
-        int Horas, HorasExtras, Ocupacion, Sueldo;
+        int Horas, HorasExtras, Ocupacion; 
+        double SueldoBase = 0, SueldoTotal = 0, Descuento;
         Ocupacion = Integer.parseInt(JOptionPane.showInputDialog(null,  "Ingrese su puesto de trabajo\n"
                                                                         +"1. Director\n"
                                                                         +"2. Gerente\n"
                                                                         +"3. Empleado general\n"));
         Horas = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese sus horas de trabajo"));
         HorasExtras = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese sus horas extras de trabajo"));
-
+        if (Ocupacion == 1){
+            SueldoBase = 33333 * Horas;
+        }
+        if (Ocupacion == 2){
+            SueldoBase = 20000 * Horas;
+        }
+        if (Ocupacion == 3){
+            SueldoBase = 5500 * Horas;
+        }
+        Descuento = SueldoBase * 0.10;
+        SueldoTotal = SueldoTotal - Descuento;
+        Descuento = SueldoBase * 0.20;
+        SueldoTotal = SueldoTotal - Descuento;
+        if (HorasExtras>=1 && HorasExtras<=5){
+            SueldoTotal = SueldoTotal + 15000;
+        }
+        if (HorasExtras>=6 && HorasExtras<=8){
+            SueldoTotal = SueldoTotal + 25000;
+        }
+        if (HorasExtras>10){
+            JOptionPane.showMessageDialog(null, "Ganastes un bono de supermercado!");
+        }
+        SueldoTotal = SueldoTotal + 55000;
+        JOptionPane.showMessageDialog(null,  "Su sueldo base es: "+SueldoBase+"\n"
+                                            +"Su sueldo total es: "+SueldoTotal);
     }
 }
