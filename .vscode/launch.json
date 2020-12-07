@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Explicar1",
+            "request": "launch",
+            "mainClass": "Practices.Java.Explicar1",
+            "projectName": "SchoolPractices_b6181e2e"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
