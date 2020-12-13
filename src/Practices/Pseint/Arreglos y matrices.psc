@@ -22,7 +22,7 @@ FinFuncion
 Funcion Actividad2
 	Definir Nombres Como Caracter;
 	Definir i, SizeDeArreglo como entero;
-	Escribir "Digite el tamaño del arreglo de nombres";
+	Escribir "Digite el tamano del arreglo de nombres";
 	leer SizeDeArreglo;
 	Dimension Nombres(SizeDeArreglo);
 	Para i = 0 Hasta SizeDeArreglo - 1 Con Paso paso Hacer
