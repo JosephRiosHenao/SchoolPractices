@@ -334,8 +334,8 @@ Funcion Actividad7
 FinFuncion
 Funcion Actividad8
 	Definir ConfirmacionMatriz,ConfirmacionArreglo,TerminarCiclo Como Logico;
-	Definir i,j,Filas,Columnas,Confirmacion,Option,NumeroAsignador,Unidimensional,Minimo,Maximo Como Entero;
-	Definir Number,Resultado,Minimo,Maximo Como Real;
+	Definir i,j,Filas,Columnas,Confirmacion,Option,NumeroAsignador,Unidimensional,Bidimensional,Minimo,Maximo,NumeroABuscar,Contador Como Entero;
+	Definir Resultado,Minimo,Maximo Como Real;
 	Escribir "-----------------------";
 	Escribir "¿Que arreglo utilizara?";
 	Escribir "1.Unidimensional";
@@ -388,6 +388,22 @@ Funcion Actividad8
 					Para i=0 Hasta Filas-1 Con Paso 1 Hacer
 						Unidimensional(i) = Aleatorio(Minimo, Maximo);
 					Fin Para
+					Limpiar Pantalla;
+				2:
+					Contador = 1;
+					Escribir "Digite el valor que desea encontrar";
+					leer NumeroABuscar;
+					Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+						SI Unidimensional(i)==NumeroABuscar Entonces
+							Escribir "Existe ",Contador," en la posicion ",i," con numero ",NumeroABuscar;
+							Contador = Contador + 1; 
+						FinSi
+					Fin Para
+					Si Contador == 1 Entonces
+						Escribir "El numero digitado no se encuentra en el arreglo";
+					FinSi
+				De Otro Modo:
+					TerminarCiclo = Falso;
 			FinSegun
 		FinMientras
 	SiNo
@@ -429,11 +445,89 @@ Funcion Actividad8
 			Limpiar Pantalla;			
 		FinMientras
 		Limpiar Pantalla;
-		Dimension Number(Filas,Columnas);
-		
-		Limpiar Pantalla;
+		Dimension Bidimensional(Filas,Columnas);
+		TerminarCiclo = Verdadero;
+		si (Columnas>=Filas) Entonces
+			Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+				Para j=0 Hasta Columnas-1 Con Paso 1 Hacer
+					Bidimensional(i,j) = 0;
+				Fin Para
+			Fin Para
+		FinSi
+		si (Columnas<Filas) Entonces
+			Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+				Para j=0 Hasta Columnas-1 Con Paso 1 Hacer
+					Bidimensional(i,j) = 0;
+				Fin Para
+			Fin Para
+		FinSi
+		Mientras TerminarCiclo == Verdadero Hacer
+			si (Columnas>=Filas) Entonces
+				Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+					Para j=0 Hasta Columnas-1 Con Paso 1 Hacer
+						Escribir "[",Bidimensional(i,j),"]" Sin Saltar;
+					Fin Para
+					Escribir "";
+				Fin Para
+			FinSi
+			si (Columnas<Filas) Entonces
+				Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+					Para j=0 Hasta Columnas-1 Con Paso 1 Hacer
+						Escribir "[",Bidimensional(i,j),"]" Sin Saltar;
+					Fin Para
+					Escribir "";
+				Fin Para
+			FinSi
+			Escribir "----------------------";
+			Escribir "¿Que desea hacer?";
+			Escribir "1.Asignar valores";
+			Escribir "2.Encontrar posicion";
+			Escribir "3.Salir";
+			Escribir "----------------------";
+			leer Option;
+			Segun Option hacer
+				1:
+					Escribir "Digite el valor minimo";
+					leer Minimo;
+					Escribir "Digite el valor maximo";
+					leer Maximo;
+					si (Columnas>=Filas) Entonces
+						Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+							Para j=0 Hasta Columnas-1 Con Paso 1 Hacer
+								Bidimensional(i,j) = Aleatorio(Minimo,Maximo);
+							Fin Para
+						Fin Para
+					FinSi
+					si (Columnas<Filas) Entonces
+						Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+							Para j=0 Hasta Columnas-1 Con Paso 1 Hacer
+								Bidimensional(i,j) = Aleatorio(Minimo,Maximo);
+							Fin Para
+						Fin Para
+					FinSi
+					Limpiar Pantalla;
+				2:
+					Contador = 1;
+					Escribir "Digite el valor que desea encontrar";
+					leer NumeroABuscar;
+					Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+						Para j=0 Hasta Columnas-1 Con Paso 1 Hacer
+							Si BIdimensional(i,j)==NumeroABuscar Entonces
+								Escribir "Existe ",Contador," en la posicion [",i,",",j,"] con numero ",NumeroABuscar;
+								Contador = Contador + 1; 
+							FinSi
+						Fin Para
+					Fin Para
+					Si Contador == 1 Entonces
+						Escribir "El numero digitado no se encuentra en el arreglo";
+					FinSi
+				De Otro Modo:
+					TerminarCiclo = Falso;
+			FinSegun
+		FinMientras
 	FinSi
-
+	WaitMessage;
+	Menu;
 FinFuncion
 Funcion Actividad9
 	
