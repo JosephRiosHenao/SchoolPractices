@@ -1,3 +1,6 @@
+Proceso ArreglosYMatrices
+	
+FinProceso
 //1.Crear un arreglo llamado nombres y que almacene los siguientes nombres de personas: Juan, Pedro, Maria, Humberto y Oscar
 //2.Llenar un arreglo con nombres de personams. Preguntar al usuario cuantos datos desea ingresar
 //3.Para sumar los elementos de un vector debemos usar un acumulador inicializado en cero
@@ -542,7 +545,7 @@ Funcion Menu
 	Escribir "5.Mostrar numeros primos en arreglo";
 	Escribir "6.Nombres y su longitud";
 	Escribir "7.Suma de 2 arreglos en un tercero";
-	Escribir "8.";
+	Escribir "8.Asig/Search en arreglos";
 	Escribir "9.";
 	Escribir "10.Salir";
 	Escribir "----------------------------------------";
