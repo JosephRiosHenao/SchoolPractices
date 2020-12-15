@@ -279,6 +279,7 @@ FinFuncion
 Funcion Actividad7
 	Definir Arreglo1,Arreglor2,Arreglo3,i,Tamano,Option,Minimo,Maximo Como Entero;
 	Definir Ciclo Como Logico;
+	Limpiar Pantalla;
 	Escribir "Digite el tamaño del arreglo";
 	leer Tamano;
 	Dimension Arreglo1(Tamano);
@@ -318,6 +319,15 @@ Funcion Actividad7
 		Para i=0 Hasta Tamano-1 Con Paso 1 Hacer
 			Escribir "Arreglo1[",i,"]: ",Arreglo1(i)," + Arreglo2[",i,"]: ",Arreglo2(i)," = " Arreglo3(i);
 		Fin Para
+		Escribir "-----------------------";
+		Escribir "¿Que desea hacer?";
+		Escribir "1.Cambiar valores";
+		Escribir "2.Volver";
+		Escribir "-----------------------";
+		leer Option;
+		si Option == 2 Entonces
+			Ciclo = Falso;
+		FinSi
 	FinMientras
 	WaitMessage;
 	Menu;
@@ -335,11 +345,11 @@ Funcion Menu
 	Escribir "2.Arreglo modificable";
 	Escribir "3.Mostrar y sumar elementos de un vector";
 	Escribir "4.Encontrar posicion en una matriz";
-	Escribir "5.Mostrar numeros primos en arreglo"
-	Escribir "6."
-	Escribir "7."
-	Escribir "8."
-	Escribir "9."
+	Escribir "5.Mostrar numeros primos en arreglo";
+	Escribir "6.Nombres y su longitud";
+	Escribir "7.Suma de 2 arreglos en un tercero";
+	Escribir "8.";
+	Escribir "9.";
 	Escribir "10.Salir";
 	Escribir "----------------------------------------";
 	Actividades;
