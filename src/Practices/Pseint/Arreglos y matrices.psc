@@ -248,7 +248,7 @@ Funcion Actividad5
 		Escribir "-----------------------";
 		leer Option;
 		si Option == 2 Entonces
-			Ciclo = Falso
+			Ciclo = Falso;
 		FinSi
 	FinMientras
 	WaitMessage;
@@ -269,7 +269,7 @@ Funcion Actividad6
 	Fin Para
 	Limpiar Pantalla;
 	Para i=0 Hasta Tamano-1 Con Paso 1 Hacer
-		Escribir "Nombre: ",Nombre(i);
+		Escribir "Nombre: ",Nombres(i);
 		Escribir "Longitud: ",Lent(i);
 		Escribir "------------------";
 	Fin Para
@@ -333,7 +333,107 @@ Funcion Actividad7
 	Menu;
 FinFuncion
 Funcion Actividad8
-	
+	Definir ConfirmacionMatriz,ConfirmacionArreglo,TerminarCiclo Como Logico;
+	Definir i,j,Filas,Columnas,Confirmacion,Option,NumeroAsignador,Unidimensional,Minimo,Maximo Como Entero;
+	Definir Number,Resultado,Minimo,Maximo Como Real;
+	Escribir "-----------------------";
+	Escribir "¿Que arreglo utilizara?";
+	Escribir "1.Unidimensional";
+	Escribir "2.Bidimensional";
+	Escribir "-----------------------";
+	leer Option;
+	Limpiar Pantalla;
+	Si Option == 1 Entonces
+		ConfirmacionArreglo = Verdadero;
+		Mientras ConfirmacionArreglo == Verdadero Hacer
+			Limpiar Pantalla;
+			Escribir "Digite el tamaño del arreglo";
+			leer Filas;
+			Limpiar Pantalla;
+			Para i = 0 Hasta Filas-1 Con Paso 1 Hacer
+				Escribir "[",i,"]" Sin Saltar;
+			Fin Para
+			Escribir "----------------------";
+			Escribir "¿Que desea hacer?";
+			Escribir "1.Cambiar tamaño";
+			Escribir "2.Continuar";
+			Escribir "----------------------";
+			leer Option;
+			si Option == 2 Entonces
+				ConfirmacionArreglo = Falso;
+			FinSi
+		FinMientras
+		Dimension Unidimensional(Filas);
+		TerminarCiclo = Verdadero;
+		Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+			Unidimensional(i) = 0;
+		Fin Para
+		Mientras TerminarCiclo == Verdadero Hacer
+			Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+				Escribir "[",Unidimensional(i),"]" Sin Saltar;
+			Fin Para
+			Escribir "----------------------";
+			Escribir "¿Que desea hacer?";
+			Escribir "1.Asignar valores";
+			Escribir "2.Encontrar posicion";
+			Escribir "3.Salir";
+			Escribir "----------------------";
+			leer Option;
+			Segun Option hacer
+				1:
+					Escribir "Digite el valor minimo";
+					leer Minimo;
+					Escribir "Digite el valor maximo";
+					leer Maximo;
+					Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+						Unidimensional(i) = Aleatorio(Minimo, Maximo);
+					Fin Para
+			FinSegun
+		FinMientras
+	SiNo
+		ConfirmacionMatriz = verdadero;
+		Mientras ConfirmacionMatriz == Verdadero hacer
+			Escribir "Valor recomendado 10 filas y 10 columnas";
+			Escribir "Digite el tamaño de Filas";
+			leer Filas;
+			Escribir "Digite el tamaño de columnas";
+			leer Columnas;
+			Limpiar Pantalla;
+			Escribir "Filas = ",Filas," Columnas = ",Columnas;
+			Escribir "------------------------";
+			si (Columnas>=Filas) Entonces
+				Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+					Para j=0 Hasta Columnas-1 Con Paso 1 Hacer
+						Escribir " [",i,",",j,"]" Sin Saltar;
+					Fin Para
+					Escribir "";
+				Fin Para
+			FinSi
+			si (Columnas<Filas) Entonces
+				Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+					Para j=0 Hasta Columnas-1 Con Paso 1 Hacer
+						Escribir " [",i,",",j,"]" Sin Saltar;
+					Fin Para
+					Escribir "";
+				Fin Para
+			FinSi
+			Escribir "---------------------";
+			Escribir "¿Que desea hacer?";
+			Escribir "1. Continuar";
+			Escribir "2. Volver a digitar";
+			Escribir "---------------------";
+			leer Confirmacion;
+			si (Confirmacion == 1) Entonces
+				ConfirmacionMatriz = Falso;
+			FinSi
+			Limpiar Pantalla;			
+		FinMientras
+		Limpiar Pantalla;
+		Dimension Number(Filas,Columnas);
+		
+		Limpiar Pantalla;
+	FinSi
+
 FinFuncion
 Funcion Actividad9
 	
