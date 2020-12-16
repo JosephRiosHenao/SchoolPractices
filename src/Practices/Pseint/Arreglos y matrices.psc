@@ -44,9 +44,9 @@ Funcion Actividad3
 	Resultado = 0;
 	Mientras ConfirmacionMatriz == Verdadero hacer
 		Escribir "Valor recomendado 10 filas y 10 columnas";
-		Escribir "Digite el tamaÃ±o de Filas";
+		Escribir "Digite el tamaño de Filas";
 		leer Filas;
-		Escribir "Digite el tamaÃ±o de columnas";
+		Escribir "Digite el tamaño de columnas";
 		leer Columnas;
 		Limpiar Pantalla;
 		Escribir "Filas = ",Filas," Columnas = ",Columnas;
@@ -68,7 +68,7 @@ Funcion Actividad3
 			Fin Para
 		FinSi
 		Escribir "---------------------";
-		Escribir "Â¿Que desea hacer?";
+		Escribir "¿Que desea hacer?";
 		Escribir "1. Continuar";
 		Escribir "2. Volver a digitar";
 		Escribir "---------------------";
@@ -82,7 +82,7 @@ Funcion Actividad3
 	Limpiar Pantalla;
 	Dimension Number(Filas,Columnas);
 	Escribir "---------------------";
-	Escribir "Â¿CÃ³mo desea agregar los valores?";
+	Escribir "¿Cómo desea agregar los valores?";
 	Escribir "1. Aleatorio";
 	Escribir "2. Manual";
 	Escribir "---------------------";
@@ -187,7 +187,7 @@ Funcion Actividad4
 			Escribir "";
 		Fin Para
 		Escribir "-----------------------";
-		Escribir "Â¿Que desea hacer?";
+		Escribir "¿Que desea hacer?";
 		Escribir "1.Encontrar posicion";
 		Escribir "2.Volver";
 		Escribir "-----------------------";
@@ -215,7 +215,7 @@ FinFuncion
 Funcion Actividad5
 	Definir Tamano,Arreglo,i,MultiploN,Resultado,Option Como Entero;
 	Definir Ciclo Como Logico;
-	Escribir "Digite el tamaÃ±o del vector";
+	Escribir "Digite el tamaño del vector";
 	leer Tamano;
 	Dimension Arreglo(Tamano);
 	Ciclo = Verdadero;
@@ -230,7 +230,7 @@ Funcion Actividad5
 			Escribir "[",Arreglo(i),"]";
 		Fin Para
 		Escribir "-----------------------";
-		Escribir "Â¿Que desea hacer?";
+		Escribir "¿Que desea hacer?";
 		Escribir "1.Cambiar multiplo";
 		Escribir "2.Volver";
 		Escribir "-----------------------";
@@ -252,7 +252,7 @@ Funcion Actividad6
 	Dimension Lent(Tamano);
 	Limpiar Pantalla;
 	Para i=0 Hasta Tamano-1 Con Paso 1 Hacer
-		Escribir "Digite el ",i+1,"Â° nombre";
+		Escribir "Digite el ",i+1,"° nombre";
 		leer Nombres(i);
 		Lent(i) = Longitud(Nombres(i));
 	Fin Para
@@ -269,7 +269,7 @@ Funcion Actividad7
 	Definir Arreglo1,Arreglo2,Arreglo3,i,Tamano,Option,Minimo,Maximo Como Entero;
 	Definir Ciclo Como Logico;
 	Limpiar Pantalla;
-	Escribir "Digite el tamaÃ±o del arreglo";
+	Escribir "Digite el tamaño del arreglo";
 	leer Tamano;
 	Dimension Arreglo1(Tamano);
 	Dimension Arreglo2(Tamano);
@@ -278,7 +278,7 @@ Funcion Actividad7
 	Mientras Ciclo == Verdadero Hacer
 		Limpiar Pantalla;
 		Escribir "---------------------";
-		Escribir "Â¿CÃ³mo desea agregar los valores?";
+		Escribir "¿Cómo desea agregar los valores?";
 		Escribir "1. Aleatorio";
 		Escribir "2. Manual";
 		Escribir "---------------------";
@@ -287,9 +287,9 @@ Funcion Actividad7
 		si Option == 2 Entonces
 			Para i=0 Hasta Tamano-1 Con Paso 1 Hacer
 				Limpiar Pantalla;
-				Escribir "Digite el ",i+1,"Â° numero del arreglo 1";
+				Escribir "Digite el ",i+1,"° numero del arreglo 1";
 				Leer Arreglo1(i);
-				Escribir "Digite el ",i+1,"Â° numero del arreglo 2";
+				Escribir "Digite el ",i+1,"° numero del arreglo 2";
 				Leer Arreglo2(i);
 				Arreglo3(i) = Arreglo1(i) + Arreglo2(i);
 			Fin Para
@@ -309,7 +309,7 @@ Funcion Actividad7
 			Escribir "Arreglo1[",i,"]: ",Arreglo1(i)," + Arreglo2[",i,"]: ",Arreglo2(i)," = " Arreglo3(i);
 		Fin Para
 		Escribir "-----------------------";
-		Escribir "Â¿Que desea hacer?";
+		Escribir "¿Que desea hacer?";
 		Escribir "1.Cambiar valores";
 		Escribir "2.Volver";
 		Escribir "-----------------------";
@@ -326,7 +326,7 @@ Funcion Actividad8
 	Definir ConfirmacionMatriz,ConfirmacionArreglo,TerminarCiclo Como Logico;
 	Definir i,j,Filas,Columnas,Confirmacion,Option,NumeroAsignador,Unidimensional,Bidimensional,Minimo,Maximo,NumeroABuscar,Contador,Resultado Como Entero;
 	Escribir "-----------------------";
-	Escribir "Â¿Que arreglo utilizara?";
+	Escribir "¿Que arreglo utilizara?";
 	Escribir "1.Unidimensional";
 	Escribir "2.Bidimensional";
 	Escribir "-----------------------";
@@ -336,7 +336,7 @@ Funcion Actividad8
 		ConfirmacionArreglo = Verdadero;
 		Mientras ConfirmacionArreglo == Verdadero Hacer
 			Limpiar Pantalla;
-			Escribir "Digite el tamaÃ±o del arreglo";
+			Escribir "Digite el tamaño del arreglo";
 			leer Filas;
 			Limpiar Pantalla;
 			Para i = 0 Hasta Filas-1 Con Paso 1 Hacer
@@ -344,8 +344,8 @@ Funcion Actividad8
 			Fin Para
 			Escribir "";
 			Escribir "----------------------";
-			Escribir "Â¿Que desea hacer?";
-			Escribir "1.Cambiar tamaÃ±o";
+			Escribir "¿Que desea hacer?";
+			Escribir "1.Cambiar tamaño";
 			Escribir "2.Continuar";
 			Escribir "----------------------";
 			leer Option;
@@ -364,7 +364,7 @@ Funcion Actividad8
 			Fin Para
 			Escribir "";
 			Escribir "----------------------";
-			Escribir "Â¿Que desea hacer?";
+			Escribir "¿Que desea hacer?";
 			Escribir "1.Asignar valores";
 			Escribir "2.Encontrar posicion";
 			Escribir "3.Salir";
@@ -403,9 +403,9 @@ Funcion Actividad8
 		ConfirmacionMatriz = verdadero;
 		Mientras ConfirmacionMatriz == Verdadero hacer
 			Escribir "Valor recomendado 10 filas y 10 columnas";
-			Escribir "Digite el tamaÃ±o de Filas";
+			Escribir "Digite el tamaño de Filas";
 			leer Filas;
-			Escribir "Digite el tamaÃ±o de columnas";
+			Escribir "Digite el tamaño de columnas";
 			leer Columnas;
 			Limpiar Pantalla;
 			Escribir "Filas = ",Filas," Columnas = ",Columnas;
@@ -427,7 +427,7 @@ Funcion Actividad8
 				Fin Para
 			FinSi
 			Escribir "---------------------";
-			Escribir "Â¿Que desea hacer?";
+			Escribir "¿Que desea hacer?";
 			Escribir "1. Continuar";
 			Escribir "2. Volver a digitar";
 			Escribir "---------------------";
@@ -472,7 +472,7 @@ Funcion Actividad8
 				Fin Para
 			FinSi
 			Escribir "----------------------";
-			Escribir "Â¿Que desea hacer?";
+			Escribir "¿Que desea hacer?";
 			Escribir "1.Asignar valores";
 			Escribir "2.Encontrar posicion";
 			Escribir "3.Salir";
@@ -564,7 +564,7 @@ Funcion Actividad10
 	ConfirmacionArreglo = Verdadero;
 	Mientras ConfirmacionArreglo == Verdadero Hacer
 		Limpiar Pantalla;
-		Escribir "Digite el tamaÃ±o del arreglo";
+		Escribir "Digite el tamaño del arreglo";
 		leer Filas;
 		Limpiar Pantalla;
 		Para i = 0 Hasta Filas-1 Con Paso 1 Hacer
@@ -572,8 +572,8 @@ Funcion Actividad10
 		Fin Para
 		Escribir "";
 		Escribir "----------------------";
-		Escribir "Â¿Que desea hacer?";
-		Escribir "1.Cambiar tamaÃ±o";
+		Escribir "¿Que desea hacer?";
+		Escribir "1.Cambiar tamaño";
 		Escribir "2.Continuar";
 		Escribir "----------------------";
 		leer Option;
@@ -593,7 +593,7 @@ Funcion Actividad10
 		Fin Para
 		Escribir "";
 		Escribir "----------------------";
-		Escribir "Â¿Que desea hacer?";
+		Escribir "¿Que desea hacer?";
 		Escribir "1.Asignar valores";
 		Escribir "2.Ordenarlos";
 		Escribir "3.Salir";
@@ -634,7 +634,7 @@ Funcion Actividad10
 	Menu;
 FinFuncion
 Funcion Actividad11
-	
+	Escribir "No la alcanze a realizar y el algoritmo me cuesta";
 FinFuncion
 Funcion Actividad12
 	
@@ -659,10 +659,70 @@ Funcion Actividad13
 	Fin Para
 FinFuncion
 Funcion Actividad14
-	
+	Definir Multi, unid,d Como Entero;
+	Definir X, yy, SS Como Entero;
+	Definir i,l,  j,k,r Como Entero;
+	Escribir "inserte las dimensiones de la matriz";
+	Leer i,l;
+	Dimension Multi(i,l);
+	Dimension unid(i*l);
+	Para k = 0 Hasta i-1 Con Paso 1 Hacer
+		Para j = 0 Hasta l-1 Con Paso 1 Hacer
+			Multi(k,j) = azar(i*l);
+		FinPara
+	FinPara
+	Limpiar Pantalla;
+	Para k = 0 Hasta i-1 Con Paso 1 Hacer
+		Para j = 0 Hasta l-1 Con Paso 1 Hacer
+			Escribir "",Multi(k,j),"|" Sin Saltar;
+		FinPara
+		Escribir "";
+	FinPara
+	Escribir "En array es:";
+	Para k = 0 Hasta i-1 Con Paso 1 Hacer
+		Para j = 0 Hasta l-1 Con Paso 1 Hacer
+			unid(k) = Multi(k,j);
+			unid(k) = Multi(k,j);
+			Escribir "",unid(k), " " Sin Saltar;
+		FinPara
+	FinPara
+	Escribir "";
 FinFuncion
 Funcion Actividad15
-	
+	Definir Eleccion,Matriz,i,j Como Entero;
+	Definir Ciclo Como Logico;
+	Dimension Matriz(5,12);
+	Para i=0 Hasta 4 Con Paso 1 Hacer
+		Para j=0 Hasta 11 Con Paso 1 Hacer
+			Matriz[i,j] = Aleatorio(500,100000);
+		Fin Para
+	Fin Para
+	Ciclo = Verdadero;
+	Mientras Ciclo == Verdadero Hacer
+		Limpiar Pantalla;
+		Escribir "--------------Actividades----------------";
+		Escribir "1.Mostrar ventas mensuales";
+		Escribir "2.Mostrar monto anual";
+		Escribir "3.Mostrar mayor venta";
+		Escribir "4.Salir";
+		Escribir "-----------------------------------------";
+		leer Eleccion;
+		Limpiar Pantalla;
+		Segun Eleccion
+			1:
+				MostrarVentasMensuales(Matriz);
+			2:
+				MontoAnual(Matriz);
+			3:
+				MostrarMayorVenta(Matriz);	
+			4:
+				Ciclo = falso;
+			De Otro Modo:
+				Escribir "Digite un numero valido";
+		FinSegun
+	FinMientras
+	WaitMessage;
+	Menu;
 FinFuncion
 Funcion Actividad16
 	
@@ -683,13 +743,61 @@ Funcion Menu
 	Escribir "11.Metodo de ordenamiento por seleccion";
 	Escribir "12.";
 	Escribir "13.Generar arreglo 2D con valores azar";
-	Escribir "14.";
-	Escribir "15.";
+	Escribir "14.Arreglo bidimensional a unidimensional";
+	Escribir "15.Presupuestos de empresas";
 	Escribir "16.";
 	Escribir "17.Salir";
 	Escribir "----------------------------------------";
 	Actividades;
 Fin Funcion
+Funcion MostrarVentasMensuales(Matriz)
+	Definir i,j Como Entero;
+	Para i=0 Hasta 4 Con Paso 1 Hacer
+		Escribir "Empresa #",i+1;
+		Para j=0 Hasta 11 Con Paso 1 Hacer
+			Escribir "Mes ",j+1," Ingresos: $ ",Matriz[i,j] Sin Saltar;
+			Escribir "";
+		Fin Para
+		Escribir "";
+	Fin Para
+	WaitMessage;
+	Menu;
+FinFuncion
+Funcion MontoAnual(Matriz)
+	Definir i,j,IngresosAnuales Como Entero;
+	IngresosAnuales = 0;
+	Para i=0 Hasta 4 Con Paso 1 Hacer
+		Escribir "--------------------------------------";
+		Escribir "Empresa #",i+1;
+		Para j=0 Hasta 11 Con Paso 1 Hacer
+			IngresosAnuales = IngresosAnuales + Matriz[i,j];
+		Fin Para
+		Escribir "Ingresos anuales: $ ",IngresosAnuales Sin Saltar;
+		Escribir "";
+	Fin Para
+	WaitMessage;
+	Menu;
+FinFuncion
+Funcion MostrarMayorVenta(Matriz)
+	Definir i,j,PosibleMayor,MayorMes Como Entero;
+	PosibleMayor = 0;
+	MayorMes = 0;
+	Para i=0 Hasta 4 Con Paso 1 Hacer
+		Escribir "--------------------------------------";
+		Escribir "Empresa #",i+1;
+		Para j=0 Hasta 11 Con Paso 1 Hacer
+			si Matriz[i,j] > PosibleMayor Entonces
+				MayorMes = i+1;
+				PosibleMayor = Matriz[i,j];
+			FinSi
+		Fin Para
+		Escribir "Mes ",MayorMes,"° con mayor venta";
+		Escribir "Ingresos: ",PosibleMayor; 
+		Escribir "";
+	Fin Para
+	WaitMessage;
+	Menu;
+FinFuncion
 Funcion WaitMessage
 	Escribir "";
 	Escribir "----------------------------------";
