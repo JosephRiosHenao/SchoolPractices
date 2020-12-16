@@ -1,21 +1,6 @@
-Proceso ArreglosYMatrices
-	
-FinProceso
-//1.Crear un arreglo llamado nombres y que almacene los siguientes nombres de personas: Juan, Pedro, Maria, Humberto y Oscar
-//2.Llenar un arreglo con nombres de personams. Preguntar al usuario cuantos datos desea ingresar
-//3.Para sumar los elementos de un vector debemos usar un acumulador inicializado en cero
-//4.Crear una matriz de 4x5 y cargarlos con los primeros numeros naturales; al ingresar un numero cualquiera debera buscar dicho numero en la matriz e indicar en que fila y columna se encuentra el numero dado
-//5. Crea un array o arreglo unidimensional donde tu le indiques el tamaño por teclado y crear una función que rellene el array o arreglo con los múltiplos de un numero pedido por teclado. Por ejemplo, si defino un array de tamaño 5 y eligo un 3 en la función, el array contendrá 3, 6, 9, 12, 15. Muestralos por pantalla usando otra función distinta.
-//6. Crea dos arrays o arreglos unidimensionales que tengan el mismo tamaño (lo pedirá por teclado), en uno de ellos almacenaras nombres de personas como cadenas, en el otro array o arreglo ira almacenando la longitud de los nombres, para ello puedes usar la función LONGITUD(cadena) que viene en PseInt. Muestra por pantalla el nombre y la longitud que tiene. Puedes usar funciones si lo deseas.
-//7. Pedir valores numericos en dos arrays distintos y almacenar el resultado de los valores de cada posición (posición 0 del arreglo 1 + posición 0 del arreglo 2) y mostrar el contenido de los 3 arreglos de esta forma. valor pos 0 arreglo 1 + valor pos 0 arreglo 2 = valor pos 0 arreglo 3 valor pos 1 arreglo 1 + valor pos 1 arreglo 2 = valor pos 1 arreglo 3 …
-//8. Buscar un elemento dentro de un arreglo que nosotros le pedimos por teclado. Indicar las posición donde se encuentra. Si hay más de uno, indicar igualmente la posición.
-//9. Suponga un array que contiene N notas de 0 a 20 generados aleatoriamente y mostradas en pantalla, de acuerdo a la nota contenida, indique cuántos estudiantes son:
-//				
-//		Deficientes 0-5
-//		Regulares 6-10
-//		Buenos 11-15
-//		Excelentes 16-20
-//
+Algoritmo ArreglosYMatricesAct
+	Menu;
+FinAlgoritmo
 Funcion Actividad1
 	Definir Nombres Como Caracter;
 	Definir i como entero;
@@ -27,7 +12,7 @@ Funcion Actividad1
 	Nombres[4] = "Oscar";
 	Escribir "[" Sin Saltar;
 	Para i = 0 Hasta 4 Con Paso 1 Hacer
-		Escribir Nombres[i]+", " Sin Saltar;
+		Escribir Nombres[i],", " Sin Saltar;
 	Fin Para
 	Escribir "]" Sin Saltar;
 	WaitMessage;
@@ -45,7 +30,7 @@ Funcion Actividad2
 	Fin Para
 	Escribir "[" Sin Saltar;
 	Para i = 0 Hasta SizeDeArreglo - 1 Con Paso 1 Hacer
-		Escribir Nombres[i]+", " Sin Saltar;
+		Escribir Nombres[i],", " Sin Saltar;
 	Fin Para
 	Escribir "]" Sin Saltar;
 	WaitMessage;
@@ -240,8 +225,8 @@ Funcion Actividad5
 		leer MultiploN;
 		Limpiar Pantalla;
 		Para i=0 Hasta Tamano-1 Con Paso 1 Hacer
+			Resultado = MultiploN * i;
 			Arreglo(i) = Resultado;
-			Resultado = Resultado + MultiploN;
 			Escribir "[",Arreglo(i),"]";
 		Fin Para
 		Escribir "-----------------------";
@@ -252,6 +237,7 @@ Funcion Actividad5
 		leer Option;
 		si Option == 2 Entonces
 			Ciclo = Falso;
+			Limpiar Pantalla;
 		FinSi
 	FinMientras
 	WaitMessage;
@@ -280,7 +266,7 @@ Funcion Actividad6
 	Menu;
 FinFuncion
 Funcion Actividad7
-	Definir Arreglo1,Arreglor2,Arreglo3,i,Tamano,Option,Minimo,Maximo Como Entero;
+	Definir Arreglo1,Arreglo2,Arreglo3,i,Tamano,Option,Minimo,Maximo Como Entero;
 	Definir Ciclo Como Logico;
 	Limpiar Pantalla;
 	Escribir "Digite el tamaño del arreglo";
@@ -308,13 +294,13 @@ Funcion Actividad7
 				Arreglo3(i) = Arreglo1(i) + Arreglo2(i);
 			Fin Para
 		SiNo
+			Escribir "Digite el valor minimo";
+			leer Minimo;
+			Escribir "Digite el valor maximo";
+			leer Maximo;
 			Para i=0 Hasta Tamano-1 Con Paso 1 Hacer
-				Escribir "Digite el valor minimo";
-				leer Minimo;
-				Escribir "Digite el valor maximo";
-				leer Maximo;
-				Arreglo1(i)  = Aleatorio(Minimo,Maximo);
-				Arreglo2(i)  = Aleatorio(Minimo,Maximo);
+				Arreglo1(i) = Aleatorio(Minimo,Maximo);
+				Arreglo2(i) = Aleatorio(Minimo,Maximo);
 				Arreglo3(i) = Arreglo1(i) + Arreglo2(i);			
 			Fin Para
 		FinSi
@@ -330,6 +316,7 @@ Funcion Actividad7
 		leer Option;
 		si Option == 2 Entonces
 			Ciclo = Falso;
+			Limpiar Pantalla;
 		FinSi
 	FinMientras
 	WaitMessage;
@@ -337,8 +324,7 @@ Funcion Actividad7
 FinFuncion
 Funcion Actividad8
 	Definir ConfirmacionMatriz,ConfirmacionArreglo,TerminarCiclo Como Logico;
-	Definir i,j,Filas,Columnas,Confirmacion,Option,NumeroAsignador,Unidimensional,Bidimensional,Minimo,Maximo,NumeroABuscar,Contador Como Entero;
-	Definir Resultado,Minimo,Maximo Como Real;
+	Definir i,j,Filas,Columnas,Confirmacion,Option,NumeroAsignador,Unidimensional,Bidimensional,Minimo,Maximo,NumeroABuscar,Contador,Resultado Como Entero;
 	Escribir "-----------------------";
 	Escribir "¿Que arreglo utilizara?";
 	Escribir "1.Unidimensional";
@@ -356,6 +342,7 @@ Funcion Actividad8
 			Para i = 0 Hasta Filas-1 Con Paso 1 Hacer
 				Escribir "[",i,"]" Sin Saltar;
 			Fin Para
+			Escribir "";
 			Escribir "----------------------";
 			Escribir "¿Que desea hacer?";
 			Escribir "1.Cambiar tamaño";
@@ -375,6 +362,7 @@ Funcion Actividad8
 			Para i=0 Hasta Filas-1 Con Paso 1 Hacer
 				Escribir "[",Unidimensional(i),"]" Sin Saltar;
 			Fin Para
+			Escribir "";
 			Escribir "----------------------";
 			Escribir "¿Que desea hacer?";
 			Escribir "1.Asignar valores";
@@ -388,6 +376,7 @@ Funcion Actividad8
 					leer Minimo;
 					Escribir "Digite el valor maximo";
 					leer Maximo;
+					Limpiar Pantalla;
 					Para i=0 Hasta Filas-1 Con Paso 1 Hacer
 						Unidimensional(i) = Aleatorio(Minimo, Maximo);
 					Fin Para
@@ -396,6 +385,7 @@ Funcion Actividad8
 					Contador = 1;
 					Escribir "Digite el valor que desea encontrar";
 					leer NumeroABuscar;
+					Limpiar Pantalla;
 					Para i=0 Hasta Filas-1 Con Paso 1 Hacer
 						SI Unidimensional(i)==NumeroABuscar Entonces
 							Escribir "Existe ",Contador," en la posicion ",i," con numero ",NumeroABuscar;
@@ -510,6 +500,7 @@ Funcion Actividad8
 					FinSi
 					Limpiar Pantalla;
 				2:
+					Limpiar Pantalla;
 					Contador = 1;
 					Escribir "Digite el valor que desea encontrar";
 					leer NumeroABuscar;
@@ -535,6 +526,67 @@ FinFuncion
 Funcion Actividad9
 	
 FinFuncion
+Funcion Actividad10
+	Definir i,Filas,Datos,Minimo,Maximo Como Entero;
+	Definir ConfirmacionArreglo,TerminarCiclo como logico;
+	ConfirmacionArreglo = Verdadero;
+	Mientras ConfirmacionArreglo == Verdadero Hacer
+		Limpiar Pantalla;
+		Escribir "Digite el tamaño del arreglo";
+		leer Filas;
+		Limpiar Pantalla;
+		Para i = 0 Hasta Filas-1 Con Paso 1 Hacer
+			Escribir "[",i,"]" Sin Saltar;
+		Fin Para
+		Escribir "";
+		Escribir "----------------------";
+		Escribir "¿Que desea hacer?";
+		Escribir "1.Cambiar tamaño";
+		Escribir "2.Continuar";
+		Escribir "----------------------";
+		leer Option;
+		si Option == 2 Entonces
+			ConfirmacionArreglo = Falso;
+		FinSi
+	FinMientras
+	Dimension Datos(Filas);
+	TerminarCiclo = Verdadero;
+	Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+		Datos(i) = 0;
+	Fin Para
+	Mientras TerminarCiclo == Verdadero Hacer
+		Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+			Escribir "[",Datos(i),"]" Sin Saltar;
+		Fin Para
+		Escribir "";
+		Escribir "----------------------";
+		Escribir "¿Que desea hacer?";
+		Escribir "1.Asignar valores";
+		Escribir "2.Ordenarlos";
+		Escribir "3.Salir";
+		Escribir "----------------------";
+		leer Option;
+		Segun Option hacer
+			1:
+				Escribir "Digite el valor minimo";
+				leer Minimo;
+				Escribir "Digite el valor maximo";
+				leer Maximo;
+				Limpiar Pantalla;
+				Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+					Datos(i) = Aleatorio(Minimo, Maximo);
+				Fin Para
+				Limpiar Pantalla;
+			2:
+				
+			De Otro Modo:
+				TerminarCiclo = Falso;
+		FinSegun
+	FinMientras
+FinFuncion
+Funcion Actividad11
+	
+FinFuncion
 Funcion Menu
 	Limpiar Pantalla;
 	Escribir "--------------Actividades---------------";
@@ -547,7 +599,14 @@ Funcion Menu
 	Escribir "7.Suma de 2 arreglos en un tercero";
 	Escribir "8.Asig/Search en arreglos";
 	Escribir "9.";
-	Escribir "10.Salir";
+	Escribir "10.Metodo de ordenamiento burbuja";
+	Escribir "11.Metodo de ordenamiento por seleccion";
+	Escribir "12.";
+	Escribir "13.";
+	Escribir "14.";
+	Escribir "15.";
+	Escribir "16.";
+	Escribir "17.Salir";
 	Escribir "----------------------------------------";
 	Actividades;
 Fin Funcion
@@ -603,13 +662,23 @@ Funcion Actividades
 				Comprobante = Falso;
 			10:
 				Limpiar Pantalla;
+				Actividad10;
+				Comprobante = Falso;
+			11:
+				Limpiar Pantalla;
+				Actividad11;
+				Comprobante = Falso;
+			12:
+			13:
+			14:
+			15:
+			16:
+				
+			17:
+				Limpiar Pantalla;
 				Comprobante = Falso;
 			De Otro Modo:
 				Escribir "Digite una opcion valida";
 		Fin Segun
 	FinMientras
 FinFuncion
-Algoritmo ArreglosYMatrices
-	Borrar Pantalla;
-	Menu;
-FinAlgoritmo
