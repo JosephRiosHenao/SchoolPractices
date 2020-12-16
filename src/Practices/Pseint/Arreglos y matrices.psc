@@ -524,10 +524,42 @@ Funcion Actividad8
 	Menu;
 FinFuncion
 Funcion Actividad9
-	
+	Definir CantEstudiantes,CantBJ,CantB,CantA,CantS,i,long Como Entero;
+	CantA = 0;
+	CantB = 0;
+	CantS = 0;
+	CantBJ = 0;
+	Escribir "Digite la cantidad de estudiantes";
+	leer long;
+	Dimension CantEstudiantes(long);
+	Para i=0 Hasta long-1 Con Paso 1 Hacer
+		CantEstudiantes(i) = Aleatorio(0,20);
+		si CantEstudiantes(i)>=0 y CantEstudiantes(i)<=5 Entonces
+			CantBJ = CantBJ + 1;
+		FinSi
+		si CantEstudiantes(i)>=6 y CantEstudiantes(i)<=10 Entonces
+			CantB = CantB + 1;
+		FinSi
+		si CantEstudiantes(i)>=11 y CantEstudiantes(i)<=15 Entonces
+			CantA = CantA + 1;
+		FinSi
+		si CantEstudiantes(i)>=16 y CantEstudiantes(i)<=20 Entonces
+			CantS = CantS + 1;
+		FinSi
+	Fin Para
+	Limpiar Pantalla;
+	Escribir "Cantidad de estudiantes = ",long;
+	Escribir "Deficientes = ",CantBJ;
+	Escribir "Regulares = ",CantB;
+	Escribir "Buenos = ",CantA;
+	Escribir "Excelentes = ",CantS;
+	Escribir "--------------------------------";
+	Escribir "";
+	WaitMessage;
+	Menu;
 FinFuncion
 Funcion Actividad10
-	Definir i,Filas,Datos,Minimo,Maximo Como Entero;
+	Definir i,Filas,Datos,Minimo,Maximo,Punter1,Punter2,NumeroIntermedio,Option,lon,l,n,temp Como Entero;
 	Definir ConfirmacionArreglo,TerminarCiclo como logico;
 	ConfirmacionArreglo = Verdadero;
 	Mientras ConfirmacionArreglo == Verdadero Hacer
@@ -548,6 +580,7 @@ Funcion Actividad10
 		si Option == 2 Entonces
 			ConfirmacionArreglo = Falso;
 		FinSi
+		Limpiar Pantalla;
 	FinMientras
 	Dimension Datos(Filas);
 	TerminarCiclo = Verdadero;
@@ -578,13 +611,60 @@ Funcion Actividad10
 				Fin Para
 				Limpiar Pantalla;
 			2:
-				
+				l = Filas-1;
+				Hacer
+					n=0;
+					Para i=1 Hasta l Con Paso 1 Hacer
+						Si Datos[i-1]>Datos[i]
+							temp=Datos[i-1];
+							Datos[i-1]=Datos[i];
+							Datos[i]=temp;
+							n=i;
+						FinSi
+					FinPara
+					l=n;
+				Hasta Que n=0;
+				Limpiar Pantalla;
 			De Otro Modo:
 				TerminarCiclo = Falso;
 		FinSegun
 	FinMientras
+	Limpiar Pantalla;
+	WaitMessage;
+	Menu;
 FinFuncion
 Funcion Actividad11
+	
+FinFuncion
+Funcion Actividad12
+	
+FinFuncion
+Funcion Actividad13
+	Definir COLUMNAS, num, FILAS, i, j Como Entero;
+	escribir "Introduce las filas del array";
+	leer FILAS;
+	escribir "Introduce las columnas del array";
+	leer COLUMNAS;
+	Dimension num[FILAS, COLUMNAS];
+	Para i<-0 Hasta FILAS-1 Con Paso 1 Hacer
+		Para j<-0 Hasta COLUMNAS-1 Con Paso 1 Hacer
+			num[i,j]<-azar(10);
+		Fin Para
+	Fin Para
+	Para i<-0 Hasta FILAS-1 Con Paso 1 Hacer
+		Para j<-0 Hasta COLUMNAS-1 Con Paso 1 Hacer
+			escribir num[i,j]," " Sin Saltar;
+		Fin Para
+		escribir "";
+	Fin Para
+FinFuncion
+Funcion Actividad14
+	
+FinFuncion
+Funcion Actividad15
+	
+FinFuncion
+Funcion Actividad16
 	
 FinFuncion
 Funcion Menu
@@ -598,11 +678,11 @@ Funcion Menu
 	Escribir "6.Nombres y su longitud";
 	Escribir "7.Suma de 2 arreglos en un tercero";
 	Escribir "8.Asig/Search en arreglos";
-	Escribir "9.";
+	Escribir "9.Calcular notas de estudiantes";
 	Escribir "10.Metodo de ordenamiento burbuja";
 	Escribir "11.Metodo de ordenamiento por seleccion";
 	Escribir "12.";
-	Escribir "13.";
+	Escribir "13.Generar arreglo 2D con valores azar";
 	Escribir "14.";
 	Escribir "15.";
 	Escribir "16.";
@@ -669,11 +749,25 @@ Funcion Actividades
 				Actividad11;
 				Comprobante = Falso;
 			12:
+				Limpiar Pantalla;
+				Actividad12;
+				Comprobante = Falso;
 			13:
+				Limpiar Pantalla;
+				Actividad13;
+				Comprobante = Falso;
 			14:
+				Limpiar Pantalla;
+				Actividad14;
+				Comprobante = Falso;
 			15:
+				Limpiar Pantalla;
+				Actividad15;
+				Comprobante = Falso;
 			16:
-				
+				Limpiar Pantalla;
+				Actividad16;
+				Comprobante = Falso;
 			17:
 				Limpiar Pantalla;
 				Comprobante = Falso;
