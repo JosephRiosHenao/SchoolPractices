@@ -634,7 +634,83 @@ Funcion Actividad10
 	Menu;
 FinFuncion
 Funcion Actividad11
-	Escribir "No la alcanze a realizar y el algoritmo me cuesta";
+	Definir i,j,Filas,Datos,Minimo,Maximo,Punter1,Punter2,NumeroIntermedio,Option,lon,l,n,temp Como Entero;
+	Definir ConfirmacionArreglo,TerminarCiclo como logico;
+	ConfirmacionArreglo = Verdadero;
+	Mientras ConfirmacionArreglo == Verdadero Hacer
+		Limpiar Pantalla;
+		Escribir "Digite el tamaño del arreglo";
+		leer Filas;
+		Limpiar Pantalla;
+		Para i = 0 Hasta Filas-1 Con Paso 1 Hacer
+			Escribir "[",i,"]" Sin Saltar;
+		Fin Para
+		Escribir "";
+		Escribir "----------------------";
+		Escribir "¿Que desea hacer?";
+		Escribir "1.Cambiar tamaño";
+		Escribir "2.Continuar";
+		Escribir "----------------------";
+		leer Option;
+		si Option == 2 Entonces
+			ConfirmacionArreglo = Falso;
+		FinSi
+		Limpiar Pantalla;
+	FinMientras
+	Dimension Datos(Filas);
+	TerminarCiclo = Verdadero;
+	Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+		Datos(i) = 0;
+	Fin Para
+	Mientras TerminarCiclo == Verdadero Hacer
+		Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+			Escribir "[",Datos(i),"]" Sin Saltar;
+		Fin Para
+		Escribir "";
+		Escribir "----------------------";
+		Escribir "¿Que desea hacer?";
+		Escribir "1.Asignar valores";
+		Escribir "2.Ordenarlos";
+		Escribir "3.Salir";
+		Escribir "----------------------";
+		leer Option;
+		Segun Option hacer
+			1:
+				Escribir "Digite el valor minimo";
+				leer Minimo;
+				Escribir "Digite el valor maximo";
+				leer Maximo;
+				Limpiar Pantalla;
+				Para i=0 Hasta Filas-1 Con Paso 1 Hacer
+					Datos(i) = Aleatorio(Minimo, Maximo);
+				Fin Para
+				Limpiar Pantalla;
+			2:
+				i  = 0;
+				Mientras i < Filas - 1 Hacer
+					n = i;
+					j = i;
+					Mientras j < Filas Hacer
+						Si Datos[j] < Datos[n] Entonces
+							n = j;
+						FinSi
+						j = j + 1;
+					Fin Mientras
+					Si i <> n Entonces
+						temp = Datos[i];
+						Datos[i] = Datos[n];
+						Datos[n] = temp;
+					FinSi
+					i = i + 1;
+				Fin Mientras
+				Limpiar Pantalla;
+			De Otro Modo:
+				TerminarCiclo = Falso;
+		FinSegun
+	FinMientras
+	Limpiar Pantalla;
+	WaitMessage;
+	Menu;
 FinFuncion
 Funcion Actividad12
 	
@@ -725,7 +801,16 @@ Funcion Actividad15
 	Menu;
 FinFuncion
 Funcion Actividad16
-	
+	definir col, arr, fil Como Entero;
+	escribir "dame un num de filas";
+	leer fil;
+	Escribir "dame un num de columnas";
+	leer col;
+	Limpiar Pantalla;
+	Dimension arr[fil, col];
+	Escribir rellenaArray(fil, col);
+	WaitMessage;
+	Menu;
 FinFuncion
 Funcion Menu
 	Limpiar Pantalla;
@@ -742,7 +827,7 @@ Funcion Menu
 	Escribir "10.Metodo de ordenamiento burbuja";
 	Escribir "11.Metodo de ordenamiento por seleccion";
 	Escribir "12.";
-	Escribir "13.Generar arreglo 2D con valores azar";
+	Escribir "13.";
 	Escribir "14.Arreglo bidimensional a unidimensional";
 	Escribir "15.Presupuestos de empresas";
 	Escribir "16.";
@@ -798,6 +883,25 @@ Funcion MostrarMayorVenta(Matriz)
 	WaitMessage;
 	Menu;
 FinFuncion
+Funcion fun <- rellenaArray (a, b)
+	definir fun, fil, col, i, j, num, arr Como Entero;
+	fil<-a;
+	col<-b;
+	Dimension arr[fil, col];
+	Escribir "¿hasta cuantos numeros al azar?";
+	leer num;
+	Para i <- 0 Hasta fil-1 Con Paso 1 Hacer
+		Para j <- 0 Hasta col-1 Con Paso 1 Hacer
+			arr[i, j] <- azar(num);
+		Fin Para
+	Fin Para
+	Para i <- 0 Hasta fil-1 Con Paso 1 Hacer
+		Para j <- 0 Hasta col-1 Con Paso 1 Hacer
+			Escribir " ", arr[i, j], "" Sin Saltar;
+		Fin Para
+		Escribir " ";
+	Fin Para
+Fin Funcion
 Funcion WaitMessage
 	Escribir "";
 	Escribir "----------------------------------";
