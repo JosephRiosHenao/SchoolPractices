@@ -730,6 +730,8 @@ Funcion Actividad12
 		Fin Para
 		escribir "";
 	Fin Para
+	WaitMessage;
+	Menu;
 FinFuncion
 Funcion Actividad13
 	Definir i,j,Datos,Cantidad Como Entero;
@@ -748,6 +750,8 @@ Funcion Actividad13
 		Escribir " ",Datos(i,0)," + ",Datos(i,1)," = ",Datos(i,2);
 		Escribir "--------------";
 	Fin Para
+	WaitMessage;
+	Menu;
 FinFuncion
 Funcion Actividad14
 	Definir Multi, unid,d Como Entero;
@@ -762,6 +766,7 @@ Funcion Actividad14
 			Multi(k,j) = azar(i*l);
 		FinPara
 	FinPara
+	Escribir "";
 	Limpiar Pantalla;
 	Para k = 0 Hasta i-1 Con Paso 1 Hacer
 		Para j = 0 Hasta l-1 Con Paso 1 Hacer
@@ -769,6 +774,7 @@ Funcion Actividad14
 		FinPara
 		Escribir "";
 	FinPara
+	Escribir "";
 	Escribir "En array es:";
 	Para k = 0 Hasta i-1 Con Paso 1 Hacer
 		Para j = 0 Hasta l-1 Con Paso 1 Hacer
@@ -778,18 +784,20 @@ Funcion Actividad14
 		FinPara
 	FinPara
 	Escribir "";
+	WaitMessage;
+	Menu;
 FinFuncion
 Funcion Actividad15
 	Definir Eleccion,Matriz,i,j Como Entero;
-	Definir Ciclo Como Logico;
+	Definir Ciclo2 Como Logico;
 	Dimension Matriz(5,12);
 	Para i=0 Hasta 4 Con Paso 1 Hacer
 		Para j=0 Hasta 11 Con Paso 1 Hacer
 			Matriz[i,j] = Aleatorio(500,100000);
 		Fin Para
 	Fin Para
-	Ciclo = Verdadero;
-	Mientras Ciclo == Verdadero Hacer
+	Ciclo2 = Verdadero;
+	Mientras Ciclo2 == Verdadero Hacer
 		Limpiar Pantalla;
 		Escribir "--------------Actividades----------------";
 		Escribir "1.Mostrar ventas mensuales";
@@ -802,12 +810,15 @@ Funcion Actividad15
 		Segun Eleccion
 			1:
 				MostrarVentasMensuales(Matriz);
+				Ciclo2 = Verdadero;
 			2:
 				MontoAnual(Matriz);
+				Ciclo2 = Verdadero;
 			3:
 				MostrarMayorVenta(Matriz);	
+				Ciclo2 = Verdadero;
 			4:
-				Ciclo = falso;
+				Ciclo2 = falso;
 			De Otro Modo:
 				Escribir "Digite un numero valido";
 		FinSegun
@@ -816,14 +827,81 @@ Funcion Actividad15
 	Menu;
 FinFuncion
 Funcion Actividad16
-	definir col, arr, fil Como Entero;
-	escribir "dame un num de filas";
-	leer fil;
-	Escribir "dame un num de columnas";
-	leer col;
-	Limpiar Pantalla;
-	Dimension arr[fil, col];
-	Escribir rellenaArray(fil, col);
+	Definir filas, COLUMNAS, LUNES, MARTES, MIERCOLES,JUEVES, VIERNES, SABADO, DOMINGO, limite,I, J, media, diaMenorTemperaturaSemana, sumaTemperatura, menorTemperaturaSemana, diaMayorTemperaturaSemana, temperaturas, mayorTemperaturaSemana,  mayorTemperaturaGeneral, diaMayorTemperaturaGeneral, diaSemanaMayorTemperaturaGeneral como real;
+	definir dias Como Caracter;
+	filas <- 5;
+    COLUMNAS <-7;
+    LUNES <- 0;
+    MARTES <- 1;
+    MIERCOLES <- 2;
+    JUEVES <- 3;                   
+    VIERNES <- 4;
+    SABADO <- 5;
+    DOMINGO <- 6;
+    Dimension dias(COLUMNAS);
+    dias(0)<-"Lunes";
+    dias(1)<-"Martes";
+    dias(2)<-"Miercoles";
+    dias(3)<-"Jueves";
+    dias(4)<-"Viernes";
+    dias(5)<-"Sabado";
+    dias(6)<-"Domingo";
+	Dimension temperaturas[5,7];
+	Escribir  "LU MA MI JU VI SA DO";
+    limite <- 0;
+    Para i<-0 Hasta filas-1 Con Paso 1 Hacer
+        Si i=filas-1 Entonces
+            limite <- MIERCOLES;
+        Sino
+            limite <- DOMINGO;
+        Fin Si
+        Para j<-0 Hasta limite Con Paso 1 Hacer
+            temperaturas(i,j) <- Aleatorio(7,38);
+            Si temperaturas(i,j)<10 Entonces
+                Escribir " " ,temperaturas(i,j) " " Sin Saltar;
+            Sino
+                Escribir temperaturas(i,j) " " Sin Saltar;
+            Fin Si
+        Fin Para
+        Escribir "";
+    Fin Para
+    mayorTemperaturaGeneral <- temperaturas(0,0);
+    diaMayorTemperaturaGeneral <- 1;
+    diaSemanaMayorTemperaturaGeneral <- 0;
+    Para i<-0 Hasta filas-1 Con Paso 1 Hacer
+        mayorTemperaturaSemana <- temperaturas(i,0);
+        diaMayorTemperaturaSemana <- LUNES;
+        menorTemperaturaSemana <- temperaturas(i,0);
+        diaMenorTemperaturaSemana <- LUNES;
+        sumaTemperatura <- 0;
+        Si i=filas-1 Entonces
+            limite <- MIERCOLES;
+        Sino
+            limite <- DOMINGO;
+        Fin Si
+        Para j<-0 Hasta limite Con Paso 1 Hacer
+            Si temperaturas(i,j)>mayorTemperaturaSemana Entonces
+                mayorTemperaturaSemana <- temperaturas(i,j);
+                diaMayorTemperaturaSemana <- j;
+            Fin Si
+            Si temperaturas(i,j)<menorTemperaturaSemana Entonces
+                menorTemperaturaSemana <- temperaturas(i,j);
+                diaMenorTemperaturaSemana <- j;
+            Fin Si
+            Si temperaturas(i,j)>mayorTemperaturaGeneral Entonces
+                mayorTemperaturaGeneral <- temperaturas(i,j);
+                diaSemanaMayorTemperaturaGeneral <- j;
+                diaMayorTemperaturaGeneral <- (i * COLUMNAS) + j+1 ; 
+            Fin Si
+            sumaTemperatura<-sumaTemperatura + temperaturas(i,j);
+        Fin Para
+        Escribir "En la semana ",(i+1), " la mayor temperatura es de ",mayorTemperaturaSemana," en el dia ", dias(diaMayorTemperaturaSemana);
+        Escribir "En la semana ",(i+1), " la menor temperatura es de ",menorTemperaturaSemana," en el dia ", dias(diaMenorTemperaturaSemana);
+        escribir "";
+        media<-sumaTemperatura/COLUMNAS;
+        Escribir "La media de la semana ",(i+1), "es de ",media;
+        Escribir "";
+	FinPara
 	WaitMessage;
 	Menu;
 FinFuncion
@@ -845,7 +923,7 @@ Funcion Menu
 	Escribir "13.Suma de una matriz en la 3° columna";
 	Escribir "14.Arreglo bidimensional a unidimensional";
 	Escribir "15.Presupuestos de empresas";
-	Escribir "16.";
+	Escribir "16.Dias de la semana y registro de C°";
 	Escribir "17.Salir";
 	Escribir "----------------------------------------";
 	Actividades;
@@ -861,7 +939,6 @@ Funcion MostrarVentasMensuales(Matriz)
 		Escribir "";
 	Fin Para
 	WaitMessage;
-	Menu;
 FinFuncion
 Funcion MontoAnual(Matriz)
 	Definir i,j,IngresosAnuales Como Entero;
@@ -876,7 +953,6 @@ Funcion MontoAnual(Matriz)
 		Escribir "";
 	Fin Para
 	WaitMessage;
-	Menu;
 FinFuncion
 Funcion MostrarMayorVenta(Matriz)
 	Definir i,j,PosibleMayor,MayorMes Como Entero;
@@ -896,7 +972,6 @@ Funcion MostrarMayorVenta(Matriz)
 		Escribir "";
 	Fin Para
 	WaitMessage;
-	Menu;
 FinFuncion
 Funcion fun <- rellenaArray (a, b)
 	definir fun, fil, col, i, j, num, arr Como Entero;
