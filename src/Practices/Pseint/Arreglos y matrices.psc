@@ -713,9 +713,6 @@ Funcion Actividad11
 	Menu;
 FinFuncion
 Funcion Actividad12
-	
-FinFuncion
-Funcion Actividad13
 	Definir COLUMNAS, num, FILAS, i, j Como Entero;
 	escribir "Introduce las filas del array";
 	leer FILAS;
@@ -732,6 +729,24 @@ Funcion Actividad13
 			escribir num[i,j]," " Sin Saltar;
 		Fin Para
 		escribir "";
+	Fin Para
+FinFuncion
+Funcion Actividad13
+	Definir i,j,Datos,Cantidad Como Entero;
+	Escribir "Digite la cantidad de sumas";
+	Leer Cantidad;
+	Dimension Datos(Cantidad,3);
+	Para i = 0 Hasta Cantidad - 1 Con Paso 1 Hacer
+		Para j = 0 Hasta 1 Con Paso 1 Hacer
+			Escribir "Digite el ",j + 1,"° numero de la ",i + 1,"° suma";
+			leer Datos(i,j);
+		Fin Para
+	Fin Para
+	Limpiar Pantalla;
+	Para i = 0 Hasta Cantidad - 1 Con Paso 1 Hacer
+		Datos(i,2) = Datos(i,0) + Datos(i,1);
+		Escribir " ",Datos(i,0)," + ",Datos(i,1)," = ",Datos(i,2);
+		Escribir "--------------";
 	Fin Para
 FinFuncion
 Funcion Actividad14
@@ -826,8 +841,8 @@ Funcion Menu
 	Escribir "9.Calcular notas de estudiantes";
 	Escribir "10.Metodo de ordenamiento burbuja";
 	Escribir "11.Metodo de ordenamiento por seleccion";
-	Escribir "12.";
-	Escribir "13.";
+	Escribir "12.Crear matriz personalizada";
+	Escribir "13.Suma de una matriz en la 3° columna";
 	Escribir "14.Arreglo bidimensional a unidimensional";
 	Escribir "15.Presupuestos de empresas";
 	Escribir "16.";
