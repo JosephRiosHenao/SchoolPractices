@@ -3,7 +3,6 @@ package ConditionalActivity;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import java.awt.Color;
-import java.nio.LongBuffer;
 import java.text.NumberFormat;
 import java.util.Locale;
 import javax.swing.Icon;
@@ -12,9 +11,6 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.general.DefaultPieDataset;
-
-import ParqueSoft.Algoritmos.Menu;
-
 import javax.swing.JFrame;
 
 public class ProgramaKernel {
