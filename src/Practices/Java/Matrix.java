@@ -1,4 +1,4 @@
-package ParqueSoft.Algoritmos;
+package Practices.Java;
 import java.util.Scanner;
 
 public class Matrix{
