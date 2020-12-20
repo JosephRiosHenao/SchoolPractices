@@ -16,5 +16,6 @@
         "exclude": [
             "c:\\Users\\RiosHenao\\Desktop\\jfreechart-1.0.19\\lib\\jfreechart-1.0.19-swt.jar"
         ]
-    }
+    },
+    "cmake.configureOnOpen": true
 }
