@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 extern int x,y;
 extern char ch;
 int main()
