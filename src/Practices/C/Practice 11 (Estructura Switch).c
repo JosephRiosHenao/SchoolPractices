@@ -19,7 +19,7 @@ int main()
             printf("Estas en la opcion 4");
         break;
         default:
-            printf("Estas en el default");
+            printf("Estas en la opcion default");
     }
     return 0;
 }
