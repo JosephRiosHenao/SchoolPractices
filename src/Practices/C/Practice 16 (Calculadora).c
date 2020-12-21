@@ -4,15 +4,16 @@
 
 int PedirNumeros(int NumeroAPedir,bool AceptarCeros)
 {
+    bool Admitido = false;
     int Numero = 0;
-    while (true)
+    while (Admitido == false)
     {
         printf("Digite el %d numero\n",NumeroAPedir);
         scanf("%d",&Numero);
-        if (AceptarCeros == true && Numero == 0) continue;
-        return Numero;
-        break;
+        if (AceptarCeros == false && Numero == 0) printf ("Digite otro valor\n");
+        else Admitido = true;
     }
+    return Numero;
 }
 
 int Suma(int Numero1, int Numero2) {return Numero1 + Numero2;}
