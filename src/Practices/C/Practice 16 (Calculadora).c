@@ -8,7 +8,7 @@ int PedirNumeros(int NumeroAPedir,bool AceptarCeros)
     int Numero = 0;
     while (Admitido == false)
     {
-        printf("Digite el %d numero\n",NumeroAPedir);
+        printf("Digite el %d° numero\n",NumeroAPedir);
         scanf("%d",&Numero);
         if (AceptarCeros == false && Numero == 0) printf ("Digite otro valor\n");
         else Admitido = true;
@@ -26,6 +26,7 @@ int main()
     int Eleccion, Numero1, Numero2;
     while (true)
     {
+        system("clear");
         printf("--Calculadora Basica--\n1.Suma\n2.Resta\n3.Multiplicacion\n4.Division\n5.Salir\n");
         scanf("%d",&Eleccion);
         switch (Eleccion)
