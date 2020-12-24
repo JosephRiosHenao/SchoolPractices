@@ -944,6 +944,7 @@ Funcion MontoAnual(Matriz)
 	Definir i,j,IngresosAnuales Como Entero;
 	IngresosAnuales = 0;
 	Para i=0 Hasta 4 Con Paso 1 Hacer
+		IngresosAnuales = 0;		
 		Escribir "--------------------------------------";
 		Escribir "Empresa #",i+1;
 		Para j=0 Hasta 11 Con Paso 1 Hacer
