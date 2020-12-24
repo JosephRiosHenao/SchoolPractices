@@ -15,7 +15,9 @@ int main()
     while (true)
     {
         system("clear");
-        printf("String 1:%s\nLongitud:%d\nString 2:%s\nLongitud:%d\n1.Cambiar Strings\n2.Salir\n",s1,strlen(s1),s2,strlen(s2));
+        printf("String 1:%s\nLongitud:%d\nString 2:%s\nLongitud:%d\n1.Cambiar Strings\n2.Salir\n"
+        ,s1,strlen(s1)
+        ,s2,strlen(s2));
         scanf("%d",&Eleccion);
         system("clear");
         switch (Eleccion)
