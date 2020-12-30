@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: wheat
+        }
+        h1 {
+            color: black;
+            margin: auto;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            margin-top: 10px;
+            padding: 2%;
+            display: block;
+
+        }
+        input {
+            width: 100%;
+            height: 30px;
+            border: 2px solid wheat;
+            border-radius: 10px;
+            margin: 10px 10px 10px 0px;
+        }
+        label {
+            color: black;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        button {
+            background-color: white;
+            border: 2.5px solid  wheat;
+            border-radius: 10px;
+            margin: auto;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            padding: 2% 10%;
+        }
+        button:hover {
+            background-color:wheat;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <div class="container">
+        <form class="Formulario">
+            <label for="email">Email:</label></br>
+            <input type="email" id="email" placeholder="Digite su correo electronico" required /></br>
+            <label for="password">Contraseña:</label></br>
+            <input type="password" id="password" placeholder="Digite su contraseña" requiered /></br>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
