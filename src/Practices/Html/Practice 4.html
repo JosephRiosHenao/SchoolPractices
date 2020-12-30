@@ -7,27 +7,21 @@
     <style>
         body {
             padding: 5%;
-            background-color: #282c34;
+            background-image: url("BG.PNG") ;
+            /* background-color: #282c34; */
             color: rgb(164,165,169);
         }
-        input[type="submit"]{
+        button{
             background-color: transparent;
             color: rgb(171,178,191);
             border: 2.5px solid rgb(217, 221, 228);
             padding: 1% 2%;
-            margin: 5px;
+            margin: 10px;
+            margin-top: 30px;
             border-radius: 40px;
             text-align: center;
         }
-        input[type="reset"]{
-            background-color: transparent;
-            color: rgb(171,178,191);
-            border: 2.5px solid rgb(217, 221, 228);
-            padding: 1% 2%;
-            margin: 5px;
-            border-radius: 40px;
-            text-align: center;
-        }
+
         article {
             padding-bottom: 15px;
             border: 2px solid rgb(217, 221, 228);
@@ -40,13 +34,41 @@
             
             box-sizing: border-box;
         }
+        input:focus {
+            border: 2.5px solid  rgb(74, 89, 119);
+            border-radius: 1px;
+            outline: none;
+            width: 80%;
+        }
+        select:focus {
+            border: 2.5px solid  rgb(74, 89, 119);
+            border-radius: 1px;
+            outline: none;
+        }
+        select {
+            background-color: transparent;
+            border: 2.5px solid  rgb(171,178,191);
+            width: 25%;
+            height: 30%;
+            text-align: center;
+            color: rgb(171,178,191);
+            align-self: center;
+        }
+        option {
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            align-items: center;
+            align-content: center;
+            align-self: center;
+        }
         .Formulario{
             margin-bottom: 15px;
             background-color: transparent;
             border: 2.5px solid  rgb(171,178,191);
-            border-radius: 5px;
+            border-radius: 15px;
             color: rgb(171,178,191);
-            width: 225px;
+            width: 50%;
             height: 30px;
             text-align: center;
         }
@@ -72,8 +94,8 @@
             text-align: center;
         }
         .PaddingMejor {
-            padding-left: 30%;
-            padding-right: 30%;
+            padding-left: 20%;
+            padding-right: 20%;
         }
         p {
             text-align: center;
@@ -166,8 +188,15 @@
                     <input  class="Formulario" type="tel" name="Telefono" id="Telefono"/> 
                     <br/>
                     <br/>
+                    <select>
+                        <option disabled hidden selected>Tipo de cuenta</option>
+                        <option>Adminitrador</option>
+                        <option>Vip</option>
+                        <option>Estudiantil</option>
+                        <option>Gratis</option>
+                    </select>
                 </div>
-                <input type="submit" value="Login"/><input type="reset" value="Borrar"/>
+                <button type="submit">Registrar</button><button type="reset">Limpiar</button>
             </form>
         </div>
     </div>
@@ -178,7 +207,7 @@
             cuenta tendras un peso maximo en la nube.</p>
         <form target="_blank" enctype="multipart/form" method="POST">
             <input type="file" name="Archivo" id="Archivo"> </br>
-            <input type="submit" value="Subir"><input type="reset" value="Borrar selección">
+            <button type="submit">Subir</button><button type="reset">Limpiar</button>
         </form>
     </div>
 
