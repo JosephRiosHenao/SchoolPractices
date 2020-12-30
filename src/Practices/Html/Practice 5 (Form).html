@@ -3,63 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Practice 5 (Form).css">
+    <link rel="shortcut icon" href="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png">
+    <meta description="description" content="Portafolio de Joseph Rios Henao">
     <title>Document</title>
     <style>
-        body {
-            background-color: wheat
-        }
-        h1 {
-            color: black;
-            margin: auto;
-            text-align: center;
-        }
-        .container {
-            background: white;
-            border-radius: 10px;
-            width: 300px;
-            margin: auto;
-            margin-top: 10px;
-            padding: 2%;
-            display: block;
-
-        }
-        input {
-            width: 100%;
-            height: 30px;
-            border: 2px solid wheat;
-            border-radius: 10px;
-            margin: 10px 10px 10px 0px;
-        }
-        label {
-            color: black;
-        }
-        * {
-            box-sizing: border-box;
-        }
-        button {
-            background-color: white;
-            border: 2.5px solid  wheat;
-            border-radius: 10px;
-            margin: auto;
-            text-align: center;
-            display: block;
-            margin-top: 10px;
-            padding: 2% 10%;
-        }
-        button:hover {
-            background-color:wheat;
-            color: white;
-        }
+    body {
+        background-color: wheat
+    }
+    h1 {
+        color: black;
+        margin: auto;
+        text-align: center;
+    }
+    .container {
+        background: white;
+        border-radius: 10px;
+        width: 30%;
+        margin: auto;
+        margin-top: 10px;
+        padding: 2%;
+        display: block;
+    
+    }
+    input {
+        display: block;
+        margin: auto !important;
+        width: 80%;
+        height: 30px;
+        border: 2px solid wheat;
+        border-radius: 10px;
+        margin: 5px 5px 5px 0px;
+    }
+    input:focus{
+        width: 100%;
+    }
+    label {
+        color: black;
+        font-size: 125%;
+        margin: auto;
+        text-align: center;
+        display: block;
+    }
+    * {
+        box-sizing: border-box;
+        font-family: "Helvetica";
+    }
+    button {
+        background-color: white;
+        border: 2.5px solid  wheat;
+        border-radius: 10px;
+        margin: auto;
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+        padding: 2% 10%;
+    }
+    button:hover {
+        background-color:rgb(245, 222, 179);
+        color: white;
+    }
     </style>
 </head>
 <body>
     <h1>Formulario</h1>
     <div class="container">
-        <form class="Formulario">
-            <label for="email">Email:</label></br>
-            <input type="email" id="email" placeholder="Digite su correo electronico" required /></br>
-            <label for="password">Contraseña:</label></br>
-            <input type="password" id="password" placeholder="Digite su contraseña" requiered /></br>
+        <form class="Formulario" method="GET" target="_blank" >
+            <label for="email">Email</label></br>
+            <input type="email" id="email" name="email" placeholder="Digite su correo electronico" required /></br>
+            <label for="password">Contraseña</label></br>
+            <input type="password" id="password" name="password" placeholder="Digite su contraseña" requiered /></br>
             <button type="submit">Entrar</button>
         </form>
     </div>
