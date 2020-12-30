@@ -13,7 +13,7 @@
         input[type="submit"]{
             background-color: transparent;
             color: rgb(171,178,191);
-            border: 5px solid white;
+            border: 2.5px solid rgb(217, 221, 228);
             padding: 1% 2%;
             margin: 5px;
             border-radius: 40px;
@@ -22,20 +22,43 @@
         input[type="reset"]{
             background-color: transparent;
             color: rgb(171,178,191);
-            border: 5px solid white;
+            border: 2.5px solid rgb(217, 221, 228);
             padding: 1% 2%;
             margin: 5px;
             border-radius: 40px;
             text-align: center;
         }
-        input{
+        article {
+            padding-bottom: 15px;
+            border: 2px solid rgb(217, 221, 228);
+            border-bottom: 0px;
+            border-right: 0px;
+            border-left: 0px;
+        }
+        nav {
+            text-align: center;
+            
+            box-sizing: border-box;
+        }
+        .Formulario{
             margin-bottom: 15px;
             background-color: transparent;
+            border: 2.5px solid  rgb(171,178,191);
+            border-radius: 5px;
+            color: rgb(171,178,191);
+            width: 225px;
+            height: 30px;
+            text-align: center;
         }
         .Cloud {
             text-align: center;
         }
         .IniciarSesion {
+            padding: 10px 10px 30px 10px;
+            border: 5px solid rgb(217, 221, 228);
+            border-right: 0px;
+            border-left: 0px;
+            border-radius: 50px;
             text-align: center;
         }
         .SocialMedia {
@@ -48,20 +71,27 @@
         .Titulo {
             text-align: center;
         }
+        .PaddingMejor {
+            padding-left: 30%;
+            padding-right: 30%;
+        }
         p {
             text-align: center;
         }
     </style>
 </head>
 <body>
-        <li><a href="#Register">Crea/Ingresa con una cuenta</a>
-        <li><a href="#Cloud">Guarda datos en la nube</a>
-        <li><a href="#Colegio">Ir a colegio</a></li>
-        <li><a href="#Tecnologias">Ir a tecnologias</a></li>
-        <li><a href="#Lenguajes">Ir a lenguajes</a></li>
-        <li><a href="#Especificaciones">Ir a especificaciones</a></li>
-        <li><a href="#Contacto">Ir a redes sociales</a></li>
-    </ul>
+    <nav>
+        <ul>
+            <li><a href="#Register">Crea/Ingresa con una cuenta</a>
+            <li><a href="#Cloud">Guarda datos en la nube</a>
+            <li><a href="#Colegio">Ir a colegio</a></li>
+            <li><a href="#Tecnologias">Ir a tecnologias</a></li>
+            <li><a href="#Lenguajes">Ir a lenguajes</a></li>
+            <li><a href="#Especificaciones">Ir a especificaciones</a></li>
+            <li><a href="#Contacto">Ir a redes sociales</a></li>
+        </ul>
+    </nav>
     <h1 class="Titulo">Bienvenidos a mi primera página</h1>
     <main>
         <h3 class="Subtitulo">Mi nombre es:</h3>
@@ -71,64 +101,75 @@
         <h3 class="Subtitulo">Acerca de mi:</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt dolor est, et aliquet sapien viverra in. In consequat finibus eros in varius. Suspendisse eu elit vel est ultrices egestas nec et lorem. Cras accumsan luctus nibh, a commodo lacus dictum a. Phasellus a mollis arcu, in fermentum felis. Duis id ligula libero. Integer faucibus diam maximus, accumsan est ac, porttitor diam. Integer cursus faucibus sollicitudin. In mattis, nibh consequat elementum ultricies, quam mauris tempus mauris, vitae pretium odio enim vel mi. Proin nec pharetra ipsum. Mauris maximus euismod dolor, vel viverra neque tincidunt sed. In volutpat vehicula eros sed varius. Sed pretium velit pellentesque auctor interdum. Morbi finibus erat purus, non cursus nulla porta non. Quisque consequat tortor vitae mollis tempor.</p>
     </header>
-    
     <div>
-        <h3 id="Colegio" class="Subtitulo">Colegio:</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt dolor est, et aliquet sapien viverra in.
-            In consequat finibus eros in varius. Suspendisse eu elit vel est ultrices egestas nec et lorem. Cras accumsan luctus
-            nibh, a commodo lacus dictum a. Phasellus a mollis arcu, in fermentum felis. Duis id ligula libero. Integer faucibus 
-            diam maximus, accumsan est ac, porttitor diam. Integer cursus faucibus sollicitudin. In mattis, nibh consequat elementum 
-            ultricies, quam mauris tempus mauris, vitae pretium odio enim vel mi. Proin nec pharetra ipsum. Mauris maximus euismod 
-            dolor, vel viverra neque tincidunt sed. In volutpat vehicula eros sed varius. Sed pretium velit pellentesque auctor 
-            interdum. Morbi finibus erat purus, non cursus nulla porta non. Quisque consequat tortor vitae mollis tempor.</p>
-        <h3 id="Tecnologias" class="Subtitulo">Tecnologias:</h3>
-        <p>Morbi laoreet, quam sed tempor facilisis, metus lacus tincidunt massa, molestie molestie risus risus vehicula nisi. 
-            Curabitur feugiat nibh et aliquam lobortis. Duis eu odio quis nisl aliquet finibus. Nam sit amet orci eget sem egestas 
-            vulputate at non orci. Donec lectus turpis, mollis vel nunc a, ultrices elementum sem. Integer eget nisl pellentesque, 
-            euismod ex sed, luctus libero. Quisque ultrices gravida justo vel gravida. Duis ultrices tellus a diam vestibulum 
-            dignissim. Aliquam erat volutpat. Vivamus congue eu augue in sagittis.</p>
-        <h3 id="Lenguajes" class="Subtitulo">Lenguajes:</h3>
-        <p>Proin posuere nibh eget felis tempor euismod. Quisque hendrerit blandit lectus, quis dictum ante lacinia at. Curabitur 
-            sem dui, maximus nec feugiat a, placerat vel sem. Curabitur pellentesque diam eu iaculis placerat. Vivamus pharetra, 
-            nulla et porta volutpat, nisi mi bibendum est, sed feugiat metus sem aliquam turpis. Nam imperdiet molestie tincidunt. 
-            Donec volutpat feugiat augue eu efficitur. Maecenas pretium bibendum dolor in convallis. Suspendisse ullamcorper nisi 
-            vitae enim ullamcorper, euismod viverra neque sodales. Pellentesque ultrices vitae diam id tincidunt. Sed sed tortor 
-            sagittis, laoreet erat ac, convallis risus. Mauris at consectetur eros, eu mattis magna. Sed congue turpis in interdum 
-            porttitor. Aenean congue dictum dui, sit amet vestibulum lorem porttitor quis. Cras at odio purus.</p>
-        <h3 id=Especificaciones class="Subtitulo">Especificaciones de la PC:</h3>
-        <p>Sed vehicula turpis libero, non faucibus justo rhoncus eget. Ut ante quam, aliquam et ante sit amet, dapibus suscipit 
-            tortor. Sed luctus purus sed odio sodales, non tincidunt purus eleifend. Maecenas posuere condimentum mi, quis efficitur 
-            diam vulputate gravida. Proin a urna nec risus volutpat tincidunt sit amet nec erat. Aliquam sapien lectus, bibendum ac 
-            facilisis quis, finibus eget justo. Praesent quis interdum nulla, ac iaculis ligula. Vestibulum non mauris sed risus
-            laoreet volutpat id vel orci. Sed ipsum enim, viverra pharetra mattis at, interdum vitae neque. Sed euismod vestibulum 
-            fermentum. Donec eleifend faucibus mauris ac consectetur. Vivamus hendrerit tellus ac blandit pharetra.</p>
-        <p>Aenean non leo id ligula lobortis pulvinar a sit amet tellus. Nam facilisis magna purus, at posuere nisl pharetra ac. 
-            Suspendisse potenti. Integer pulvinar tortor ut leo lobortis condimentum. In lectus nunc, feugiat sit amet elit maximus, 
-            pellentesque tincidunt nisi. Phasellus vulputate quis elit venenatis varius. Mauris molestie scelerisque facilisis. 
-            In sagittis ante nec mauris gravida, condimentum vulputate purus viverra.</p>
-    
-    <div class="IniciarSesion">
-        <h2 id="Register">Incia sesion</h2>
-        <form target="_blank" autocomplete="on" method="POST">
-            <label for="Nombre">Usuario: </label>
-            <br/>
-            <input type="text" name="Nombre" id="Nombre" required/> 
-            <br/>
-            <label for="Contraseña">Contraseña: </label>
-            <br/>
-            <input type="password" name="Contraseña" id="Contraseña" required/> 
-            <br/>
-            <label for="Correo">Correo electronico: </label>
-            <br/>
-            <input type="email" name="Email" id="Correo"/> 
-            <br/>
-            <label for="Telefono">Telefono: </label>
-            <br/>
-            <input type="tel" name="Telefono" id="Telefono"/> 
-            <br/>
-            <br/>
-            <input type="submit" value="Login"/><input type="reset" value="Borrar"/>
-        </form>
+        <article>
+            <h3 id="Colegio" class="Subtitulo">Colegio:</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt dolor est, et aliquet sapien viverra in.
+                In consequat finibus eros in varius. Suspendisse eu elit vel est ultrices egestas nec et lorem. Cras accumsan luctus
+                nibh, a commodo lacus dictum a. Phasellus a mollis arcu, in fermentum felis. Duis id ligula libero. Integer faucibus 
+                diam maximus, accumsan est ac, porttitor diam. Integer cursus faucibus sollicitudin. In mattis, nibh consequat elementum 
+                ultricies, quam mauris tempus mauris, vitae pretium odio enim vel mi. Proin nec pharetra ipsum. Mauris maximus euismod 
+                dolor, vel viverra neque tincidunt sed. In volutpat vehicula eros sed varius. Sed pretium velit pellentesque auctor 
+                interdum. Morbi finibus erat purus, non cursus nulla porta non. Quisque consequat tortor vitae mollis tempor.</p>
+        </article>
+        <article>
+            <h3 id="Tecnologias" class="Subtitulo">Tecnologias:</h3>
+            <p>Morbi laoreet, quam sed tempor facilisis, metus lacus tincidunt massa, molestie molestie risus risus vehicula nisi. 
+                Curabitur feugiat nibh et aliquam lobortis. Duis eu odio quis nisl aliquet finibus. Nam sit amet orci eget sem egestas 
+                vulputate at non orci. Donec lectus turpis, mollis vel nunc a, ultrices elementum sem. Integer eget nisl pellentesque, 
+                euismod ex sed, luctus libero. Quisque ultrices gravida justo vel gravida. Duis ultrices tellus a diam vestibulum 
+                dignissim. Aliquam erat volutpat. Vivamus congue eu augue in sagittis.</p>
+        </article>
+        <article>
+            <h3 id="Lenguajes" class="Subtitulo">Lenguajes:</h3>
+            <p>Proin posuere nibh eget felis tempor euismod. Quisque hendrerit blandit lectus, quis dictum ante lacinia at. Curabitur 
+                sem dui, maximus nec feugiat a, placerat vel sem. Curabitur pellentesque diam eu iaculis placerat. Vivamus pharetra, 
+                nulla et porta volutpat, nisi mi bibendum est, sed feugiat metus sem aliquam turpis. Nam imperdiet molestie tincidunt. 
+                Donec volutpat feugiat augue eu efficitur. Maecenas pretium bibendum dolor in convallis. Suspendisse ullamcorper nisi 
+                vitae enim ullamcorper, euismod viverra neque sodales. Pellentesque ultrices vitae diam id tincidunt. Sed sed tortor 
+                sagittis, laoreet erat ac, convallis risus. Mauris at consectetur eros, eu mattis magna. Sed congue turpis in interdum 
+                porttitor. Aenean congue dictum dui, sit amet vestibulum lorem porttitor quis. Cras at odio purus.</p>
+        </article>
+        <article>
+            <h3 id=Especificaciones class="Subtitulo">Especificaciones de la PC:</h3>
+            <p>Sed vehicula turpis libero, non faucibus justo rhoncus eget. Ut ante quam, aliquam et ante sit amet, dapibus suscipit 
+                tortor. Sed luctus purus sed odio sodales, non tincidunt purus eleifend. Maecenas posuere condimentum mi, quis efficitur 
+                diam vulputate gravida. Proin a urna nec risus volutpat tincidunt sit amet nec erat. Aliquam sapien lectus, bibendum ac 
+                facilisis quis, finibus eget justo. Praesent quis interdum nulla, ac iaculis ligula. Vestibulum non mauris sed risus
+                laoreet volutpat id vel orci. Sed ipsum enim, viverra pharetra mattis at, interdum vitae neque. Sed euismod vestibulum 
+                fermentum. Donec eleifend faucibus mauris ac consectetur. Vivamus hendrerit tellus ac blandit pharetra.</p>
+            <p>Aenean non leo id ligula lobortis pulvinar a sit amet tellus. Nam facilisis magna purus, at posuere nisl pharetra ac. 
+                Suspendisse potenti. Integer pulvinar tortor ut leo lobortis condimentum. In lectus nunc, feugiat sit amet elit maximus, 
+                pellentesque tincidunt nisi. Phasellus vulputate quis elit venenatis varius. Mauris molestie scelerisque facilisis. 
+                In sagittis ante nec mauris gravida, condimentum vulputate purus viverra.</p>
+        </article>
+    </div>
+    <div class="PaddingMejor">
+        <div class="IniciarSesion">
+            <h2 id="Register">Incia sesion</h2>
+            <form target="_blank" autocomplete="on" method="POST">
+                <div>
+                    <label for="Nombre">Usuario: </label>
+                    <br/>
+                    <input  class="Formulario" type="text" name="Nombre" id="Nombre" required/> 
+                    <br/>
+                    <label for="Contraseña">Contraseña: </label>
+                    <br/>
+                    <input  class="Formulario" type="password" name="Contraseña" id="Contraseña" required/> 
+                    <br/>
+                    <label for="Correo">Correo electronico: </label>
+                    <br/>
+                    <input  class="Formulario" type="email" name="Email" id="Correo"/> 
+                    <br/>
+                    <label for="Telefono">Telefono: </label>
+                    <br/>
+                    <input  class="Formulario" type="tel" name="Telefono" id="Telefono"/> 
+                    <br/>
+                    <br/>
+                </div>
+                <input type="submit" value="Login"/><input type="reset" value="Borrar"/>
+            </form>
+        </div>
     </div>
 
     <div class="Cloud">
@@ -145,13 +186,13 @@
         <div class="SocialMedia">
             <h3 id="Contacto">Redes sociales:</h3>
             <a target="_blank" href="https://www.facebook.com/profile.php?id=100005786926145">
-                <img src="https://i.ibb.co/Lz2CpfJ/facebook-1.png" width=125px>
+                <img src="https://i.ibb.co/Lz2CpfJ/facebook-1.png" width=100px>
             </a>
             <a target="_blank" href="https://www.youtube.com/channel/UCPr6ptJjDhsYGlZSgpLXyJQ">
-                <img src="https://i.ibb.co/h7wQDxD/youtube-1.png" width=125px>
+                <img src="https://i.ibb.co/h7wQDxD/youtube-1.png" width=100px>
             </a>
             <a target="_blank" href="https://www.instagram.com/pochi_dibujos/">
-                <img src="https://i.ibb.co/86xRvs0/instagram-1.png" width=125px> 
+                <img src="https://i.ibb.co/86xRvs0/instagram-1.png" width=100px> 
             </a>
             </ul>
         </div>
