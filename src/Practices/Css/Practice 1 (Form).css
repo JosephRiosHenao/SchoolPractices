@@ -31,8 +31,8 @@ h1 {
     width: 100%;
     margin: auto;
     margin-top: 10px;
-    padding: 2%;
-    display: block;
+    padding: 2% 2% 1% 2%;
+    display: block
 }
 input {
     display: block;
@@ -73,9 +73,6 @@ button {
 button:hover {
     background-color:rgb(113,177,129);
     color: white;
-}
-a{
-    color: transparent;
 }
 button[type="submit"] {
     margin-bottom: 15px;
@@ -138,4 +135,20 @@ button[type="submit"] {
 .Centrado {
     margin: auto;
     border: 0px solid #aaa;
+}
+.PaginaPrincipal {
+    display: block;
+    color: white;
+    font-weight: bold;
+    bottom: 1%;
+    position: fixed;
+    text-align: center !important;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+}
+.CrearCuenta {
+    text-align: center;
+    color:rgb(20,77,95);
 }
