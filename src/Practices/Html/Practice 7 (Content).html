@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/Practice 2 (Content).css">
     <title>Document</title>
+
 </head>
 <body>
     <div class="MenuFlotante">
@@ -12,5 +13,15 @@
     <footer>
         <a class="CerrarSeccion" href="Practice 5 (FormLogin).html">Vover al inicio de sesion</a>
     </footer>
+    <script type="text/javascript">
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var peso = prompt("Digite su peso");
+        var PesoMarte = (peso*g_marte)/g_tierra;
+        var PesoJupiter = (peso*g_jupiter)/g_tierra;
+        document.write("Su peso en Marte es "+(PesoMarte.toFixed(2)));
+        document.write("Su peso en Jupiter es "+(PesoJupiter.toFixed(2)));
+    </script>
 </body>
 </html>
