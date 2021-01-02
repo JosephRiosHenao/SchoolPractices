@@ -1,0 +1,14 @@
+.CerrarSeccion {
+    display: block;
+    color: black;
+    font-weight: bold;
+    bottom: 1%;
+    position: fixed;
+    text-align: center !important;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+}
+
+
