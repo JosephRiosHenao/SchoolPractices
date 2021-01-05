@@ -1,6 +1,6 @@
 var d = document.getElementById("Lienzo");
 var lienzo = d.getContext("2d"); 
-var pasos = 250;
+var pasos = parseInt(prompt("Digite los pasos"));
 var PasoFinal = 0;
 var X1 = 0, Y1 = 0, X2 = 500, Y2 = 500;
 for (let i = 0; i <= 500; i+=(pasos/2)) {
