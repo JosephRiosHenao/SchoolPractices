@@ -7,5 +7,5 @@ Boton.addEventListener("click",Calcular);
 function Calcular(){
     var FechaDeNacimiento = Calendario.valueAsDate.getFullYear();
     var Edad = AñoActual-FechaDeNacimiento;
-    document.write(Edad);
+    alert("Tue edad es: "+Edad);
 }   
