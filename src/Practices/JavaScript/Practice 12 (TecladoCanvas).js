@@ -1,5 +1,8 @@
 var teclado = {
-    
+    W = 87,
+    A = 65,
+    S = 83,
+    D= 68
 }
 
 document.addEventListener("keydown",dibujarTeclado)
@@ -7,9 +10,3 @@ document.addEventListener("keydown",dibujarTeclado)
 function dibujarTeclado(Tecla) {
     console.log(Tecla.keyCode)
 }
-/*
-    w = 87
-    a = 65
-    s = 83
-    d = 68
-*/
