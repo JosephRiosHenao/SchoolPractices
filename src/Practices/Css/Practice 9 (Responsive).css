@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('Practice 10 (Responsive-Menu).css');
 
 *{
     margin: 0;
@@ -21,4 +22,12 @@ header{
 .contenedor{
     width: 98%;
     margin: auto;
+}
+
+h1 {
+    float: left;
+}
+
+header .contenedor {
+    display: table;
 }
