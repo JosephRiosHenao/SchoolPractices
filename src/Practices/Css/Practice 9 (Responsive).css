@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 @import url('Practice 10 (Responsive-Menu).css');
 @import url('Practice 11 (Responsive-Banner).css');
+@import url('Practice 12 (Responsive-Blog).css');
 
 *{
     margin: 0;
@@ -36,4 +37,7 @@ header .contenedor {
 section {
     width: 100%;
     margin-bottom: 25px;
+}
+#Bienvenidos{
+    text-align: center;
 }
