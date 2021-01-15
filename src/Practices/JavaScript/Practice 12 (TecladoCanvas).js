@@ -4,6 +4,12 @@ var teclado = {
     S: 83,
     D: 68
 }
+var PASOS = 5;
+var Posicion = 
+{
+    Inicial: {X:0,Y:0},
+    Final: {X:0,Y:0}
+}
 
 document.addEventListener("keydown",dibujarTeclado)
 
