@@ -1,3 +1,6 @@
+Canvas = document.getElementById("Lienzo");
+Pincel = Canvas.getContext("2d");
+
 var teclado = {
     W: 87,
     A: 65,
@@ -7,8 +10,8 @@ var teclado = {
 var PASOS = 5;
 var Posicion = 
 {
-    Inicial: {X:0,Y:0},
-    Final: {X:0,Y:0}
+    Inicial: {X:250,Y:250},
+    Final: {X:250,Y:250}
 }
 
 document.addEventListener("keydown",dibujarTeclado)
@@ -31,4 +34,13 @@ function dibujarTeclado(Teclas) {
             console.log("Derecha!");
         break;
     }
+}
+
+function DibujarLinea(Color,X1,Y1,X2,Y2){
+    Pincel.beginPath();
+    Pincel.strokeStyle = color;
+    Pincel.moveTo(X1,Y1);
+    Pincel.lineTo(X2,Y2);
+    Pincel.stroke();
+    Pincel.closePath();
 }
