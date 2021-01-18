@@ -5,7 +5,7 @@ int main()
 {
     int a = 1;
     char b;
-    while (a == 1){
+    do {
         printf("Digite la \'A\'\n");
         scanf("%c", &b);
         if (b == 'A'){
@@ -14,6 +14,6 @@ int main()
         }else{
             printf("Digite correctamente\n");
         }
-    }
+    } while (a != 1)
     return 0;
 }
