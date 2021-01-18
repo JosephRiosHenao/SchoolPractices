@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Practice_1_WhileDo",
+            "request": "launch",
+            "mainClass": "Practices.Java.Practice_1_WhileDo",
+            "projectName": "SchoolPractices_b6181e2e"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Explicar1",
             "request": "launch",
             "mainClass": "Practices.Java.Explicar1",
