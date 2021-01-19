@@ -1,14 +1,10 @@
 import pyperclip
 import random
-
 Almacen = ""
-
 def Copy(Almacen):
     pyperclip.copy(Almacen)
-
 def Paste():
     pyperclip.paste()
-
 def Generated(Almacen,Tabla):
     NombreLista = (["Carmen","Pedro","Joaquín","Jesús","María","Cristiano","Andres","Gerad","Ana","Eric","Eva","Hugo","Ivan","Juan","Laura","Leo"])
     CruceLista = (["Cr","Cll"])
@@ -28,14 +24,17 @@ def Generated(Almacen,Tabla):
         Cantidad = random.randint(0,100)
         PrecioIndividual = random.randint(1000,10000)
         Precio = PrecioIndividual * Cantidad
+        Año = random.randint(2000,2020)
+        Mes = random.randint(1,12)
+        Dia = random.randint(1,30)
+        Fecha = f"{Año}-{Mes}-{Dia}"
         Dirrecion = f"{Cruce} {NumeroDeCruce}{SubCruce} #{NumeroDeCruceContrario}-{NumeroDeCasa}"
         #Almacen += f"\nINSERT INTO {Tabla} VALUES (\"{ID}\",\"{Nombre}\",\"{Dirrecion}\",\"{Ciudad}\");"
         #Almacen += f"\nINSERT INTO {Tabla} VALUES (\"{ID}\",\"{Producto}\");"
-        Almacen += f"\nINSERT INTO {Tabla} VALUES (\"{ID}\",\"{CodigoProducto}\",\"{Cantidad}\",\"{Precio}\");"
-
+        #Almacen += f"\nINSERT INTO {Tabla} VALUES (\"{ID}\",\"{CodigoProducto}\",\"{Cantidad}\",\"{Precio}\");"
+        Almacen += f"\nINSERT INTO {Tabla} VALUES (\"{ID}\",\"{CodigoProducto}\",\"{Fecha}\");"
     print("Finalizado")
     Copy(Almacen)
 
 print("Iniciando")
-Generated(Almacen,"item_ventas")
-#ITEM_VENTAS(Número_Factura, codigo_producto,cantidad,precio) VENTAS(numero_factura, codigo_cliente,fecha)
+Generated(Almacen,"ventas")
