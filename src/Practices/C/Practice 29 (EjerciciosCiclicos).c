@@ -34,8 +34,7 @@ void Punto3(){
         scanf("%d",&Input);
         if (Input%2==0) Suma += Input;
         if (Input%5==0) Producto *= Input;
-        printf("Su suma es: %d\n",Suma);
-        printf("Su producto es: %d\n\n",Producto);
+        printf("Su suma es: %d\nSu producto es: %d\n\n",Suma,Producto);
         system("pause");
         system("clear");
     }

@@ -16,3 +16,12 @@ const Punto2 = () => {
         else alert(Entrada+" es un numero negativo\n");
     } while (Entrada != 20);
 }
+const Punto3 = () => {
+    var Variables = {Input: 0, Producto: 1,Suma: 0};
+    while (Variables.Input != 999){
+        Variables.Input = parseInt(prompt("Digite '999' para salir\nDigite un numero: "));
+        if (Variables.Input%2==0) Variables.Suma += Variables.Input;
+        if (Variables.Input%5==0) Variables.Producto *= Variables.Input;
+        alert("Su suma es: "+Variables.Suma+"\nSu producto es: "+Variables.Producto);
+    }
+}

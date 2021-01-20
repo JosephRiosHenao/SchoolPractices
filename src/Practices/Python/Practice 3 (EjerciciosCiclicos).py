@@ -10,4 +10,11 @@ def Punto2():
         if (Entrada==0): print(f"{Entrada} es un numero neutro\n")
         elif (Entrada>0): print(f"{Entrada} es un numero positivo\n")
         else: print(f"{Entrada} es un numero negativo\n")
-Punto2()
+def Punto3():
+    Producto, Suma, Input = 1,0,0
+    while (Input != 999):
+        Input = int(input("Digite '999' para salir\nDigite un numero: "))
+        if (Input%2==0): Suma += Input
+        if (Input%5==0): Producto *= Input
+        print(f"Su suma es: {Suma}\nSu producto es: {Producto}\n\n")
+Punto3()
