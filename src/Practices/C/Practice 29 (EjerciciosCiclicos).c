@@ -1,4 +1,4 @@
-#include <stdio.h>;
+#include <stdio.h>
 
 void Punto1(){
     int i = 1;
@@ -36,19 +36,19 @@ void Punto3(){
     }
 }
 void Punto4(){
-    char MesesNombres[12] = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+    char* MesesNombres[] = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
     int MesesDinero[12];
-    int DineroAño = 0;
-    for (int i = 0; i < 12){
+    int DineroAno = 0;
+    for (int i = 0; i < 12; i++){
         printf("¿Cuanto dinero ahorras en %s?",MesesNombres[i]);
-        scanf("%d",&MesDinero[i]);
-        DineroAño += MesDinero[i];
+        scanf("%d",&MesesDinero[i]);
+        DineroAno += MesesDinero[i];
     }
     system("clear");
-    for (int i = 0; i < 12){
+    for (int i = 0; i < 12; i++){
         printf("%s: %d\n",MesesNombres[i], MesesDinero[i]);
     }
-    printf("Dinero ahorrado de todo el año: %d",DineroAño);
+    printf("Dinero ahorrado de todo el año: %d",DineroAno);
 }
 
 int main(){
