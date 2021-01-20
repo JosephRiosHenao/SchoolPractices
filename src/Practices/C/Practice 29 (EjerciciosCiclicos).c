@@ -1,9 +1,5 @@
 #include <stdio.h>;
-int main(){
-    system("clear");
-    Punto3();
-    return 0;
-}
+
 void Punto1(){
     int i = 1;
     while (i <= 20){
@@ -38,4 +34,25 @@ void Punto3(){
         system("pause");
         system("clear");
     }
+}
+void Punto4(){
+    char MesesNombres[12] = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+    int MesesDinero[12];
+    int DineroAño = 0;
+    for (int i = 0; i < 12){
+        printf("¿Cuanto dinero gano en %50s?",MesesNombres[i]);
+        scanf("%d",&MesDinero[i]);
+        DineroAño += MesDinero[i];
+    }
+    system("clear");
+    for (int i = 0; i < 12){
+        printf("%s: %d\n",MesesNombres[i], MesesDinero[i]);
+    }
+    printf("Dinero ahorrado de todo el año: %d",DineroAño);
+}
+
+int main(){
+    system("clear");
+    Punto4();
+    return 0;
 }
