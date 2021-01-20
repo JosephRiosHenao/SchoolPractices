@@ -40,7 +40,7 @@ void Punto4(){
     int MesesDinero[12];
     int DineroAño = 0;
     for (int i = 0; i < 12){
-        printf("¿Cuanto dinero gano en %50s?",MesesNombres[i]);
+        printf("¿Cuanto dinero ahorras en %s?",MesesNombres[i]);
         scanf("%d",&MesDinero[i]);
         DineroAño += MesDinero[i];
     }
