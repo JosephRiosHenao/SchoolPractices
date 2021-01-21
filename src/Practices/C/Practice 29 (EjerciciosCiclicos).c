@@ -59,8 +59,49 @@ void Punto5(){
         printf("Color = %s\n\n",Color);
     }
 }
+void Punto6(){
+    int seleccion = 0;
+    for (int i = 1; i <= 5; i++){
+        printf("PERSONA #%d\n\n1.Bogota\n2.Medellin\n3.Cali\nDigite su ciudad favorita: ",i);
+        scanf("%d", &seleccion);
+        system("clear");
+        switch (seleccion){
+            case 1:
+                printf("Vamos a comenzar hablando de Bogotá, capital de la República de Colombia y del departamento\n
+                de Cundinamarca, además de ser el epicentro político, administrativo, económico, industrial,\n
+                artístico, cultural, deportivo y, por supuesto, turístico del país. Se trata de una ciudad diversa y\n
+                multicultural en la que se combinan las construcciones modernas con las del pasado colonial.\n
+                Además, es importante tener en cuenta que gracias a sus cerros y a sus parques, es una ciudad\n
+                verde.");
+                system("pause");
+                system("clear");
+            break
+            case 2:
+                printf("La segunda ciudad más poblada de Colombia es Medellín, capital del departamento de\n
+                Antioquia. Situada en la cordillera central de los Andes, es un destino ideal para hacer\n
+                senderismo, tirolina y montar a caballo. Además, los turistas podrán disfrutar de unas\n
+                vacaciones llenas de cultura.");
+                system("pause");
+                system("clear");
+            break;
+            case 3:
+                printf("Tras Medellín, la ciudad más poblada de Colombia es Cali, cuyo nombre oficial es Santiago de\n
+                Cali. Se trata de la capital del departamento del Valle del Cauca y está considerada como una de\n
+                las ciudades más antiguas de América. Por otro lado, debes saber que se trata de uno de los\n
+                principales centros económicos e industriales del país.");
+                system("pause");
+                system("clear");
+            break;
+            default:
+                printf("Al no digitar una opcion valida, Se procedera con la persona #%d",i+1);
+                system("pause");
+                system("clear");
+            break;
+        }
+    }
+}
 int main(){
     system("clear");
-    Punto5();
+    Punto6();
     return 0;
 }
