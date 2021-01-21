@@ -25,3 +25,14 @@ const Punto3 = () => {
         alert("Su suma es: "+Variables.Suma+"\nSu producto es: "+Variables.Producto);
     }
 }
+const Punto4 = () => {
+    var NombreMeses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+    var DineroTotal = 0, Mensaje = "MESES\n\n";
+    let DineroMeses = [];
+    for (let i = 0; i <12; i++){
+        DineroMeses.push(parseInt(prompt("Digite el dinero ahorrado en el mes de "+NombreMeses[i])));
+        DineroTotal += DineroMeses[i];
+        Mensaje += NombreMeses[i]+": "+DineroMeses[i]+"\n";
+    }
+    alert(Mensaje+"\nDinero total del año: "+DineroTotal);
+}

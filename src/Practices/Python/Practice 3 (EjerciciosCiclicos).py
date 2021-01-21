@@ -17,4 +17,17 @@ def Punto3():
         if (Input%2==0): Suma += Input
         if (Input%5==0): Producto *= Input
         print(f"Su suma es: {Suma}\nSu producto es: {Producto}\n\n")
-Punto3()
+def Punto4():
+    NombreMeses = (["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"])
+    DineroTotal, DineroMeses= 0, []
+    for i in range(12):
+        try:
+            DineroMeses.append(int(input(f"¿Cuanto dinero ahorrastes en {NombreMeses[i]}?: ")))
+            DineroTotal += DineroMeses[i]
+        except ValueError:
+            print("Digite un valor valido")
+    for i in range(12):
+        print(f"{NombreMeses[i]}: {DineroMeses[i]}")
+    print("Dinero total ahorrado en el año: {}".format(DineroTotal))
+    (NombreMeses[0])
+Punto4()
