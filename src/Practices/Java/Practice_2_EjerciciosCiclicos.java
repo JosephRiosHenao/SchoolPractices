@@ -1,11 +1,12 @@
 package Practices.Java;
+import javax.swing.Icon;
 import javax.swing.JOptionPane;
-
+import MainCode.RenderImagesClass;
 import ConditionalActivity.ProgramaKernel;
 
 public class Practice_2_EjerciciosCiclicos {
     public static void main(String[] args) {
-        Punto5();
+        Punto6();
     }
     public static void Punto1() {
         int i = 1;
@@ -60,4 +61,23 @@ public class Practice_2_EjerciciosCiclicos {
             if (Color.equals("BLUE")) break;
         }
     }
+    public static void Punto6(){
+        String[] Options ={ "Bogota","Medellin","Cali"};
+        int Seleccion;
+        for (int i = 1; i <= 5;i++){
+            Seleccion = JOptionPane.showOptionDialog(null,"PERSONA #"+i+"\n\nSelecciona tu ciudad favorita","Elige",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,icono("/resources/IMG/Samsung.png",50,60),Options, 0);
+            switch (Seleccion){
+                case 0:
+                    JOptionPane.showMessageDialog(null,"Vamos a comenzar hablando de Bogotá, capital de la República de Colombia y del departamento\nde Cundinamarca, además de ser el epicentro político, administrativo, económico, industrial,\nartístico, cultural, deportivo y, por supuesto, turístico del país. Se trata de una ciudad diversa y\nmulticultural en la que se combinan las construcciones modernas con las del pasado colonial.\nAdemás, es importante tener en cuenta que gracias a sus cerros y a sus parques, es una ciudad\nverde.","BOGOTA",JOptionPane.PLAIN_MESSAGE,icono())
+                break;
+                case 1:
+                break;
+                case 3:
+                break;
+            }
+        }
+    }
+	private static Icon icono(String string, int i, int j) {
+		return null;
+	}
 }
