@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
 void Punto1(){
     int i = 1;
     while (i <= 20){
@@ -50,9 +51,16 @@ void Punto4(){
     }
     printf("Dinero ahorrado de todo el año: %d",DineroAno);
 }
-
+void Punto5(){
+    char Color[100];
+    while (strcmp(Color,"BLUE") != 0){
+        printf("Para salir digite 'BLUE'\nDigite un color: ");
+        scanf("%s",Color);
+        printf("Color = %s\n\n",Color);
+    }
+}
 int main(){
     system("clear");
-    Punto4();
+    Punto5();
     return 0;
 }

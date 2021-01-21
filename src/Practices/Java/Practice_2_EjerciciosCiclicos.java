@@ -53,4 +53,7 @@ public class Practice_2_EjerciciosCiclicos {
         }
         JOptionPane.showMessageDialog(null,Mensaje+"\n\nDinero ahorrado en todo el año: "+ProgramaKernel.FormatearDinero(DineroTotal));
     }
+    public static void Punto5(){
+
+    }
 }
