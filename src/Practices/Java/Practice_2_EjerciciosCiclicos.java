@@ -5,7 +5,7 @@ import ConditionalActivity.ProgramaKernel;
 
 public class Practice_2_EjerciciosCiclicos {
     public static void main(String[] args) {
-        Punto4();
+        Punto5();
     }
     public static void Punto1() {
         int i = 1;
@@ -53,7 +53,11 @@ public class Practice_2_EjerciciosCiclicos {
         }
         JOptionPane.showMessageDialog(null,Mensaje+"\n\nDinero ahorrado en todo el año: "+ProgramaKernel.FormatearDinero(DineroTotal));
     }
-    public static void Punto5(){
-
+    public static void Punto5(){    
+        String Color = "N/A";
+        while(true){
+            Color = JOptionPane.showInputDialog(null,"Color = "+Color+"\nDigite un color, sí digita 'BLUE' finaliza el programa");
+            if (Color.equals("BLUE")) break;
+        }
     }
 }

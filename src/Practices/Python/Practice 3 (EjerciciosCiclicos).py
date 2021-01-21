@@ -30,4 +30,10 @@ def Punto4():
         print(f"{NombreMeses[i]}: {DineroMeses[i]}")
     print("Dinero total ahorrado en el año: {}".format(DineroTotal))
     (NombreMeses[0])
-Punto4()
+def Punto5():
+    while (True):
+        Color = "N/A"
+        Color = input(f"\nColor = {Color}\nDigite un color, sí digita 'BLUE' finaliza el programa: ")
+        if (Color == "BLUE"): break;
+
+Punto5()

@@ -1,3 +1,4 @@
+var Body = document.getElementById("container");
 const Punto1 = () => {
     var i = 1;
     while (i<=20){
@@ -36,3 +37,11 @@ const Punto4 = () => {
     }
     alert(Mensaje+"\nDinero total del año: "+DineroTotal);
 }
+const Punto5 = () => {
+    Color = "white";
+    while(true){
+        Color = prompt("Su color actual es: "+Color+"\n\nDigite 'blue' para salir\nAcontinuacion digite un color: ").toLocaleLowerCase();
+        Body.style.backgroundColor = Color;
+    }
+}
+
