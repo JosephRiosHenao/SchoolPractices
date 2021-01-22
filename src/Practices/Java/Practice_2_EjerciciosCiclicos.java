@@ -1,10 +1,10 @@
 package Practices.Java;
-import javax.swing.Icon;
+
 import javax.swing.JOptionPane;
-import MainCode.RenderImagesClass;
 import ConditionalActivity.ProgramaKernel;
 
 public class Practice_2_EjerciciosCiclicos {
+    static MainCode.RenderImagesClass Render = new MainCode.RenderImagesClass();
     public static void main(String[] args) {
         Punto6();
     }
@@ -65,19 +65,21 @@ public class Practice_2_EjerciciosCiclicos {
         String[] Options ={ "Bogota","Medellin","Cali"};
         int Seleccion;
         for (int i = 1; i <= 5;i++){
-            Seleccion = JOptionPane.showOptionDialog(null,"PERSONA #"+i+"\n\nSelecciona tu ciudad favorita","Elige",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,icono("/resources/IMG/Samsung.png",50,60),Options, 0);
+            Seleccion = JOptionPane.showOptionDialog(null,"PERSONA #"+i+"\n\nSelecciona tu ciudad favorita","Elige",JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Samsung.png",50,60),Options, 0);
             switch (Seleccion){
                 case 0:
-                    JOptionPane.showMessageDialog(null,"Vamos a comenzar hablando de Bogotá, capital de la República de Colombia y del departamento\nde Cundinamarca, además de ser el epicentro político, administrativo, económico, industrial,\nartístico, cultural, deportivo y, por supuesto, turístico del país. Se trata de una ciudad diversa y\nmulticultural en la que se combinan las construcciones modernas con las del pasado colonial.\nAdemás, es importante tener en cuenta que gracias a sus cerros y a sus parques, es una ciudad\nverde.","BOGOTA",JOptionPane.PLAIN_MESSAGE,icono())
+                    JOptionPane.showMessageDialog(null,"Vamos a comenzar hablando de Bogotá, capital de la República de Colombia y del departamento\nde Cundinamarca, además de ser el epicentro político, administrativo, económico, industrial,\nartístico, cultural, deportivo y, por supuesto, turístico del país. Se trata de una ciudad diversa y\nmulticultural en la que se combinan las construcciones modernas con las del pasado colonial.\nAdemás, es importante tener en cuenta que gracias a sus cerros y a sus parques, es una ciudad\nverde."
+                    ,"BOGOTA",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Bogota.jpg",500,250));
                 break;
                 case 1:
+                    JOptionPane.showMessageDialog(null,"La segunda ciudad más poblada de Colombia es Medellín, capital del departamento de\nAntioquia. Situada en la cordillera central de los Andes, es un destino ideal para hacer\nsenderismo, tirolina y montar a caballo. Además, los turistas podrán disfrutar de unas\nvacaciones llenas de cultura."
+                    ,"MEDELLIN",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Medellin.jpg",500,250));
                 break;
-                case 3:
+                case 2:
+                    JOptionPane.showMessageDialog(null,"Tras Medellín, la ciudad más poblada de Colombia es Cali, cuyo nombre oficial es Santiago de\nCali. Se trata de la capital del departamento del Valle del Cauca y está considerada como una de\nlas ciudades más antiguas de América. Por otro lado, debes saber que se trata de uno de los\nprincipales centros económicos e industriales del país."
+                    ,"CALI",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Cali.jpg",500,250));
                 break;
             }
         }
     }
-	private static Icon icono(String string, int i, int j) {
-		return null;
-	}
 }
