@@ -6,7 +6,7 @@ import ConditionalActivity.ProgramaKernel;
 public class Practice_2_EjerciciosCiclicos {
     static MainCode.RenderImagesClass Render = new MainCode.RenderImagesClass();
     public static void main(String[] args) {
-        Punto6();
+        menu();
     }
     public static void Punto1() {
         int i = 1;
@@ -15,8 +15,9 @@ public class Practice_2_EjerciciosCiclicos {
             if (i % 2 == 0) {
                 Lista += "Numero par: " + i + "\n";
             }
+            i++;
         }
-        JOptionPane.showMessageDialog(null, Lista);
+        JOptionPane.showMessageDialog(null, ""+Lista);
     }
     public static void Punto2() {
         int Entrada;
@@ -78,6 +79,38 @@ public class Practice_2_EjerciciosCiclicos {
                 case 2:
                     JOptionPane.showMessageDialog(null,"Tras Medellín, la ciudad más poblada de Colombia es Cali, cuyo nombre oficial es Santiago de\nCali. Se trata de la capital del departamento del Valle del Cauca y está considerada como una de\nlas ciudades más antiguas de América. Por otro lado, debes saber que se trata de uno de los\nprincipales centros económicos e industriales del país."
                     ,"CALI",JOptionPane.PLAIN_MESSAGE,Render.icono("/resources/IMG/Cali.jpg",500,250));
+                break;
+            }
+        }
+    }
+    public static void menu() {
+        int options = 0;
+        while (true){
+            options = Integer.parseInt(JOptionPane.showInputDialog(null,"MENU\n\n1.Punto1 (Numero pares de 0 a 20)\n2.Punto2 (Detectar valor de numero)\n3.Punto3 (Sumar pares y multiplicar multiplos de 5)\n4.Punto4 (Dinero ahorrado en el año)\n5.Punto5 (Digitador de colores)\n6.Punto6 (Ciudades de Colombia)\n7.Salir\n\n"));
+            switch (options){
+                case 1:
+                    Punto1();
+                break;
+                case 2:
+                    Punto2();
+                break;
+                case 3:
+                    Punto3();
+                break;
+                case 4:
+                    Punto4();
+                break;
+                case 5:
+                    Punto5();
+                break;
+                case 6:
+                    Punto6();
+                break;
+                case 7:
+                    System.exit(0);
+                break;
+                default:
+                    JOptionPane.showMessageDialog(null,"\n\nDigite una opcion valida\n\n");
                 break;
             }
         }

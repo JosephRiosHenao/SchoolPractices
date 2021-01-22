@@ -99,35 +99,30 @@ void Menu(){
         scanf("%d",&menu);
         switch (menu){
             case 1:
-                system("pause");
-                system("clear");
+                esperarTecla();
                 Punto1();
+                system("pause");
             break;
             case 2:
-                system("pause");
-                system("clear");
+                esperarTecla();
                 Punto2();     
                 system("pause");
             break;
             case 3:
-                system("pause");
-                system("clear");
+                esperarTecla();
                 Punto3();            
             break;
             case 4:
-                system("pause");
-                system("clear");
+                esperarTecla();
                 Punto4(); 
                 system("pause");    
             break;
             case 5:
-                system("pause");
-                system("clear");
+                esperarTecla();
                 Punto5();            
             break;
             case 6:
-                system("pause");
-                system("clear");
+                esperarTecla();
                 Punto6();
             break;
             case 7:
@@ -135,11 +130,14 @@ void Menu(){
             break;
             default:
                 printf("\n\nDigite una opcion valida\n\n");
-                system("pause");
-                system("clear");
+                esperarTecla();
             break;
         }
     }
+}
+void esperarTecla(){
+    system("pause");
+    system("clear");
 }
 int main(){
     system("clear");
