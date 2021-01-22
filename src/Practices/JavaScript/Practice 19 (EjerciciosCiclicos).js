@@ -44,4 +44,14 @@ const Punto5 = () => {
         Body.style.backgroundColor = Color;
     }
 }
+const Punto6 = () => {
+    var eleccion = 0;
+    for (let i = 1; i <= 5; i++) {
+        eleccion = parseInt(prompt("PERSONA #"+i+"\n\n1.Bogota\n2.Medellin\n3.Cali\nDigite su ciudad favorita: "));
+        if (eleccion == 1) alert("\n\nVamos a comenzar hablando de Bogotá, capital de la República de Colombia y del departamento de Cundinamarca, además de ser el epicentro político, administrativo, económico, industrial, artístico, cultural, deportivo y, por supuesto, turístico del país. Se trata de una ciudad diversa y nmulticultural en la que se combinan las construcciones modernas con las del pasado colonial. Además, es importante tener en cuenta que gracias a sus cerros y a sus parques, es una ciudad verde.\n\n");
+        if (eleccion == 2) alert("\n\nLa segunda ciudad más poblada de Colombia es Medellín, capital del departamento de Antioquia. Situada en la cordillera central de los Andes, es un destino ideal para hacer senderismo, tirolina y montar a caballo. Además, los turistas podrán disfrutar de unas vacaciones llenas de cultura.\n\n");
+        if (eleccion == 3) alert("\n\nTras Medellín, la ciudad más poblada de Colombia es Cali, cuyo nombre oficial es Santiago de Cali. Se trata de la capital del departamento del Valle del Cauca y está considerada como una de las ciudades más antiguas de América. Por otro lado, debes saber que se trata de uno de los principales centros económicos e industriales del país.\n\n");
+    }
+}
+Punto6();
 
