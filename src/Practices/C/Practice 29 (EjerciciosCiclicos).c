@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 void Punto1(){
     int i = 1;
     while (i <= 20){
@@ -89,8 +90,59 @@ void Punto6(){
         }
     }
 }
+void Menu(){
+    int menu = 0;
+    while(true){
+        system("clear");
+        printf("MENU\n\n1.Punto1 (Numero pares de 0 a 20)\n2.Punto2 (Detectar valor de numero)\n3.Punto3 (Sumar pares y multiplicar multiplos de 5)\n4.Punto4 (Dinero ahorrado en el año)\n5.Punto5 (Digitador de colores)\n6.Punto6 (Ciudades de Colombia)\n7.Salir\n\n");
+        printf("Digite una opcion: ");
+        scanf("%d",&menu);
+        switch (menu){
+            case 1:
+                system("pause");
+                system("clear");
+                Punto1();
+            break;
+            case 2:
+                system("pause");
+                system("clear");
+                Punto2();     
+                system("pause");
+            break;
+            case 3:
+                system("pause");
+                system("clear");
+                Punto3();            
+            break;
+            case 4:
+                system("pause");
+                system("clear");
+                Punto4(); 
+                system("pause");    
+            break;
+            case 5:
+                system("pause");
+                system("clear");
+                Punto5();            
+            break;
+            case 6:
+                system("pause");
+                system("clear");
+                Punto6();
+            break;
+            case 7:
+                exit(1);
+            break;
+            default:
+                printf("\n\nDigite una opcion valida\n\n");
+                system("pause");
+                system("clear");
+            break;
+        }
+    }
+}
 int main(){
     system("clear");
-    Punto6();
+    Menu();
     return 0;
 }
