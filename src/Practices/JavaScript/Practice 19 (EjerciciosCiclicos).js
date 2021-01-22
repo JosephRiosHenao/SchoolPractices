@@ -1,14 +1,22 @@
 var Body = document.getElementById("container");
-const Punto1 = () => {
+var Punto1 = document.getElementById("SubirPunto1").addEventListener("click",Punto1);
+var Punto2 = document.getElementById("SubirPunto2").addEventListener("click",Punto2);
+var Punto3 = document.getElementById("SubirPunto3").addEventListener("click",Punto3);
+var Punto4 = document.getElementById("SubirPunto4").addEventListener("click",Punto4);
+var Punto5 = document.getElementById("SubirPunto5").addEventListener("click",Punto5);
+var Punto6 = document.getElementById("SubirPunto6").addEventListener("click",Punto6);
+var BGColor = document.getElementById("colorInput");
+function Punto1() {
+    alert("Se imprimieron en consola!");
     var i = 1;
     while (i<=20){
         if (i%2==0){
             console.log(i);
         }
-        i++;
+        i++;    
     }
 }
-const Punto2 = () => {
+function Punto2() {
     var Entrada  = 0;
     do {
         Entrada  = parseInt(prompt("Introduzca un numero\nSi desea salir digite \"20\"\n"));
@@ -17,7 +25,7 @@ const Punto2 = () => {
         else alert(Entrada+" es un numero negativo\n");
     } while (Entrada != 20);
 }
-const Punto3 = () => {
+function Punto3() {
     var Variables = {Input: 0, Producto: 1,Suma: 0};
     while (Variables.Input != 999){
         Variables.Input = parseInt(prompt("Digite '999' para salir\nDigite un numero: "));
@@ -26,7 +34,7 @@ const Punto3 = () => {
         alert("Su suma es: "+Variables.Suma+"\nSu producto es: "+Variables.Producto);
     }
 }
-const Punto4 = () => {
+function Punto4() {
     var NombreMeses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
     var DineroTotal = 0, Mensaje = "MESES\n\n";
     let DineroMeses = [];
@@ -37,14 +45,12 @@ const Punto4 = () => {
     }
     alert(Mensaje+"\nDinero total del año: "+DineroTotal);
 }
-const Punto5 = () => {
-    Color = "white";
-    while(true){
-        Color = prompt("Su color actual es: "+Color+"\n\nDigite 'blue' para salir\nAcontinuacion digite un color: ").toLocaleLowerCase();
-        Body.style.backgroundColor = Color;
-    }
+function Punto5() {
+    ColorSelect = BGColor.value; 
+    document.getElementById('container').style.backgroundColor= ColorSelect;
+
 }
-const Punto6 = () => {
+function Punto6() {
     var eleccion = 0;
     for (let i = 1; i <= 5; i++) {
         eleccion = parseInt(prompt("PERSONA #"+i+"\n\n1.Bogota\n2.Medellin\n3.Cali\nDigite su ciudad favorita: "));
@@ -53,5 +59,4 @@ const Punto6 = () => {
         if (eleccion == 3) alert("\n\nTras Medellín, la ciudad más poblada de Colombia es Cali, cuyo nombre oficial es Santiago de Cali. Se trata de la capital del departamento del Valle del Cauca y está considerada como una de las ciudades más antiguas de América. Por otro lado, debes saber que se trata de uno de los principales centros económicos e industriales del país.\n\n");
     }
 }
-Punto6();
 

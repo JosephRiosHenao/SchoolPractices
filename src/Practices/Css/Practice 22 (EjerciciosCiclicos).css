@@ -31,6 +31,8 @@
     height: 2rem;
     width: 100%;
     border-radius: 1rem;
+    font-size: 30px;
+    text-align: center;
 }
 .fondo{
     background-color: black;
