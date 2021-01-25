@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Practice_3_EjerciciosIterativos",
+            "request": "launch",
+            "mainClass": "Practices.Java.Practice_3_EjerciciosIterativos",
+            "projectName": "SchoolPractices_b6181e2e"
+        },
+        {
+            "type": "java",
             "name": "Launch Practice_2_EjerciciosCiclicos",
             "request": "launch",
             "mainClass": "Practices.Java.Practice_2_EjerciciosCiclicos",
