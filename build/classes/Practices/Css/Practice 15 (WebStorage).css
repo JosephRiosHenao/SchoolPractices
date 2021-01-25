@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+.container {
+    display: block;
+    width:max-content;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: auto;
+}
+input {
+    width: 100%;
+}
+button {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    border-radius: 1rem;
+    outline: none;
+    margin-top: 1rem;
+}

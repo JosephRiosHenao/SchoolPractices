@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma;
+}
+body {
+    background: linear-gradient(to left, rgb(41, 169, 201), rgb(210, 61, 255));
+}
+.container h1 {
+    background: white;
+    padding: 1rem 1rem 1rem 1rem;
+    width: max-content;
+    display: block;
+    text-align: center;
+    border-radius: 1rem;
+    margin: auto; 
+    margin-top: 1rem;
+}
+.Formulario {
+    background: white;
+    width:max-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+}
+input[type="button"]{
+    text-decoration: none;
+    outline: none;
+    padding: 1rem;
+    display: block;
+    margin: auto;
+    border: 0px solid transparent;
+    margin-top: 1rem;
+    background: linear-gradient(to right,rgb(41, 169, 201), rgb(210, 61, 255));
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    color: white;
+    font-weight:bold
+}
+input[type="date"]{
+    border-radius: 2rem;
+    outline: none;
+    margin-top: 1rem;
+    border: 1px solid black;
+    text-align: end;
+}

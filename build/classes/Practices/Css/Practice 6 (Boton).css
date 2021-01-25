@@ -1,0 +1,23 @@
+input[type="button"]{
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-size: larger;
+    background: black;
+    color: White;
+    box-sizing: border-box;
+    display: block;
+    margin: auto;
+    margin-top: 20%;
+    padding: 2rem;
+    border-radius: 1rem;
+    outline: none;
+    font-family: "Helvetica";
+}
+input[type="button"]:active{
+    transition: all 0.1s;
+    background-color: white;
+    color: black;
+}
+body {
+    background: rgb(204, 81, 81);
+}   

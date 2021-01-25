@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('Practice 10 (Responsive-Menu).css');
+@import url('Practice 11 (Responsive-Banner).css');
+@import url('Practice 12 (Responsive-Blog).css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 178, 155);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+
+h1 {
+    float: left;
+}
+
+header .contenedor {
+    display: table;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+#Bienvenidos{
+    text-align: center;
+}

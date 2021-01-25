@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.padre{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.tarjeta{
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 10px dashed lightgreen;
+}
+.tarjeta button {
+    font-size: 30px;
+    padding: 0.5rem;
+    background-color: lightgreen;
+    border-radius: 1rem;
+}
+.tarjeta h1 {
+    margin-bottom: 3rem;;
+}
+.tarjeta input {
+    margin-bottom: 1.5rem;
+    height: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    font-size: 30px;
+    text-align: center;
+}
+.fondo{
+    background-color: black;
+}

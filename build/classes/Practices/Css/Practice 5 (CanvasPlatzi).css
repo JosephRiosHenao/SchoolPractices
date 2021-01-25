@@ -1,0 +1,17 @@
+body {
+    background: rgb(17, 17, 17);
+}
+canvas {
+    display: flex;
+    margin: auto;
+    margin-top: 6%;
+    border: 1px solid white;
+    background: rgb(0, 0, 0);
+}
+canvas:hover {
+    transition: all 1s;
+    background: rgb(17, 17, 17);
+    border-radius: 2rem;
+    border: 1px solid rgb(17, 17, 17);
+
+}

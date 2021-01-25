@@ -1,0 +1,20 @@
+.Grid > .Tarjeta{
+    background: gray;
+    color: white;
+    display:grid;
+    grid-template-columns:repeat(1,min-content);
+    grid-template-rows: repeat(2,max-content);
+    gap: 1em;
+    text-align: center;
+}
+.Grid{
+    padding: 1em;
+    background: lightgray;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(3,max-content);
+    gap: 1em;
+}
+body{
+    background: black;
+}   

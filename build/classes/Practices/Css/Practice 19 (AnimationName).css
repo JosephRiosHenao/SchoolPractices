@@ -1,0 +1,28 @@
+/*body {
+    background-color: black;
+}
+.Efect{
+    stroke-dasharray: 900;
+    stroke-dashoffset: 0;
+    animation: dash 10s linear;
+}
+@keyframes dash{
+    from {stroke-dashoffset: 900;}
+    to {stroke-dashoffset: 0;}
+    0% {fill: none;}
+    10% {fill:white;}
+    from {stroke: read};
+    to {stroke: ;}
+}
+body {
+    background-color: black;
+}
+*/
+.badytechdvxfv{
+    stroke-dasharray: 900;
+    animation: dash 10s ease-out;
+    text-shadow:0px 0px 10px white;
+    }
+  @keyframes dash{
+    from{stroke-dashoffset: 1000;}
+    }

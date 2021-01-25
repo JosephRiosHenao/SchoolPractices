@@ -1,0 +1,22 @@
+body {
+    background-color: white;
+    color: black;
+}
+table {
+    border: 2px solid black;
+    width: 100%;
+}
+tr {
+    border: 5px solid black;
+}
+td {
+    border-top: 1px solid rgb(131, 27, 27)
+}
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.hola{
+    background-color: aqua;
+}
