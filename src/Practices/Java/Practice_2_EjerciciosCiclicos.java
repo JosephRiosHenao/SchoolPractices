@@ -86,7 +86,7 @@ public class Practice_2_EjerciciosCiclicos {
     public static void menu() {
         int options = 0;
         while (true){
-            options = Integer.parseInt(JOptionPane.showInputDialog(null,"MENU\n\n1.Punto1 (Numero pares de 0 a 20)\n2.Punto2 (Detectar valor de numero)\n3.Punto3 (Sumar pares y multiplicar multiplos de 5)\n4.Punto4 (Dinero ahorrado en el año)\n5.Punto5 (Digitador de colores)\n6.Punto6 (Ciudades de Colombia)\n7.Salir\n\n"));
+            options = Integer.parseInt(JOptionPane.showInputDialog(null,"MENU\n\n1.Punto1 (Numero pares de 0 a 20)\n2.Punto2 (Detectar valor de numero)\n3.Punto3 (Sumar pares y multiplicar multiplos de 5)\n4.Punto4 (Dinero ahorrado en el año)\n5.Punto5 (Digitador de colores)\n6.Punto6 (Ciudades de Colombia)\n7.Punto7 (Ciclo hasta que digites 5)\n8.Punto8 (Tabla de multiplicasr)\n9.Punto9 (Multiplos de 8 hasta 200)\n10.Punto10 (Porcentaje de notas de 5 estudiantes)\n11.Salir\n\n"));
             switch (options){
                 case 1:
                     Punto1();
@@ -107,6 +107,18 @@ public class Practice_2_EjerciciosCiclicos {
                     Punto6();
                 break;
                 case 7:
+                    Practice_3_EjerciciosIterativos.Punto7();
+                break;
+                case 8:
+                    Practice_3_EjerciciosIterativos.Punto8();
+                break;
+                case 9:
+                    Practice_3_EjerciciosIterativos.Punto9();
+                break;
+                case 10:
+                    Practice_3_EjerciciosIterativos.Punto10();
+                break;
+                case 11:
                     System.exit(0);
                 break;
                 default:

@@ -3,9 +3,7 @@ package Practices.Java;
 import javax.swing.JOptionPane;
 
 public class Practice_3_EjerciciosIterativos {
-    public static void main(String[] args) {
-        Punto10();
-    }
+
     public static void Punto7(){
         int num=1;
         while(num!=5){
