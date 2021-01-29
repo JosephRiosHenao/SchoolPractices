@@ -10,17 +10,20 @@ void point1(){
     scanf("%f",&vf);
     printf("\nDigite la velocidad inicial: ");
     scanf("%f",&v0);
+    printf("\nDigite los segundos: ");
+    scanf("%f",&t);
     printf("%.3lf\n",d);
 }
 void point2(){
     float a,vf,v0,t,v;
     printf("\n\nTODOS LOS DATOS DEBEN SER EN m/s\n");
     printf("a = (vf - v0)/t\n");
-    printf("d = ( (vf + v0) / 2) t\n");
     printf("Digite la velocidad final: ");
     scanf("%f",&vf);
     printf("\nDigite la velocidad inicial: ");
     scanf("%f",&v0);
+    printf("\nDigite los segundos: ");
+    scanf("%f",&t);
 }
 void point3(){
     float m1,vf,v0,tf,t0,t,v;
@@ -31,6 +34,10 @@ void point3(){
     scanf("%f",&vf);
     printf("\nDigite la velocidad inicial: ");
     scanf("%f",&v0);
+    printf("\nDigite el tiempo inicial: ");
+    scanf("%f",&t0);
+    printf("\nDigite el tiempo final: ");
+    scanf("%f",&tf);
 }
 void eleccion(int option){
     switch (option){
