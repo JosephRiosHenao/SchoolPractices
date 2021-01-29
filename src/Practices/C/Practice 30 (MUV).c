@@ -3,18 +3,34 @@
 #include <stdlib.h>
 
 void point1(){
-    printf("TODOS LOS DATOS DEBEN SER EN m/s\n");
-    float v0,v1,s,d;
-    v0 = 5.6676;
-    v1 = 32.434343;
-    d = v1 + v0;
+    float v0,vf,t,d,v;
+    printf("\n\nTODOS LOS DATOS DEBEN SER EN m/s\n");
+    printf("d = ( (vf + v0) / 2) t\n");
+    printf("Digite la velocidad final: ");
+    scanf("%f",&vf);
+    printf("\nDigite la velocidad inicial: ");
+    scanf("%f",&v0);
     printf("%.3lf\n",d);
 }
 void point2(){
-    printf("punto2");
+    float a,vf,v0,t,v;
+    printf("\n\nTODOS LOS DATOS DEBEN SER EN m/s\n");
+    printf("a = (vf - v0)/t\n");
+    printf("d = ( (vf + v0) / 2) t\n");
+    printf("Digite la velocidad final: ");
+    scanf("%f",&vf);
+    printf("\nDigite la velocidad inicial: ");
+    scanf("%f",&v0);
 }
 void point3(){
-    printf("punto3");
+    float m1,vf,v0,tf,t0,t,v;
+    printf("\n\nTODOS LOS DATOS DEBEN SER EN m/s\n");
+    printf("m1 = (vf - v0) / (tf - t0)\n");
+    printf("d = ( (vf + v0) / 2) t\n");
+    printf("Digite la velocidad final: ");
+    scanf("%f",&vf);
+    printf("\nDigite la velocidad inicial: ");
+    scanf("%f",&v0);
 }
 void eleccion(int option){
     switch (option){
@@ -32,8 +48,9 @@ void eleccion(int option){
 void menu(){
     int optionSelect;
     while (true){
-        printf("Digite lo que quiere hallar\n1.Desplazamiento\n4.Salir\n");
+        printf("Digite lo que quiere hallar\n1.Desplazamiento\n2.Acelerracion\n3.Pendiente\n4.Salir\n");
         scanf("%d",&optionSelect);
+        system("clear");
         if (optionSelect>0 && optionSelect<5) eleccion(optionSelect);
         else printf("\nDigite una opcion valida\n");    
     }
