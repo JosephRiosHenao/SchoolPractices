@@ -1,9 +1,11 @@
 package Practices.Java;
 
+import java.util.Random;
+
 import javax.swing.JOptionPane;
 
 public class Practice_4_EjerciciosDoWhile {
-    static int input;
+    static int input = 0;
 
     public static void main(String[] args) {
 
@@ -12,8 +14,9 @@ public class Practice_4_EjerciciosDoWhile {
     public static void menu() {
         int options = 0;
         while (true) {
+            input = 0;
             options = Integer.parseInt(JOptionPane.showInputDialog(null,
-                    "MENU\n\n1.Punto1 (Numero pares de 0 a 20)\n2.Punto2 (Detectar valor de numero)\n3.Punto3 (Sumar pares y multiplicar multiplos de 5)\n4.Punto4 (Dinero ahorrado en el año)\n5.Punto5 (Digitador de colores)\n6.Punto6 (Ciudades de Colombia)\n7.Punto7 (Ciclo hasta que digites 5)\n8.Salir\n\n"));
+                    "MENU\n\n1.Punto1 (Contar numeros hasta negativo)\n2.Punto2 (Mostrar cuadrado)\n3.Punto3 (Par o impar hasta 0)\n4.Punto4 (Promedio de estatura y edad)\n5.Punto5 (Adivinar numero)\n6.Punto6 (Calcular promedio hasta negativo)\n7.Punto7 (Prueba clasificatoria de Produccion Cinematografica)\n8.Salir\n\n"));
             switch (options) {
                 case 1:
                     point1();
@@ -35,6 +38,9 @@ public class Practice_4_EjerciciosDoWhile {
                     break;
                 case 7:
                     point7();
+                    break;
+                case 8:
+                    System.exit(0);
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "\n\nDigite una opcion valida\n\n");
@@ -81,14 +87,34 @@ public class Practice_4_EjerciciosDoWhile {
     }
 
     public static void point5(){
-
+        int number = new Random().nextInt(100);
+        do {
+            input = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite un numero"));
+            if (input>number) JOptionPane.showMessageDialog(null,"Su numero es alto");
+            else if (input<number) JOptionPane.showMessageDialog(null,"Su numero es bajo");
+            else JOptionPane.showMessageDialog(null,"Felicitaciones\nAcerto su numnero!!");
+        } while (number == input);
     }
 
     public static void point6(){
-
+        int cont = 1;
+        do {
+            input += Integer.parseInt(JOptionPane.showInputDialog(null,"Digite un numero, sí es negativo termina el ciclo"));
+            cont++;
+        } while (input<0);
+        JOptionPane.showMessageDialog(null,"Su promedio es "+(input/cont)+"\nDigitastes el numero "+cont+" veces\nTu entrada en total es: "+input);
     }
 
     public static void point7(){
-
+        int approved = 0, disapproved = 0;
+        float totalRating = 0, rating = 0;
+        do {
+            rating = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite la nota del estuadiante "+input));
+            totalRating += rating;
+            input++;
+            if (rating<3.0 && rating>0) disapproved++;
+            else approved++;
+        } while (input<0);
+        JOptionPane.showMessageDialog(null,"Total de estuadiantes: "+(approved+disapproved)+"Estuadiantes que aprobaron: "+approved+"\nEstuantes que desaprobaron: "+disapproved+"\nPromedio del grupo: "+(totalRating/(approved+disapproved)));
     }
 }
