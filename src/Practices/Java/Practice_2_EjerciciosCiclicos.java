@@ -17,7 +17,7 @@ public class Practice_2_EjerciciosCiclicos {
             }
             i++;
         }
-        JOptionPane.showMessageDialog(null, ""+Lista);
+        JOptionPane.showMessageDialog(null,Lista);
     }
     public static void Punto2() {
         int Entrada;
