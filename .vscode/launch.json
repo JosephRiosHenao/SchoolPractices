@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Practice_5_TablaDeMultiplicar",
+            "request": "launch",
+            "mainClass": "Practices.Java.Practice_5_TablaDeMultiplicar",
+            "projectName": "SchoolPractices_b6181e2e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice_4_EjerciciosDoWhile",
+            "request": "launch",
+            "mainClass": "Practices.Java.Practice_4_EjerciciosDoWhile",
+            "projectName": "SchoolPractices_b6181e2e"
+        },
+        {
+            "type": "java",
             "name": "Launch Practice_3_EjerciciosIterativos",
             "request": "launch",
             "mainClass": "Practices.Java.Practice_3_EjerciciosIterativos",

@@ -8,7 +8,7 @@ public class Practice_4_EjerciciosDoWhile {
     static int input = 0;
 
     public static void main(String[] args) {
-
+        menu();
     }
 
     public static void menu() {
@@ -54,16 +54,16 @@ public class Practice_4_EjerciciosDoWhile {
         do {
             input = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite un numero\nSí digita uno negativo se termina el bucle"));
             cont++;
-        } while (input < 0);
-        JOptionPane.showInputDialog(null, "Usted a digitado " + cont + " numeros");
+        } while (input > 0);
+        JOptionPane.showMessageDialog(null, "Usted a digitado " + cont + " numeros");
     }
 
     public static void point2() {
         do {
             input = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite un numero\nSí digita uno negativo se termina el bucle"));
             JOptionPane.showMessageDialog(null, "El cuadrado de " + input + " es: " + (input * input));
-        } while (input < 0);
-        JOptionPane.showInputDialog(null,"Usted se salio por digita un numero negativo");
+        } while (input > 0);
+        JOptionPane.showMessageDialog(null,"Usted se salio por digita un numero negativo");
     }
 
     public static void point3(){
@@ -71,7 +71,7 @@ public class Practice_4_EjerciciosDoWhile {
             input = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite un numero\nSí digita '0' se termina el bucle"));
             if (input%2 == 0) JOptionPane.showMessageDialog(null,"El numero "+input+" es par");
             else JOptionPane.showMessageDialog(null,"El numero "+input+" es impar");
-        } while (input == 0);
+        } while (input != 0);
     }
 
     public static void point4(){
@@ -79,11 +79,11 @@ public class Practice_4_EjerciciosDoWhile {
         float promYears, height = 0;
         do {
             years += Integer.parseInt(JOptionPane.showInputDialog(null, "Digite la edad de la persona " + persons));
-            height += Integer.parseInt(JOptionPane.showInputDialog(null, "Digite la estatura de la persona " + persons));
+            height += Float.parseFloat(JOptionPane.showInputDialog(null, "Digite la estatura de la persona " + persons));
             promYears = years/persons;
             JOptionPane.showMessageDialog(null,"PROMEDIOS ACTUALES\nEdad: "+promYears+"\nEstatura: "+(height/persons));
             persons++;
-        } while (promYears > 30);
+        } while (promYears < 30);
     }
 
     public static void point5(){
@@ -93,16 +93,17 @@ public class Practice_4_EjerciciosDoWhile {
             if (input>number) JOptionPane.showMessageDialog(null,"Su numero es alto");
             else if (input<number) JOptionPane.showMessageDialog(null,"Su numero es bajo");
             else JOptionPane.showMessageDialog(null,"Felicitaciones\nAcerto su numnero!!");
-        } while (number == input);
+        } while (number != input);
     }
 
     public static void point6(){
-        int cont = 1;
+        int cont = 0, storage = 0;
         do {
-            input += Integer.parseInt(JOptionPane.showInputDialog(null,"Digite un numero, sí es negativo termina el ciclo"));
+            input = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite un numero, sí es negativo termina el ciclo"));
+            storage += input;
             cont++;
-        } while (input<0);
-        JOptionPane.showMessageDialog(null,"Su promedio es "+(input/cont)+"\nDigitastes el numero "+cont+" veces\nTu entrada en total es: "+input);
+        } while (input>0);
+        JOptionPane.showMessageDialog(null,"Su promedio es "+(storage/cont)+"\nDigitastes el numeros "+cont+" veces\nTu entrada en total es: "+storage);
     }
 
     public static void point7(){
@@ -114,7 +115,7 @@ public class Practice_4_EjerciciosDoWhile {
             input++;
             if (rating<3.0 && rating>0) disapproved++;
             else approved++;
-        } while (input<0);
+        } while (rating>0);
         JOptionPane.showMessageDialog(null,"Total de estuadiantes: "+(approved+disapproved)+"\nEstuadiantes que aprobaron: "+approved+"\nEstuantes que desaprobaron: "+disapproved+"\nPromedio del grupo: "+(totalRating/(approved+disapproved)));
     }
 }
