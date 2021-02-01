@@ -115,6 +115,6 @@ public class Practice_4_EjerciciosDoWhile {
             if (rating<3.0 && rating>0) disapproved++;
             else approved++;
         } while (input<0);
-        JOptionPane.showMessageDialog(null,"Total de estuadiantes: "+(approved+disapproved)+"Estuadiantes que aprobaron: "+approved+"\nEstuantes que desaprobaron: "+disapproved+"\nPromedio del grupo: "+(totalRating/(approved+disapproved)));
+        JOptionPane.showMessageDialog(null,"Total de estuadiantes: "+(approved+disapproved)+"\nEstuadiantes que aprobaron: "+approved+"\nEstuantes que desaprobaron: "+disapproved+"\nPromedio del grupo: "+(totalRating/(approved+disapproved)));
     }
 }
