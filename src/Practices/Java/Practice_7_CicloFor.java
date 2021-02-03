@@ -8,11 +8,41 @@ public class Practice_7_CicloFor {
     static String Lista = "";
 
     public static void main(String[] args) {
-        point5();    
+        menu();    
     }
 
-    public static void menu(){
-
+    public static void menu() {
+        int options = 0;
+        while (true) {
+            Lista = "";
+            options = Integer.parseInt(JOptionPane.showInputDialog(null,"MENU\n\n1.Punto1 (Numeros de 100 a 0 de 7 en 7)\n2.Punto2 (10 primeros numeros impares)\n3.Punto3 (Cantidad de negativos, positivos y ceros)\n4.Punto4 (Pedir sueldos y calcular)\n5.Punto5 (Media de edades y estura de un curso)\n6.Punto6 (Meses con for each)\n7.Salir\n\n"));
+            switch (options) {
+                case 1:
+                    point1();
+                    break;
+                case 2:
+                    point2();
+                    break;
+                case 3:
+                    point3();
+                    break;
+                case 4:
+                    point4();
+                    break;
+                case 5:
+                    point5();
+                    break;
+                case 6:
+                    point6();
+                    break;
+                case 7:
+                    System.exit(0);
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "\n\nDigite una opcion valida\n\n");
+                    break;
+            }
+        }
     }
 
     public static void point1(){
