@@ -26,7 +26,7 @@ public class Practice_7_CicloFor {
     public static void point3(){
         int numPos = 0, numNeg = 0, numZero = 0, num;
         for (int i = 1; i <= 10; i++) {
-            num = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite un numero, va por el "+i+"° numero"))
+            num = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite un numero, va por el "+i+"° numero"));
             if (num == 0) numZero++;
             else if (num > 0) numPos++;
             else numNeg++;
@@ -34,10 +34,13 @@ public class Practice_7_CicloFor {
         JOptionPane.showMessageDialog(null,"Cantidad de numeros positivos: "+numPos+"\nCantidad de numeros negativos: "+numNeg+"\nCantidad de ceros: "+numZero);
     }
     public static void point4(){
-        long money = 0, sumMoney;
+        long money = 0, sumMoney = 0, cont = 0;
         for (int i = 1; i <= 10; i++) {
             money = ProgramaKernel.PedirNumeroDinero("Digite el presupuesto del usuario "+i, 300, 300);
+            sumMoney += money;
+            if (money>1000000)  cont++;
         }
+        JOptionPane.showMessageDialog(null,"El presupuesto final es: "+(ProgramaKernel.FormatearDinero(sumMoney))+"\nLos presupuestos mayores a 1M son: "+cont);
     }
     public static void point5(){
         int years, contYears = 0, contHeight = 0, sumYears = 0;
@@ -53,6 +56,9 @@ public class Practice_7_CicloFor {
         JOptionPane.showMessageDialog(null,"Edad media "+(sumYears/5)+"\nEstatura media "+(sumHeight/5)+"\nCantidad de alumnos mayores a 18: "+contYears+"\nCantidad de alumnos mas altos de 1.75: "+contHeight);
     }
     public static void point6(){
-
+        String[] NombreMeses =  {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
+        for (String Mes : NombreMeses){
+            JOptionPane.showMessageDialog(null,Mes);
+        }
     }
 }
