@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "Practices.Java.test",
+            "projectName": "SchoolPractices_b6181e2e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice_7_CicloFor",
+            "request": "launch",
+            "mainClass": "Practices.Java.Practice_7_CicloFor",
+            "projectName": "SchoolPractices_b6181e2e"
+        },
+        {
+            "type": "java",
             "name": "Launch Practice_6_ForEach",
             "request": "launch",
             "mainClass": "Practices.Java.Practice_6_ForEach",
