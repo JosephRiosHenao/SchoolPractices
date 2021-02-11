@@ -54,14 +54,19 @@ public class Practice_7_CicloFor {
         JOptionPane.showMessageDialog(null,Lista);
     }
     public static void point3(){
-        int numPos = 0, numNeg = 0, numZero = 0, num;
+        int numPos = 0, numNeg = 0, numZero = 0, num, numPosCant = 0, numNegCant = 0;
         for (int i = 1; i <= 10; i++) {
             num = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite un numero, va por el "+i+"° numero"));
             if (num == 0) numZero++;
-            else if (num > 0) numPos++;
-            else numNeg++;
+            else if (num > 0){
+                numPos++;
+                numPosCant += num;
+            }else{
+                numNeg++;
+                numNegCant += num;
+            }
         }
-        JOptionPane.showMessageDialog(null,"Cantidad de numeros positivos: "+numPos+"\nCantidad de numeros negativos: "+numNeg+"\nCantidad de ceros: "+numZero);
+        JOptionPane.showMessageDialog(null,"Cantidad de numeros positivos: "+numPos+"\nCantidad de numeros negativos: "+numNeg+"\nCantidad de ceros: "+numZero+"\nPromedio Negativo: "+(numNegCant/numNeg)+"\nPromedio Positivo: ");
     }
     public static void point4(){
         long money = 0, sumMoney = 0, cont = 0;
