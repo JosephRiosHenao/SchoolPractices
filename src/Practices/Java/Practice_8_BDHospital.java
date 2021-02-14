@@ -22,7 +22,7 @@ public class Practice_8_BDHospital {
                     priority = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite la prioridad del paciente "+name+"\n(De 1 a "+pacients+", entre más alto tiene mayor prioridad)"));
                     DB[priority] = name;
                 }
-                for (int i = pacients; i >= 0; i--) {
+                for (int i = pacients; i > 0; i--) {
                     output += i+") "+DB[i]+"\n";
                 }
                 JOptionPane.showMessageDialog(null,output);
