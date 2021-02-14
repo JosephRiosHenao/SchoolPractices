@@ -9,6 +9,13 @@
             "name": "Launch Practice_8_BDHospital",
             "request": "launch",
             "mainClass": "Practices.Java.Practice_8_BDHospital",
+            "projectName": "SchoolPractices_d16c0e2a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice_8_BDHospital",
+            "request": "launch",
+            "mainClass": "Practices.Java.Practice_8_BDHospital",
             "projectName": "SchoolPractices_c8885c88"
         },
         {

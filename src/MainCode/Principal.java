@@ -4,6 +4,7 @@ import javax.print.attribute.standard.JobPriority;
 import javax.swing.JOptionPane;
 
 import Practices.Java.Practice_4_EjerciciosDoWhile;
+import Practices.Java.Practice_7_CicloFor;
 public class Principal {
 
     public static void main(String[] args) {
@@ -19,6 +20,7 @@ public class Principal {
         // ConditionalActivity.SistemaDeEmpleados A = new
         // ConditionalActivity.SistemaDeEmpleados();
         // A.Seccion();
-        Practice_4_EjerciciosDoWhile.main(args);
+        //Practice_4_EjerciciosDoWhile.main(args);
+        Practice_7_CicloFor.main(args);
     }
 }

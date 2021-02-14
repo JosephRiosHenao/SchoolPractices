@@ -66,7 +66,7 @@ public class Practice_7_CicloFor {
                 numNegCant += num;
             }
         }
-        JOptionPane.showMessageDialog(null,"Cantidad de numeros positivos: "+numPos+"\nCantidad de numeros negativos: "+numNeg+"\nCantidad de ceros: "+numZero+"\nPromedio Negativo: "+(numNegCant/numNeg)+"\nPromedio Positivo: ");
+        JOptionPane.showMessageDialog(null,"Cantidad de numeros positivos: "+numPos+"\nCantidad de numeros negativos: "+numNeg+"\nCantidad de ceros: "+numZero+"\nPromedio Negativo: "+(numNegCant/numNeg)+"\nPromedio Positivo: "+(numPosCant/numPos));
     }
     public static void point4(){
         long money = 0, sumMoney = 0, cont = 0;
