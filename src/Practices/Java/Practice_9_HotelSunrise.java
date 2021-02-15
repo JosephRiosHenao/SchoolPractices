@@ -1,7 +1,8 @@
 package Practices.Java;
 
-import javax.swing.JOptionPane;
+import java.util.*;
 
+import javax.swing.*;
 public class Practice_9_HotelSunrise {
     static int optionGlobal = 0;
     static String Lista = "PERSONAS BD\n\n";
@@ -41,13 +42,16 @@ public class Practice_9_HotelSunrise {
         }
     }
     public static void registerClients(){
-        int yearOfBirth = 0;
+        List<String> IDlist = new ArrayList<String>();
+        int yearOfBirth = 0, ID;
         boolean a = true;
         while(a){
             optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,"¿Que desea hacer?\n1. Ingresar datos\n2. Mostrar datos\n3. Volver al menu principal"));
             switch (optionGlobal) { 
                 case 1:
-                    Lista += JOptionPane.showInputDialog(null,"Digite su ID (4 numeros)") + " - ";
+                    ID = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite su ID (4 numeros)"));
+                    IDlist.add(""+ID);
+                    Lista += ID + " - ";
                     Lista += JOptionPane.showInputDialog(null,"Digite su nombre") + " - ";
                     Lista += JOptionPane.showInputDialog(null,"Digite sus apellidos" + " - ");
                     Lista += JOptionPane.showInputDialog(null,"Digite su cedula") + " - ";
@@ -70,7 +74,30 @@ public class Practice_9_HotelSunrise {
         }
     }
     public static void registerRooms(){
-
+        boolean a = true;
+        while(a){
+            optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,"¿Que desea hacer?\n1. Ingresar datos\n2. Mostrar datos\n3. Volver al menu principal"));
+            switch (optionGlobal) { 
+                case 1:
+                    Lista += JOptionPane.showInputDialog(null,"Digite su Codigo de reserva (4 numeros)") + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite su ID(existente)") + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite sus apellidos" + " - ");
+                    Lista += JOptionPane.showInputDialog(null,"Digite su cedula") + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite su nacionalidad") + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite su telefono") + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite su dirrecion") + "\n";
+                break;
+                case 2:
+                    JOptionPane.showMessageDialog(null,Lista);
+                break;
+                case 3:
+                    a = false;
+                break;
+                default:
+                    JOptionPane.showMessageDialog(null,"Digite una opcion valdia");
+                break;
+            }
+        }
     }
     public static void checkIn(){
 
