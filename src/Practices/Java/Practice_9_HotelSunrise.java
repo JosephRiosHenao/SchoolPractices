@@ -41,18 +41,26 @@ public class Practice_9_HotelSunrise {
         }
     }
     public static void registerClients(){
+        int yearOfBirth = 0;
         boolean a = true;
         while(a){
-            optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,"¿Que desea hacer?\n1. Ingresar datos\n2. Volver al menu principal"));
-            switch (optionGlobal) { //TY
+            optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,"¿Que desea hacer?\n1. Ingresar datos\n2. Mostrar datos\n3. Volver al menu principal"));
+            switch (optionGlobal) { 
                 case 1:
-                    Lista += JOptionPane.showInputDialog(null,"Digite su ID (4 numeros)");
-                    Lista += JOptionPane.showInputDialog(null,"Digite su nombre");
-                    Lista += JOptionPane.showInputDialog(null,"Digite sus apellidos");
-                    Lista += JOptionPane.showInputDialog(null,"Digite su cedula");
-                    
+                    Lista += JOptionPane.showInputDialog(null,"Digite su ID (4 numeros)") + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite su nombre") + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite sus apellidos" + " - ");
+                    Lista += JOptionPane.showInputDialog(null,"Digite su cedula") + " - ";
+                    yearOfBirth = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite su fecha de nacimiento"));
+                    Lista +=  (2021-yearOfBirth) + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite su nacionalidad") + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite su telefono") + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Digite su dirrecion") + "\n";
                 break;
                 case 2:
+                    JOptionPane.showMessageDialog(null,Lista);
+                break;
+                case 3:
                     a = false;
                 break;
                 default:
