@@ -74,13 +74,17 @@ public class Practice_9_HotelSunrise {
         }
     }
     public static void registerRooms(){
+        int ID;
         boolean a = true;
         while(a){
             optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,"¿Que desea hacer?\n1. Ingresar datos\n2. Mostrar datos\n3. Volver al menu principal"));
             switch (optionGlobal) { 
                 case 1:
                     Lista += JOptionPane.showInputDialog(null,"Digite su Codigo de reserva (4 numeros)") + " - ";
-                    Lista += JOptionPane.showInputDialog(null,"Digite su ID(existente)") + " - ";
+                    while(true){
+                        ID = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite su ID(existente)"));
+                        CompararID()
+                    }
                     Lista += JOptionPane.showInputDialog(null,"Digite sus apellidos" + " - ");
                     Lista += JOptionPane.showInputDialog(null,"Digite su cedula") + " - ";
                     Lista += JOptionPane.showInputDialog(null,"Digite su nacionalidad") + " - ";
