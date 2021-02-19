@@ -1,9 +1,12 @@
 package Practices.Java;
 
-import java.util.*;
+import static javax.swing.JOptionPane.showOptionDialog;
 
+import java.util.*;
 import javax.swing.*;
+
 public class Practice_9_HotelSunrise {
+    static MainCode.RenderImagesClass Render = new MainCode.RenderImagesClass();
     static int optionGlobal = 0;
     static String Lista = "PERSONAS BD\n\n";
     static List<Integer> IDlist = new ArrayList<Integer>();
@@ -47,10 +50,12 @@ public class Practice_9_HotelSunrise {
             }
         }
     }
+
     public static int CompararID(int IDClientRoom) {
         int Return = 1;
         for (int i = 0; i <= IDlist.size() - 1; i++) {
-            if ((IDlist.get(i)) == IDClientRoom) Return = 0;
+            if ((IDlist.get(i)) == IDClientRoom)
+                Return = 0;
         }
         return Return;
     }
@@ -73,7 +78,7 @@ public class Practice_9_HotelSunrise {
                     Lista += (2021 - yearOfBirth) + " - ";
                     Lista += JOptionPane.showInputDialog(null, "Digite su nacionalidad") + " - ";
                     Lista += JOptionPane.showInputDialog(null, "Digite su telefono") + " - ";
-                    Lista += JOptionPane.showInputDialog(null, "Digite su dirrecion") + "\n";
+                    Lista += JOptionPane.showInputDialog(null, "Digite su dirrecion") + "\n\n";
                     break;
                 case 2:
                     JOptionPane.showMessageDialog(null, Lista);
@@ -89,7 +94,8 @@ public class Practice_9_HotelSunrise {
     }
 
     public static void registerRooms() {
-        int ID, b = 1;
+        String typeRooms[] = { "Sencilla", "Doble", "Especial" };
+        int ID = 0, b = 1, typeRoomSelect = 0;
         boolean a = true;
         while (a) {
             optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,
@@ -100,13 +106,27 @@ public class Practice_9_HotelSunrise {
                     while (b != 0) {
                         ID = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite su ID(existente)"));
                         b = CompararID(ID);
-                        if  (b==0) JOptionPane.showMessageDialog(null,"Codigo validado correctamente");
-                        else JOptionPane.showMessageDialog(null,"Validacion del codigo incorrecto");
+                        if (b == 0)
+                            JOptionPane.showMessageDialog(null, "Codigo validado correctamente");
+                        else
+                            JOptionPane.showMessageDialog(null, "Validacion del codigo incorrecto");
                     }
                     Lista += ID + " - ";
-                    Lista += JOptionPane.showInputDialog(null,"Digite sus apellidos" + " - ");
-                    
-                    Lista += JOptionPane.showInputDialog(null,"Digite su dirrecion") + "\n";
+                    typeRoomSelect = showOptionDialog(null,
+                            "Digite el tipo de habitacion:\nSencilla:500.000/dia\nDoble:800.000/dia\nEspecial:1.000.000/dia",
+                            "Tipo de habitaciones", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+                            Render.icono("/resources/IMG/Samsung.png", 100, 100), typeRooms, 0);
+                    switch(typeRoomSelect){
+                        case 0:
+                            Lista += "Sencilla:500.000/dia" + " - ";
+                            break;
+                        case 1:
+                            Lista += "Doble:800.000/dia" + " - ";
+                        case 2:
+                            Lista += "Especial:1.000.000/dia" + " - ";
+                    }
+
+                    Lista += JOptionPane.showInputDialog(null,"Numero de habitaciones: ") + "\n\n";
                 break;
                 case 2:
                     JOptionPane.showMessageDialog(null,Lista);
