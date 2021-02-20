@@ -1,7 +1,5 @@
 package Practices.Java;
 
-import static javax.swing.JOptionPane.showOptionDialog;
-
 import java.util.*;
 import javax.swing.*;
 
@@ -94,7 +92,7 @@ public class Practice_9_HotelSunrise {
     }
 
     public static void registerRooms() {
-        String typeRooms[] = { "Sencilla", "Doble", "Especial" };
+        String typeRooms[] = { "Sencilla", "Doble", "Especial" },typePaymentMethod[] = {"Tarjeta","Efectivo"};
         int ID = 0, b = 1, typeRoomSelect = 0;
         boolean a = true;
         while (a) {
@@ -112,8 +110,8 @@ public class Practice_9_HotelSunrise {
                             JOptionPane.showMessageDialog(null, "Validacion del codigo incorrecto");
                     }
                     Lista += ID + " - ";
-                    typeRoomSelect = showOptionDialog(null,
-                            "Digite el tipo de habitacion:\nSencilla:500.000/dia\nDoble:800.000/dia\nEspecial:1.000.000/dia",
+                    typeRoomSelect = JOptionPane.showOptionDialog(null,
+                            "Seleccione el tipo de habitacion:\nSencilla:500.000/dia\nDoble:800.000/dia\nEspecial:1.000.000/dia",
                             "Tipo de habitaciones", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
                             Render.icono("/resources/IMG/Samsung.png", 100, 100), typeRooms, 0);
                     switch(typeRoomSelect){
@@ -125,7 +123,10 @@ public class Practice_9_HotelSunrise {
                         case 2:
                             Lista += "Especial:1.000.000/dia" + " - ";
                     }
-
+                    typeRoomSelect = JOptionPane.showOptionDialog(null,
+                            "Seleccione el metodo de pago::",
+                            "Tipo de habitaciones", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+                            Render.icono("/resources/IMG/Samsung.png", 100, 100), typePaymentMethod, 0);
                     Lista += JOptionPane.showInputDialog(null,"Numero de habitaciones: ") + "\n\n";
                 break;
                 case 2:
