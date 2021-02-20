@@ -93,7 +93,7 @@ public class Practice_9_HotelSunrise {
 
     public static void registerRooms() {
         String typeRooms[] = { "Sencilla", "Doble", "Especial" },typePaymentMethod[] = {"Tarjeta","Efectivo"};
-        int ID = 0, b = 1, typeRoomSelect = 0;
+        int ID = 0, b = 1, typeRoomSelect = 0,typePaymentMethodSelect = 0;
         boolean a = true;
         while (a) {
             optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,
@@ -110,6 +110,7 @@ public class Practice_9_HotelSunrise {
                             JOptionPane.showMessageDialog(null, "Validacion del codigo incorrecto");
                     }
                     Lista += ID + " - ";
+                    Lista += JOptionPane.showInputDialog(null,"Numero de habitaciones: ");
                     typeRoomSelect = JOptionPane.showOptionDialog(null,
                             "Seleccione el tipo de habitacion:\nSencilla:500.000/dia\nDoble:800.000/dia\nEspecial:1.000.000/dia",
                             "Tipo de habitaciones", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
@@ -117,17 +118,26 @@ public class Practice_9_HotelSunrise {
                     switch(typeRoomSelect){
                         case 0:
                             Lista += "Sencilla:500.000/dia" + " - ";
-                            break;
+                        break;
                         case 1:
                             Lista += "Doble:800.000/dia" + " - ";
+                        break;
                         case 2:
                             Lista += "Especial:1.000.000/dia" + " - ";
+                        break;
                     }
-                    typeRoomSelect = JOptionPane.showOptionDialog(null,
+                    typePaymentMethodSelect = JOptionPane.showOptionDialog(null,
                             "Seleccione el metodo de pago::",
                             "Tipo de habitaciones", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
                             Render.icono("/resources/IMG/Samsung.png", 100, 100), typePaymentMethod, 0);
-                    Lista += JOptionPane.showInputDialog(null,"Numero de habitaciones: ") + "\n\n";
+                    switch(typePaymentMethodSelect){
+                        case 0:
+                            Lista += "Tarjeta\n\n";
+                        break;
+                        case 1:
+                            Lista += "Efectivo\n\n";
+                        break;
+                    }
                 break;
                 case 2:
                     JOptionPane.showMessageDialog(null,Lista);
