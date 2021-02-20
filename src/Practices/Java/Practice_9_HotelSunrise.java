@@ -2,11 +2,12 @@ package Practices.Java;
 
 import java.util.*;
 import javax.swing.*;
+import ConditionalActivity.ProgramaKernel;
 
 public class Practice_9_HotelSunrise {
     static MainCode.RenderImagesClass Render = new MainCode.RenderImagesClass();
     static int optionGlobal = 0;
-    static String Lista = "PERSONAS BD\n\n";
+    static String Lista = "PERSONAS BD\n\n", ListaReserva = "RESERVA BD\n\n";
     static List<Integer> IDlist = new ArrayList<Integer>();
 
     public static void main(String[] args) {
@@ -70,9 +71,9 @@ public class Practice_9_HotelSunrise {
                     IDlist.add(ID);
                     Lista += ID + " - ";
                     Lista += JOptionPane.showInputDialog(null, "Digite su nombre") + " - ";
-                    Lista += JOptionPane.showInputDialog(null, "Digite sus apellidos" + " - ");
+                    Lista += JOptionPane.showInputDialog(null, "Digite sus apellidos") + " - ";
                     Lista += JOptionPane.showInputDialog(null, "Digite su cedula") + " - ";
-                    yearOfBirth = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite su fecha de nacimiento"));
+                    yearOfBirth = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite su año de nacimiento"));
                     Lista += (2021 - yearOfBirth) + " - ";
                     Lista += JOptionPane.showInputDialog(null, "Digite su nacionalidad") + " - ";
                     Lista += JOptionPane.showInputDialog(null, "Digite su telefono") + " - ";
@@ -93,14 +94,14 @@ public class Practice_9_HotelSunrise {
 
     public static void registerRooms() {
         String typeRooms[] = { "Sencilla", "Doble", "Especial" },typePaymentMethod[] = {"Tarjeta","Efectivo"};
-        int ID = 0, b = 1, typeRoomSelect = 0,typePaymentMethodSelect = 0;
+        int ID = 0, b = 1, typeRoomSelect = 0,typePaymentMethodSelect = 0,HabitacionesCantidad;
         boolean a = true;
         while (a) {
             optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "¿Que desea hacer?\n1. Ingresar datos\n2. Mostrar datos\n3. Volver al menu principal"));
             switch (optionGlobal) {
                 case 1:
-                    Lista += JOptionPane.showInputDialog(null, "Digite su Codigo de reserva (4 numeros)") + " - ";
+                    ListaReserva += JOptionPane.showInputDialog(null, "Digite su Codigo de reserva (4 numeros)") + " - ";
                     while (b != 0) {
                         ID = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite su ID(existente)"));
                         b = CompararID(ID);
@@ -109,21 +110,22 @@ public class Practice_9_HotelSunrise {
                         else
                             JOptionPane.showMessageDialog(null, "Validacion del codigo incorrecto");
                     }
-                    Lista += ID + " - ";
-                    Lista += JOptionPane.showInputDialog(null,"Numero de habitaciones: ");
+                    ListaReserva += ID + " - ";
+                    HabitacionesCantidad = Integer.parseInt(JOptionPane.showInputDialog(null,"Numero de habitaciones: "));
+                    ListaReserva += HabitacionesCantidad + " - ";
                     typeRoomSelect = JOptionPane.showOptionDialog(null,
                             "Seleccione el tipo de habitacion:\nSencilla:500.000/dia\nDoble:800.000/dia\nEspecial:1.000.000/dia",
                             "Tipo de habitaciones", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
                             Render.icono("/resources/IMG/Samsung.png", 100, 100), typeRooms, 0);
                     switch(typeRoomSelect){
                         case 0:
-                            Lista += "Sencilla:500.000/dia" + " - ";
+                            ListaReserva += ProgramaKernel.FormatearDinero((500000*HabitacionesCantidad)) + "/dia" + " - ";
                         break;
                         case 1:
-                            Lista += "Doble:800.000/dia" + " - ";
+                            ListaReserva += ProgramaKernel.FormatearDinero((800000*HabitacionesCantidad)) + "/dia" + " - ";
                         break;
-                        case 2:
-                            Lista += "Especial:1.000.000/dia" + " - ";
+                        case 2: 
+                            ListaReserva += ProgramaKernel.FormatearDinero((1000000*HabitacionesCantidad)) + "/dia" + " - ";
                         break;
                     }
                     typePaymentMethodSelect = JOptionPane.showOptionDialog(null,
@@ -132,15 +134,15 @@ public class Practice_9_HotelSunrise {
                             Render.icono("/resources/IMG/Samsung.png", 100, 100), typePaymentMethod, 0);
                     switch(typePaymentMethodSelect){
                         case 0:
-                            Lista += "Tarjeta\n\n";
+                            ListaReserva += "Tarjeta\n\n";
                         break;
                         case 1:
-                            Lista += "Efectivo\n\n";
+                            ListaReserva += "Efectivo\n\n";
                         break;
                     }
                 break;
                 case 2:
-                    JOptionPane.showMessageDialog(null,Lista);
+                    JOptionPane.showMessageDialog(null,ListaReserva);
                 break;
                 case 3:
                     a = false;
