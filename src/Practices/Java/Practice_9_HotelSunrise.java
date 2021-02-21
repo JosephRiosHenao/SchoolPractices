@@ -70,7 +70,7 @@ public class Practice_9_HotelSunrise {
                     ID = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite su ID (4 numeros)"));
                     IDlist.add(ID);
                     Lista += ID + " - ";
-                    Lista += JOptionPane.showInputDialog(null, "Digite su nombre") + " - ";
+                    Lista += JOptionPane.showInputDialog(null, "Digite su nombre") + " ";
                     Lista += JOptionPane.showInputDialog(null, "Digite sus apellidos") + " - ";
                     Lista += JOptionPane.showInputDialog(null, "Digite su cedula") + " - ";
                     yearOfBirth = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite su año de nacimiento"));
@@ -154,7 +154,28 @@ public class Practice_9_HotelSunrise {
         }
     }
     public static void checkIn(){
+        String ForeginListFactur
+        boolean a = true;
+        while(a){
+            optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,"1.Visualizar personas registradas\n2.Visualizar habitaciones reservadas\n3.Facturar\n4.Volver"));
+            switch (optionGlobal){
+                case 1:
+                    JOptionPane.showMessageDialog(null,Lista);
+                break;
+                case 2:
+                    JOptionPane.showMessageDialog(null,ListaReserva);
+                break;
+                case 3:
+                    JOptionPane.showMessageDialog(null,"Confirmaremos unos datos para la facturacion");
 
+                break;
+                case 4:
+                    a = false;
+                break;
+                default:
+                    JOptionPane.showMessageDialog(null,"Digite una opcion valida");
+            }
+        }
     }
     public static void tour(){
 
