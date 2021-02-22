@@ -26,7 +26,7 @@ public class Practice_9_HotelSunrise {
         int option;
         while (true) {
             option = Integer.parseInt(JOptionPane.showInputDialog(null,
-                    "MENU\n1. Registro de clientes\n2. Registro de habitaciones\n3. Facturacion\n4. Tour\n5. Salir"));
+                    "MENU\n1. Registro de clientes\n2. Registro de habitaciones\n3. Facturacion\n4. Shows\n5. Salir"));
             switch (option) {
                 case 1:
                     registerClients();
@@ -38,7 +38,7 @@ public class Practice_9_HotelSunrise {
                     checkIn();
                     break;
                 case 4:
-                    tour();
+                    shows();
                     break;
                 case 5:
                     System.exit(0);
@@ -77,7 +77,7 @@ public class Practice_9_HotelSunrise {
                     Lista += (2021 - yearOfBirth) + " - ";
                     Lista += JOptionPane.showInputDialog(null, "Digite su nacionalidad") + " - ";
                     Lista += JOptionPane.showInputDialog(null, "Digite su telefono") + " - ";
-                    Lista += JOptionPane.showInputDialog(null, "Digite su dirrecion") + "\n\n";
+                    Lista += JOptionPane.showInputDialog(null, "Digite su direccion") + "\n\n";
                     break;
                 case 2:
                     JOptionPane.showMessageDialog(null, Lista);
@@ -154,30 +154,160 @@ public class Practice_9_HotelSunrise {
         }
     }
     public static void checkIn(){
-        String ForeginListFactur
+        int menu, cant, cont = 1, tip, sen = 0, dob = 0, esp = 0;
+        String nom, ape, preg;
+        double sencilla = 500000, doble = 800000, especial = 1000000, valortotal, valortotaldes;
         boolean a = true;
         while(a){
-            optionGlobal = Integer.parseInt(JOptionPane.showInputDialog(null,"1.Visualizar personas registradas\n2.Visualizar habitaciones reservadas\n3.Facturar\n4.Volver"));
-            switch (optionGlobal){
+            menu = Integer.parseInt(JOptionPane.showInputDialog("----------MENU----------\n"
+                    + "Selecciona una de las siguientes opciones:\n"
+                    + "1. Factura \n"
+                    + "2. Consulta \n"
+                    + "3. Volver \n"));
+            switch (menu) {
                 case 1:
-                    JOptionPane.showMessageDialog(null,Lista);
-                break;
+                    nom = JOptionPane.showInputDialog("Escriba su nombre");
+                    ape = JOptionPane.showInputDialog("Escriba su apellido");
+                    cant = Integer.parseInt(JOptionPane.showInputDialog("que cantidad de habitaciones reservara?"));
+                    while (cont <= cant) {
+                        tip = Integer.parseInt(JOptionPane.showInputDialog("seleccione el tipo de habitacion \n"
+                                + "1. Sencilla \n"
+                                + "2. Doble \n"
+                                + "3. Especial \n"));
+                        if (tip == 1) {
+                            sen = sen + 1;
+                        } else if (tip == 2) {
+                            dob = dob + 1;
+                        } else if (tip == 3) {
+                            esp = esp + 1;
+                        }
+                        cont++;
+                    }
+                    valortotal = ((sencilla * sen) + (doble * dob) + (esp * especial));
+                    preg = JOptionPane.showInputDialog("su nacionalidad es colombiana? SI/NO");
+                    if ("SI".equals(preg)) {
+                        JOptionPane.showMessageDialog(null, "tiene descuento");
+                        sencilla = (sencilla - (sencilla * 0.25));
+                        doble = (doble - (doble * 0.15));
+                        especial = (especial - (especial * 0.10));
+                    } else {
+                        JOptionPane.showMessageDialog(null, "no tiene descuento");
+                    }
+                    valortotaldes = ((sencilla * sen) + (doble * dob) + (esp * especial));
+                    JOptionPane.showMessageDialog(null, "señor(a) " + nom +" "+ ape + "\n"
+                            + "La cantidad de habitaciónes reservadas es de " + cant + " habitaciones \n"
+                            + sen + " sencilla(s)\n"
+                            + dob + " doble(s)\n"
+                            + esp + " especial(es)\n"
+                            + "su valor total es: " + valortotal + "\n"
+                            + "como usted " + preg + " tiene descuento su valor total es: " + valortotaldes);
+                    break;
                 case 2:
-                    JOptionPane.showMessageDialog(null,ListaReserva);
-                break;
+                    JOptionPane.showMessageDialog(null, "habitaciones \n"
+                            + "1. Sencilla ($ 500.000 el día)\n"
+                            + "2. Doble ($ 800.000 el día)\n"
+                            + "3. Especial (1’000.000 el día)\n"
+                            + "Descuento \n"
+                            + "si la nacionalidad del cliente es Colombia, tendrá\n"
+                            + "un 25% en habitación sencilla \n"
+                            + "15% en doble \n"
+                            + "y 10% en habitaciones especial.");
+                    break;
                 case 3:
-                    JOptionPane.showMessageDialog(null,"Confirmaremos unos datos para la facturacion");
-
-                break;
-                case 4:
                     a = false;
                 break;
-                default:
-                    JOptionPane.showMessageDialog(null,"Digite una opcion valida");
             }
         }
     }
-    public static void tour(){
+    public static void shows(){
+        int menu, cont = 0;
+        String nom;
+        nom = JOptionPane.showInputDialog("Escriba su nombre");
+        do {
+            menu = Integer.parseInt(JOptionPane.showInputDialog("------Actividades-----\n"
+                    + "Selecciona la actividad que desea realizar :\n"
+                    + "1. yoga \n"
+                    + "2. clase de baile \n"
+                    + "3. tour por la ciudad \n"
+                    + "4. concierto \n"
+                    + "5. show de comedia \n"
+                    + "6. cena romantica \n"
+                    + "7. fiesta \n"
+                    + "8. pelicula "));
 
+            switch (menu) {
+                case 1:
+                    JOptionPane.showMessageDialog(null, "señor(a) " + nom + " YOGA la actividad tiene un precio de 10000 por persona \n"
+                            + "puede asistir en el siguiente horario \n"
+                            + "8:00am \n"
+                            + "9:00am \n"
+                            + "10:00am \n"
+                            + "11:00am \n"
+                            + "recuerde cancelar en caja");
+                    break;
+                case 2:
+                    JOptionPane.showMessageDialog(null, "señor(a) " + nom + " CLASE DE BAILE la actividad tiene un precio de 8000 por persona \n"
+                            + "puede asistir en el siguiente horario \n"
+                            + "9:00am \n"
+                            + "3:00pm \n"
+                            + "5:00pm \n"
+                            + "7:00am \n"
+                            + "recuerde cancelar en caja");
+                    break;
+                case 3:
+                    JOptionPane.showMessageDialog(null, "señor(a) " + nom + " TOUR POR LA CIUDAD la actividad tiene un precio de 30000 por persona \n"
+                            + "puede asistir en el siguiente horario \n"
+                            + "8:00am \n"
+                            + "10:00am \n"
+                            + "1:00pm \n"
+                            + "3:00pm \n"
+                            + "4:00pm \n"
+                            + "5:00pm \n"
+                            + "recuerde cancelar en caja");
+                    break;
+                case 4:
+                    JOptionPane.showMessageDialog(null, "señor(a) " + nom + " CONCIERTO la actividad tiene un precio de 40000 por persona \n"
+                            + "puede asistir en el siguiente horario \n"
+                            + "8:00pm \n"
+                            + "10:00pm \n"
+                            + "recuerde cancelar en caja");
+                    break;
+                case 5:
+                    JOptionPane.showMessageDialog(null, "señor(a) " + nom + " SHOW DE COMEDIA la actividad tiene un precio de 10000 por persona \n"
+                            + "puede asistir en el siguiente horario \n"
+                            + "8:00pm \n"
+                            + "9:00pm \n"
+                            + "10:00pm \n"
+                            + "11:00pm \n"
+                            + "recuerde cancelar en caja");
+                    break;
+                case 6:
+                    JOptionPane.showMessageDialog(null, "señor(a) " + nom + " CENA ROMANTICA la actividad tiene un precio de 50000 por persona \n"
+                            + "puede asistir en el siguiente horario \n"
+                            + "7:00pm \n"
+                            + "8:00pm \n"
+                            + "9:00pm \n"
+                            + "recuerde cancelar en caja");
+                    break;
+                case 7:
+                    JOptionPane.showMessageDialog(null, "señor(a) " + nom + " FIESTA la actividad tiene un precio de 20000 por persona \n"
+                            + "puede asistir en el siguiente horario \n"
+                            + "desde la 7:00pm \n"
+                            + "recuerde cancelar en caja");
+                    break;
+                case 8:
+                    JOptionPane.showMessageDialog(null, "señor(a) " + nom + " PELICULA la actividad tiene un precio de 12000 por persona \n"
+                            + "puede asistir en el siguiente horario \n"
+                            + "8:00pm \n"
+                            + "9:00pm \n"
+                            + "10:00pm \n"
+                            + "11:00pm \n"
+                            + "recuerde cancelar en caja");
+                    break;
+            }
+            cont=Integer.parseInt(JOptionPane.showInputDialog( "desea volver al menu principal"
+                    + "SI=1"
+                    + "NO=2"));
+        } while (cont != 1);
     }
 }
