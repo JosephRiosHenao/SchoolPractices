@@ -1,9 +1,4 @@
 package MainCode;
-
-import javax.print.attribute.standard.JobPriority;
-import javax.swing.JOptionPane;
-
-import Practices.Java.Practice_4_EjerciciosDoWhile;
 import Practices.Java.Practice_7_CicloFor;
 public class Principal {
 

@@ -2,8 +2,9 @@ package Practices.Java;
 import java.util.Scanner;
 
 public class Matrix{
+    static Scanner Entrada = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner Entrada = new Scanner(System.in);
         String Columnas= "   ";  
         String Filas = "";
         System.out.println("Digite el tamaño");

@@ -2,8 +2,9 @@ package Practices.Java;
 import java.util.Scanner;
 
 public class Arreglo {
+    static Scanner Entrada = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner Entrada = new Scanner(System.in);
         System.out.println("Digite el tamaño del array");
         int Cantidad = Entrada.nextInt();
         int[] Numeros = new int[Cantidad];

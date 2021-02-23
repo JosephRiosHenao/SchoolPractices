@@ -4,10 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Practice_1_WhileDo {
+    static Scanner Lector = new Scanner(System.in);
+
     public static void main(String[] args) {
         //Mayor();
-CicloNumeros();
-//Receptor();
+        CicloNumeros();
+        //Receptor();
     }
     public static void CicloNumeros(){
         int Numero = 100;
@@ -18,7 +20,6 @@ CicloNumeros();
     }
     public static void Mayor(){
         int Maximo = 0;
-        Scanner Lector = new Scanner(System.in);
         Random r1 = new Random();
         int Numero = 0;
         do {
@@ -39,7 +40,6 @@ CicloNumeros();
     public static void Receptor(){
         int Numero = 5;
         int Entrada = 0;
-        Scanner Lector  = new Scanner(System.in);
         do {
             System.out.println("Digite el numero "+Numero);
             Entrada = Lector.nextInt();
