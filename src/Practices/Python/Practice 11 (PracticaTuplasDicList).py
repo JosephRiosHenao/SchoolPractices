@@ -19,9 +19,13 @@ print("--Datos ficticios--")
 
 metrajes = [{
     "Fast & Furious" : ("001","Fast & Furious","Carreras de autos","Acion","1:23:04","2004","Pelicula","4.2"),
-    "Simpsons" : ("002","Simpsons","Comedia caricaturestica de una familia muy divertida","Comedio","+24","2000","Serie","5.0"),
-    "Futurama" : 
+    "Simpsons" : ("002","Simpsons","Comedia caricaturestica de una familia muy divertida","Comedia","+24","2000","Serie","5.0"),
+    "Futurama" : ("003","Futurama","Comedia futuristica caricaturistica","Comedia","+24","2002","Serie","4.9")
+    
 }]
+
+for names in metrajes:
+    if(metrajes[names[6]]) ==
 
 # tip para comparar fechas
 miDate = date(2019, 4, 13)
