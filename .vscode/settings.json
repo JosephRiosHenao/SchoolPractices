@@ -20,5 +20,6 @@
         ]
     },
     "cmake.configureOnOpen": true,
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.pythonPath": "C:\\Users\\RiosHenao\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
 }

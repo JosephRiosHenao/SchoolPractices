@@ -1,5 +1,6 @@
 package MainCode;
 import Practices.Java.Practice_7_CicloFor;
+import Practices.Java.Practice_9_HotelSunrise;
 public class Principal {
 
     public static void main(String[] args) {
@@ -16,6 +17,7 @@ public class Principal {
         // ConditionalActivity.SistemaDeEmpleados();
         // A.Seccion();
         //Practice_4_EjerciciosDoWhile.main(args);
-        Practice_7_CicloFor.main(args);
+        //Practice_7_CicloFor.main(args);
+        Practice_9_HotelSunrise.main(args);
     }
 }

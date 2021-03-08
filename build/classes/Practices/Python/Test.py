@@ -1,2 +1,4 @@
-medida = input("Introduce la operacion: ")
-print(eval(medida))
+a = int(input("Digite algo: "))
+print("Su numero es:",a)
+
+
