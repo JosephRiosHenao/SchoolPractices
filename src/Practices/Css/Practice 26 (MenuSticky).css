@@ -92,6 +92,20 @@ footer  .contenedor-imagen {
 	object-position: 0 bottom;
 }
 
+
+.contenedor-imagen::before{
+	content: "";
+	background: rgba(33,37,43,0.1);
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+body.dark .contenedor-imagen::before{
+	background: rgba(33,37,43,0.5);
+}
 /* * ============================== */
 /* * ============ MAIN ============ */
 /* * ============================== */
@@ -158,6 +172,7 @@ aside .indice a {
 	color: #FFCD48;
 }
 
+
 /* * ============================== */
 /* * ========== FOOTER ============ */
 /* * ============================== */
@@ -213,6 +228,7 @@ footer .navbar {
 	right: 0;
 	left: unset;
 }
+
 /* * ============================== */
 /* * ====== MEDIA QUERIES ========= */
 /* * ============================== */
