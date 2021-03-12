@@ -73,8 +73,7 @@ body.dark .navbar a:hover {
 }
 
 .contenedor {
-	max-width: 1000px;
-	width: 95%;
+	width: 90%;
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
