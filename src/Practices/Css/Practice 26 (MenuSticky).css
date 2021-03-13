@@ -41,17 +41,31 @@ body.dark #blog {
 /* * ============================== */
 /* * ============ HEADER ========== */
 /* * ============================== */
+header .contenedor-icono {
+	font-size: 50px;
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	z-index: 1;
+	animation: bajar-subir 1s ease infinite;
+}
 
+header .contenedor-icono i {
+	color: #FFCD48;
+}
+body.dark header .contenedor-icono i {
+	color: #B5B5B5;
+}
 .navbar {
 	background: #FFCD48;
 	position: sticky;
 	top: 0;
+	z-index: 9;
 }
 body.dark .navbar {
 	background: rgb(58,64,75);
 }
 .navbar a {
-	color: #fff;
 	display: inline-block;
 	padding: 20px;
 	width: 100%;
@@ -300,4 +314,10 @@ canvas{
 	aside {
 		position: static;
 	}
+}
+
+@keyframes bajar-subir {
+	0% { transform: translateY(25px); }
+	50% { transform: translateY(0); }
+	100% { transform: translateY(25px); }
 }

@@ -1,4 +1,4 @@
-/*!
+    /*!
  * fullPage 3.1.0
  * https://github.com/alvarotrigo/fullPage.js
  *
@@ -73,12 +73,18 @@ html.fp-enabled,
 .fp-controlArrow.fp-prev {
     left: 15px;
     width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    border-width: 30px 25px 30px 0;
+    border-color: transparent #FFCD48 transparent transparent;
 }
 .fp-controlArrow.fp-next {
-    right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
+    right: 0;
+    border-width: 30px 25px 30px ;
+    border-color: transparent transparent transparent #FFCD48;
+}
+body.dark .fp-controlArrow.fp-prev {
+    border-color: transparent #fff transparent transparent;
+}
+body.dark .fp-controlArrow.fp-next {
     border-color: transparent transparent transparent #fff;
 }
 .fp-scrollable {
@@ -111,18 +117,21 @@ html.fp-enabled,
     left: 17px;
 }
 .fp-slidesNav{
+    color: green !important;
     position: absolute;
     z-index: 4;
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-    left: 0 !important;
+    left: 50%;
     right: 0;
+    bottom: 10%;
+
     margin: 0 auto !important;
 }
 .fp-slidesNav.fp-bottom {
-    bottom: 17px;
+    bottom: 50px;
 }
 .fp-slidesNav.fp-top {
     top: 17px;
@@ -170,7 +179,7 @@ html.fp-enabled,
     height: 4px;
     width: 4px;
     border: 0;
-    background: #333;
+    background: #FFCD48;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
@@ -178,6 +187,9 @@ html.fp-enabled,
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
+}
+body.dark .fp-slidesNav ul li a span {
+    background: white;
 }
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span{
