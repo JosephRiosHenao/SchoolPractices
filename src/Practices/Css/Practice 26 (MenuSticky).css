@@ -310,7 +310,7 @@ canvas{
 
 .texto {
 	margin: 1rem;
-	border: solid 3px white;
+	border: solid 3px black;
 	padding: 1rem;
 	margin-left: 25%;
 	margin-bottom: 5%
@@ -318,11 +318,25 @@ canvas{
 
 .textoSinImagen {
 	margin: 1rem;
-	border: solid 3px white;
+	border: solid 3px black;
 	padding: 1rem;
 	margin-bottom: 5%
 }
 
+body.dark .texto {
+	margin: 1rem;
+	border: solid 3px white;
+	padding: 1rem;
+	margin-left: 25%;
+	margin-bottom: 5%
+}
+
+body.dark .textoSinImagen {
+	margin: 1rem;
+	border: solid 3px white;
+	padding: 1rem;
+	margin-bottom: 5%
+}
 
 /* * ============================== */
 /* * ====== MEDIA QUERIES ========= */
