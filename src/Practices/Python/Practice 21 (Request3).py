@@ -39,8 +39,12 @@ class Book(Resource):
     def put(self, book_id):
         abort_if_book_doesnt_exits(book_id)
         json = request.get_json(True)
-        
-
+        BOOKS.update({'{}'.format(book_id): json})
+        return jsonify({'data': BOOKS[book_id]})
+    def delete(self, book_id):
+        abort_if_book_doesnt_exits(book_id)
+        del BOOKS[book_id]
+        return jsonify({'data': BOOKS})
 class Authors(Resource):
     pass
 
