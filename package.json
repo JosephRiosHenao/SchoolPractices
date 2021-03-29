@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.3",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "name": "SchoolPractices",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosephRiosHenao/SchoolPractices.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JosephRiosHenao/SchoolPractices/issues"
+  },
+  "homepage": "https://github.com/JosephRiosHenao/SchoolPractices#readme",
+  "description": ""
+}
