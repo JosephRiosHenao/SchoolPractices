@@ -8,7 +8,7 @@ t = 0
 while (status):
     if (t<=limit):
         resultPosition = yi+vi*t-((9.8*math.pow(t,2))/2)
-        resultVelocity = vi-9.8*t
+        resultVelocity = vi+9.8*t
         print('Posicion:',resultPosition,'\nTiempo:',t,'\nVelocidad:',resultVelocity,'\n')
         t = t + tSum
     else:
