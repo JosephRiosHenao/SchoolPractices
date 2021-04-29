@@ -1,0 +1,5 @@
+CodeMainEncapsulation.Actividad2MediaTecnica.ACT1
+CodeMainEncapsulation.Actividad2MediaTecnica.ACT1$4
+CodeMainEncapsulation.Actividad2MediaTecnica.ACT1$3
+CodeMainEncapsulation.Actividad2MediaTecnica.ACT1$2
+CodeMainEncapsulation.Actividad2MediaTecnica.ACT1$1

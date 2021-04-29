@@ -1,0 +1,3 @@
+CodeMainEncapsulation.Actividad3MediaTecnica.Punto1Act3
+CodeMainEncapsulation.Actividad3MediaTecnica.Punto1Act3$2
+CodeMainEncapsulation.Actividad3MediaTecnica.Punto1Act3$1

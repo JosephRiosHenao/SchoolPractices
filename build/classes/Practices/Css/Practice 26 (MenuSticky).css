@@ -1,0 +1,373 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: .3s ease-out all;
+}
+
+html {
+	scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;	
+	background: #f2f2f2;
+}
+body #blog {
+	background: #f2f2f2;
+}
+body.dark {
+	background: rgb(33,37,43);
+}
+body.dark #blog {
+	background: rgb(33,37,43)
+}
+
+/* * ============================== */
+/* * ============ HEADER ========== */
+/* * ============================== */
+header .contenedor-icono {
+	font-size: 50px;
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	z-index: 1;
+	animation: bajar-subir 1s ease infinite;
+}
+
+header .contenedor-icono i {
+	color: #FFCD48;
+}
+body.dark header .contenedor-icono i {
+	color: #B5B5B5;
+}
+.navbar {
+	background: #FFCD48;
+	position: sticky;
+	top: 0;
+	z-index: 9;
+}
+body.dark .navbar {
+	background: rgb(58,64,75);
+}
+.navbar a {
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	transition: .3s ease-out all;
+}
+body.dark .navbar a {
+	color: #B5B5B5;
+}
+
+.navbar a:hover {
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;
+}
+body.dark .navbar a:hover {
+	background: rgb(33,37,43);
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* * ============================== */
+/* * ===== CONTENEDOR IMAGEN ====== */
+/* * ============================== */
+
+header  .contenedor-imagen {
+	height: 100vh;
+	position: relative;
+	bottom: 60px;
+	z-index: -2;
+}
+footer  .contenedor-imagen {
+	height: 100vh;
+	position: relative;
+	top: 60px;
+	z-index: -2;
+}
+header {
+	background: linear-gradient(to top, rgba(242,242,242,1) 10%, rgba(255,255,250,0.0) 50%);
+}
+footer {
+	background: linear-gradient(to bottom, rgba(242,242,242,1) 10%, rgba(255,255,250,0.0) 50%);
+}
+
+body.dark header {
+	background: linear-gradient(to top, rgba(33,37,43,1) 10%, rgba(255,255,250,0.0) 50%);
+}
+body.dark footer {
+	background: linear-gradient(to bottom, rgba(33,37,43,1) 10%, rgba(255,255,250,0.0) 50%);
+}
+
+.contenedor-imagen img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	object-fit: cover;
+	object-position: 0 bottom;
+}
+
+
+.contenedor-imagen::before{
+	content: "";
+	background: rgba(33,37,43,0.1);
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+body.dark .contenedor-imagen::before{
+	background: rgba(33,37,43,0.5);
+}
+/* * ============================== */
+/* * ============ MAIN ============ */
+/* * ============================== */
+
+main {
+	min-height: 100vh;
+	z-index: 2;
+}
+
+main .contenido p {
+	margin-bottom: 20px;
+	line-height: 30px;
+	color: #525151;
+}
+body.dark main .contenido p {
+	color: #B5B5B5;
+}
+
+main .contenido .titulo {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+}
+body.dark main .contenido .titulo {
+	color: #B5B5B5;
+}
+
+main .contenido .fecha {
+	font-size: 14px;
+	color: #B5B5B5;
+}
+body.dark main .contenido .fecha {
+	color: #525151;
+}
+
+/* * ============================== */
+/* * ============ ASIDE =========== */
+/* * ============================== */
+
+aside {
+	min-width: 30%;
+	margin: 40px 20px 20px 0;
+	height: 100%;
+	background: #1D2F3D;
+	padding: 20px;
+	border-radius: 3px;
+	position: sticky;
+	top: 60px;
+}
+body.dark aside {
+	background: rgb(58,64,75);
+}
+
+aside .titulo {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #f2f2f2;
+}
+ 
+aside .indice a {
+	display: block;
+	margin-bottom: 10px;
+	color: #FFCD48;
+}
+
+
+/* * ============================== */
+/* * ========== FOOTER ============ */
+/* * ============================== */
+
+footer .navbar {
+	position: sticky;
+	bottom: 0;
+}
+/* * ============================== */
+/* * ========== SWITCH ============ */
+/* * ============================== */
+.switch {
+	background: #343D5B;
+	border-radius: 1000px;
+	border: none;
+	position: relative;
+	cursor: pointer;
+	display: -webkit-box;
+  	display: -ms-flexbox;
+	display: flex;
+	outline: none;
+}
+
+.switch span {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	background-attachment: none;
+	color: #fff
+}
+
+.switch::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	background: #F1F1F1;
+	top: 0;
+	left: 0;
+	right: unset;
+	border-radius: 100px;
+	transition: .3s ease all;
+	-webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+			box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+.switch.active {
+	background: orange;
+	color: #000
+}
+.switch.active::after {
+	right: 0;
+	left: unset;
+}
+
+
+/* * ============================== */
+/* * ====== PARTICLES JS ========== */
+/* * ============================== */
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: fixed;
+}
+
+
+/* * ============================== */
+/* * ====== FOTOS SLIDE =========== */
+/* * ============================== */
+.post img {
+	border-radius: 1rem;
+	float: left;
+}
+
+.post p {
+	vertical-align: middle;
+	display: block;
+	text-align: justify;|
+}
+.post {
+	padding: 1rem;
+}
+
+/* * ============================== */
+/* * ====== TEXTO SLIDE =========== */
+/* * ============================== */
+
+.texto {
+	margin: 1rem;
+	border: solid 3px black;
+	padding: 1rem;
+	margin-left: 25%;
+	margin-bottom: 5%
+}
+
+.textoSinImagen {
+	margin: 1rem;
+	border: solid 3px black;
+	padding: 1rem;
+	margin-bottom: 5%
+}
+
+body.dark .texto {
+	margin: 1rem;
+	border: solid 3px white;
+	padding: 1rem;
+	margin-left: 25%;
+	margin-bottom: 5%
+}
+
+body.dark .textoSinImagen {
+	margin: 1rem;
+	border: solid 3px white;
+	padding: 1rem;
+	margin-bottom: 5%
+}
+
+/* * ============================== */
+/* * ====== MEDIA QUERIES ========= */
+/* * ============================== */
+@media screen and (max-width: 900px){
+	.navbar .contenedor {
+		flex-wrap: wrap;
+		margin: 0;
+		width: 100%;
+	}
+
+	.navbar a {
+		width: auto;
+		flex: 1;
+	}
+
+	.contenedor-imagen {
+		height: 50vh;
+	}
+
+	main .contenedor {
+		flex-direction: column;
+	}
+
+	aside {
+		position: static;
+	}
+}
+
+@keyframes bajar-subir {
+	0% { transform: translateY(25px); }
+	50% { transform: translateY(0); }
+	100% { transform: translateY(25px); }
+}

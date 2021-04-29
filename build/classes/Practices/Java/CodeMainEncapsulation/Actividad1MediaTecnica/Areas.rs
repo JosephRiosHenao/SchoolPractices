@@ -1,0 +1,5 @@
+CodeMainEncapsulation.Actividad1MediaTecnica.Areas$4
+CodeMainEncapsulation.Actividad1MediaTecnica.Areas$3
+CodeMainEncapsulation.Actividad1MediaTecnica.Areas$2
+CodeMainEncapsulation.Actividad1MediaTecnica.Areas$1
+CodeMainEncapsulation.Actividad1MediaTecnica.Areas
