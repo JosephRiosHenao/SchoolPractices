@@ -1,1 +1,11 @@
 /* STYLE SHEET */
+header {
+    width: 100%;
+    min-height: 625px;
+}
+
+.wave {
+    position: relative;
+    padding-top: 10rem;
+    background: linear-gradient(90deg, rgba(97,101,215,1) 0%, rgba(227,141,221));
+}
