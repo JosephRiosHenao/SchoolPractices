@@ -1,11 +1,24 @@
 /* STYLE SHEET */
 header {
     width: 100%;
-    min-height: 625px;
+    min-height: 100vh;
 }
 
 .wave {
     position: relative;
     padding-top: 10rem;
-    background: linear-gradient(90deg, rgba(97,101,215,1) 0%, rgba(227,141,221));
+    background: linear-gradient(120deg,  rgba(217,60,101) 10%, rgb(253, 224, 63) 90%);
+}
+
+.wave::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background: url("../Html/assets/WaveTwo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
 }
