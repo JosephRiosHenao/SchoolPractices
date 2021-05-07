@@ -14,6 +14,7 @@ cv2.drawContours(imagen,contorno,-1,(0,255,0),4)
 
 # cv2.imshow("OUTPUT",umbral)
 # cv2.imshow("OUTPUT",gray)
-# cv2.imshow("Imagen",imagen)
+cv2.imshow("Imagen",imagen)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
