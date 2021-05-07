@@ -21,5 +21,7 @@
     },
     "cmake.configureOnOpen": true,
     "C_Cpp.errorSquiggles": "Disabled",
-    "python.pythonPath": "C:\\Users\\RiosHenao\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+    "python.pythonPath": "C:\\Users\\RiosHenao\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }
