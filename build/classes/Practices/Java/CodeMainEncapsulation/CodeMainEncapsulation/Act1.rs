@@ -1,5 +1,0 @@
-CodeMainEncapsulation.CodeMainEncapsulation.Act1$1
-CodeMainEncapsulation.CodeMainEncapsulation.Act1$2
-CodeMainEncapsulation.CodeMainEncapsulation.Act1$3
-CodeMainEncapsulation.CodeMainEncapsulation.Act1$4
-CodeMainEncapsulation.CodeMainEncapsulation.Act1
