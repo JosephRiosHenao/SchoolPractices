@@ -11,9 +11,9 @@ rl.question("", (respuesta2) => {
     
         var arregloNuevo = respuesta;
     
-        arregloNuevo = arrayNew.split(' ');
+        arregloNuevo = arregloNuevo.split(' ');
 
-        arrayNew.forEach(elemento => {
+        arregloNuevo.forEach(elemento => {
             elemento = parseInt(elemento);
             arregloBusqueda.push(elemento)
         });
