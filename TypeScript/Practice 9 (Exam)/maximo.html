@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximo</title>
+</head>
+<body>
+    
+    <p id="arrayOtp"></p>
+    <p id="maxNumber"></p>
+    <input type="number" id="maxNumLimitArray">
+    <button id="actionButton">REGENERAR</button>
+
+    <script>
+        const arrayQuery = document.querySelector("#arrayOtp");
+        const maxNumCamp = document.querySelector("#maxNumber");
+        const maxLimit = document.querySelector("#maxNumLimitArray");
+        const action = document.querySelector("#actionButton").addEventListener("click", ()=>{
+            let arraySearch = [];
+    
+            for (let index = 0; index < maxLimit.value; index++) {
+                let rand = Math.floor(Math.random() *50);
+                arraySearch.push(rand)
+            }
+    
+            arrayQuery.innerHTML = arraySearch;
+            console.log(arraySearch)
+
+            let maxNum = 0
+            arraySearch.forEach(element => {
+                if (maxNum < element) { maxNum = element }
+            });
+
+            maxNumCamp.innerHTML = maxNum;
+        })
+
+
+
+    </script>
+</body>
+</html>

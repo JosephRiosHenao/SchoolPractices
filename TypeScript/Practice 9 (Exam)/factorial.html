@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <h1>Digite el numero</h1>    
+    <input type="text" id="number">
+    <button id="calculateButton">CALCULAR</button>
+    <p id="result"></p>
+    <script>
+        const inputNumber = document.querySelector("#number");
+        const buttonAction = document.querySelector("#calculateButton").addEventListener("click", ()=>{
+            let number = inputNumber.value;
+            let fact = 1;
+            console.log(number)
+            let resultText = "";
+            for (let i = 1; i <= number; i++) {
+                if (fact == 0) {fact = 1}
+                resultText += fact+" x "+i+" = "+(fact * i)+"\n";
+                fact = fact * i;
+            }
+            console.log(resultText + "\n El factorial de "+number+" es: "+fact)
+            console.log(fact)
+        })
+    </script>
+</body>
+</html>
