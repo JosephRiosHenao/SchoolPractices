@@ -71,3 +71,9 @@ let countries = [
     }
 ]
 
+let getCountry = (id, callback) => {
+    let country = countries.find(country => country.id === id);
+    !country ? callback("dont exist") : callback(null, country);
+}
+
+getCountry(100, (err, res) => err ? console.error(err) : console.log(res));
