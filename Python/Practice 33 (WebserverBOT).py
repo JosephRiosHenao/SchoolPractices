@@ -4,8 +4,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 import time
 
-USERNAME = "joseph.rios.1"
-PASSWORD = "ElectroMine2306"
 
 def enterText(element, text):
     element.clear()
@@ -19,7 +17,7 @@ def login():
     passInput.send_keys(Keys.ENTER)
 
 # web = webdriver.Chrome(ChromeDriverManager().install())
-web = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+# web = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 web.get("https://www.santillanaconnect.com/Account/Login/?wtrealm=http%3A%2F%2Flms30.santillanacompartir.com%2Flogin%2Fcompartir%2F&wreply=https%3A%2F%2Flms30.santillanacompartir.com%2Flogin%2Fsso%2Floginconnect")
 # web.get("https://www.instagram.com/")
 time.sleep(1)

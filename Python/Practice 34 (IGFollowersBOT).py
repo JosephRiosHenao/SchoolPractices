@@ -3,8 +3,6 @@ from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
-USERNAME = "loncron232005@gmail.com"
-PASSWORD = "Foca2306"
 
 def enterText(element, text):
     element.clear()
