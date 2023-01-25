@@ -1,10 +1,11 @@
 node_modules
-/Java/Practice1/nbproject/private/
-/Java/Practice1/build/
-/Java/Practice1/dist/
+**/.vscode/
 
-# Created by https://www.toptal.com/developers/gitignore/api/c,c++,dart,java,node,video,csharp,django,opencv,python,netbeans,pythonvanilla,visualstudiocode,visualstudio,dotnetcore,microsoftoffice,windows,macos,linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=c,c++,dart,java,node,video,csharp,django,opencv,python,netbeans,pythonvanilla,visualstudiocode,visualstudio,dotnetcore,microsoftoffice,windows,macos,linux
+# Created by https://www.toptal.com/developers/gitignore/api/c,c++,dart,java,node,linux,macos,video,csharp,django,opencv,python,windows,netbeans,dotnetcore,visualstudio,pythonvanilla,microsoftoffice,visualstudiocode,xcode,appbuilder,git,ssh,venv
+# Edit at https://www.toptal.com/developers/gitignore?templates=c,c++,dart,java,node,linux,macos,video,csharp,django,opencv,python,windows,netbeans,dotnetcore,visualstudio,pythonvanilla,microsoftoffice,visualstudiocode,xcode,appbuilder,git,ssh,venv
+
+### AppBuilder ###
+.ab/
 
 ### C ###
 # Prerequisites
@@ -679,6 +680,21 @@ obj/
 /node_modules
 /wwwroot/node_modules
 
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
 ### Java ###
 # Compiled class file
 *.class
@@ -1039,6 +1055,23 @@ poetry.toml
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 
 
+### SSH ###
+**/.ssh/id_*
+**/.ssh/*_id_*
+**/.ssh/known_hosts
+
+### venv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+pip-selfcheck.json
+
 ### Video ###
 *.3g2
 *.3gp
@@ -1090,6 +1123,23 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+### Xcode ###
+## User settings
+xcuserdata/
+
+## Xcode 8 and earlier
+*.xcscmblueprint
+*.xccheckout
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
 
 ### VisualStudio ###
 
@@ -1272,4 +1322,4 @@ $RECYCLE.BIN/
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/c,c++,dart,java,node,video,csharp,django,opencv,python,netbeans,pythonvanilla,visualstudiocode,visualstudio,dotnetcore,microsoftoffice,windows,macos,linux
+# End of https://www.toptal.com/developers/gitignore/api/c,c++,dart,java,node,linux,macos,video,csharp,django,opencv,python,windows,netbeans,dotnetcore,visualstudio,pythonvanilla,microsoftoffice,visualstudiocode,xcode,appbuilder,git,ssh,venv

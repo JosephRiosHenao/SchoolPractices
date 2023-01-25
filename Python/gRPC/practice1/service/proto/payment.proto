@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service ServicePayment {
+    rpc addPay (PayData) returns (PayInvoice);
+    rpc verifyPay (PayInvoice) returns (PayStatus);
+}
+
+message PayInvoice {
+    int32 id = 1;
+}
+
+message PayStatus {
+    bool status = 1;
+}
+
+message PayData {
+    int32 nit = 1;
+    int64 money = 2;
+}
