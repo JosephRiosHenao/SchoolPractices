@@ -1,0 +1,1 @@
+# Descompon un numero

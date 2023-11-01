@@ -1,0 +1,27 @@
+Las máquinas producen oro.
+Cada máquina cuesta C oro para comprar y luego producir P oro por turno, comenzando el 
+siguiente turno después de comprarlo.
+Comienzas en el turno 0 con 1 máquina y 0 de oro. Puedes comprar tantas máquinas 
+como puedas.
+¿Cuál es la cantidad máxima de oro que puedes alcanzar en el turno 100?
+
+Ex:C= 10 y P= 1
+En el turno 1 tienes 1 oro... 2 oro en el turno 2... 3 oro en el turno 3...
+Si compras otra máquina en el turno 10, terminas con 0 oro en el turno 10 (porque 
+gastaste 10)
+En el turno 11 tendrás 2 de oro (porque ambas máquinas producen 1)
+Al producir 2 de oro del turno 11 al 100, terminarás con 180 de oro. Pero 
+ciertamente puedes hacerlo mejor...
+
+input:
+10 
+1
+
+output:
+32904
+
+
+10 1 - 32904
+99 2 - 201
+50 1 - 100
+43 7 - 36299177

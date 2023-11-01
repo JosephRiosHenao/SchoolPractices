@@ -1,0 +1,32 @@
+name: Unity CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Unity
+        uses: game-ci/setup-unity@v1
+        with:
+          unityVersion: 2019.4.x # Reemplaza con tu versión de Unity
+
+      - name: Build Unity project
+        run: |
+          unityPath="/opt/unity/Editor/Unity"
+          $unityPath -batchmode -projectPath "Your/Unity/Project/Path" -executeMethod YourBuildScript.Build -quit
+        env:
+          UNITY_LICENSE: "your_license_key" # Reemplaza con tu clave de licencia de Unity
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: Your/Unity/Project/Path/Builds

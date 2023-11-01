@@ -1,0 +1,10 @@
+"/Users/administrador/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/232.9559.58/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/administrador/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/232.9559.58/CLion.app/Contents/bin/ninja/mac/ninja" -DCMAKE_TOOLCHAIN_FILE=/Users/administrador/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake -G Ninja -S "/Users/administrador/code/PRACTICES/SchoolPractices/C/Practice 31" -B "/Users/administrador/code/PRACTICES/SchoolPractices/C/Practice 31/cmake-build-debug"
+-- The C compiler identification is AppleClang 14.0.3.14030022
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (1.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/administrador/code/PRACTICES/SchoolPractices/C/Practice 31/cmake-build-debug
