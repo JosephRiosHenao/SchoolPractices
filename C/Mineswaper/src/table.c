@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "table.h"
+#include "mines.h"
 
 // Print table
 void getTable(int **table, int rows, int cols){
@@ -15,6 +16,16 @@ void getTable(int **table, int rows, int cols){
     }
     printf("\n");
 }
+
+// Show Stats
+void showStats(int turn, int **gameTable, int **mineTable, int rows, int cols){
+    printf("|- Turn %d -=- ", turn);
+    printf("Remaining Mines %d -=- ", captureConditional(mineTable, rows, cols, -1));
+    printf("Capture Mines %d -| \n", captureConditional(mineTable, rows, cols, -2));
+}
+
+
+
 
 // Print table but show cells reveals
 void getMaskTable(int **gameTable, int **mineTable , int rows, int cols){
@@ -36,9 +47,6 @@ void getMaskTable(int **gameTable, int **mineTable , int rows, int cols){
 
 // Print column decorator
 void firstColDecorator(int row){
-    printf("Cells: %d", cells);
-    printf("Turn: %d", turn);
-    printf("Mines: %d" mines);
     // if is has 2 intenegers number include space in arrow
     if (row/10>=1) printf("%d → ", row);
     else printf("%d  → ", row);
@@ -79,6 +87,8 @@ void printArrows(int cols){
 void printCells(int cell){
     // Is a no reveal cell
     if (cell == 0) printf("[ ■ ]");
+    // Is a mine capture
+    else if (cell == -2) printf("[ c ]");
     // Is a mine
     else if (cell == -1) printf("[ x ]");
     // Reveal number value for mines around

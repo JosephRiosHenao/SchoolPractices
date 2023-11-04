@@ -28,7 +28,37 @@ void setCellsValues(int **table, int rows, int cols){
     }
 }
 
-// TODO: Coment
+void detectCapture(int **gameTable, int **minesTable, int rows, int cols, int px, int py){
+    if (px== -1 || py == -1){
+        for (int i = 0; i < rows; i++){
+            for (int j = 0; j < cols; j++){
+                if (minesTable[i][j] == -1) detectCapture(gameTable, minesTable, rows, cols, i, j);
+            }
+        }
+    }else{
+        int aroundCells = 0;
+        int aroundPlay = 0;
+        for (int x = -1; x <= 1; x++){
+            for (int y = -1; y <= 1; y++){
+                int ni = py + y;
+                int nj = px + x;
+                if (ni >= 0 && ni < rows && nj >= 0 && nj < cols){
+                    aroundCells += 1;
+                    if (minesTable[ni][nj] < 1 || gameTable[ni][nj] == 1){
+                        aroundPlay += 1;
+                    }
+                }
+            }
+        }
+        printf("\nArround cells %d arround play %d", aroundCells, aroundPlay);
+        if (((aroundPlay-1) == aroundCells) && minesTable[py][px] == -1){
+            minesTable[py][px] = -2;
+        } 
+            
+    }
+}
+
+
 // Set values for cells if around mines
 void showCells(int **gameTable, int **minesTable, int rows, int cols, int px, int py){
     gameTable[py][px] = 1;
@@ -37,20 +67,25 @@ void showCells(int **gameTable, int **minesTable, int rows, int cols, int px, in
             int ni = py + y;
             int nj = px + x;
             if (ni >= 0 && ni < rows && nj >= 0 && nj < cols){
-                if (gameTable[ni][nj] == 0 && minesTable[ni][nj] != -1) gameTable[ni][nj] = 1;
-            }else minesTable[ni][nj] = -2;
+                if (gameTable[ni][nj] == 0){
+                    if (minesTable[ni][nj] > 0) gameTable[ni][nj] = 1;  
+                    if (minesTable[ni][nj] == 0) {
+                        showCells(gameTable, minesTable, rows, cols, nj, ni);
+                    }
+                } 
+            }
         }
     }
 }
 
-int remainingMines(int **table, int rows, int cols, int mines){
-    int remainingMines = mines;
+int captureConditional(int **table, int rows, int cols, int conditional){
+    int capture = 0;
     for (int i = 0; i < rows; i++){
         for (int j = 0; j < cols; j++){
-            if (table[i][j] == -2) mines--;
+            if (table[i][j] == conditional) capture++;
         }
     }
-    return remainingMines;
+    return capture;
 }
 
 // Set and return vector of mines in randoms positions

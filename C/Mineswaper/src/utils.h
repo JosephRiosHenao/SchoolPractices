@@ -7,5 +7,6 @@ int getPX(int cols);
 int getPY(int rows);
 int comprobate(int px, int py, int **gameTable, int **mineTable);
 void warning();
+void status(char *message);
 
 #endif

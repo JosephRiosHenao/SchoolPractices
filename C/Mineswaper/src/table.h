@@ -8,8 +8,9 @@ void getMaskTable(int **gameTable, int **mineTable, int rows, int cols);
 void printCells(int cell);
 void printHeaders(int cols);
 void printArrows(int cols);
-void firstRowDecorator(int cols);
+void firstRowDecorator(int cols); 
 void firstColDecorator(int row);
+void showStats(int turn, int **gameTable, int **mineTable, int rows, int cols);
 
 
 #endif

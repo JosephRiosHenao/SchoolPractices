@@ -34,19 +34,19 @@ void menu(){
         switch (getMenu()){
             // Level Easy
             case 1:
-                startGame(8,8,10);
+                setScore(startGame(8,8,10));
             break;
             // Level Medium
             case 2:
-                startGame(16,16,40);
+                setScore(startGame(16,16,40));
             break;
             // Level Hard
             case 3:
-                startGame(16,30,99);
+                setScore(startGame(16,30,99));
             break;
             // Custom
             case 4:
-                startGame(0,0,0);
+                setScore(startGame(0,0,0));
             break;
             // Print leadboard
             case 5:

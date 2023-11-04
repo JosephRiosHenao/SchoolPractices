@@ -1,39 +1,40 @@
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "utils.h"
 #include "table.h"
 #include "mines.h"
 
 // Game logic in turns
-void runGame(int **gameTable, int **minesTable, int rows, int cols){
+int runGame(int **gameTable, int **minesTable, int rows, int cols){
     // Declarate position vars
-    int px, py, turn;
+    int px, py, turn = 0;
     // Cycle for state in game
     while (true){
         turn++;
-        getScore(turn, minesTable, rows, cols);
         // Draw table with 2 tables for mask reveal cells
+        detectCapture(gameTable, minesTable, rows, cols, -1, -1);
+        getTable(gameTable,rows,cols);
+        getTable(minesTable,rows,cols);
+        showStats(turn, gameTable, minesTable, rows, cols); 
         getMaskTable(gameTable, minesTable, rows, cols);
         // Question position cell
         px = getPX(cols);
         py = getPY(rows);
-        // Comprobate position played
+
+        // Comprobate is playing cell or report to user
         switch (comprobate(px, py, gameTable, minesTable)){
-        // Lose
-        case 1:
-            break;
-        // Win
-        case 2:
-            break;
-        // Reveal cell
-        case 3:
-            showCells(gameTable, minesTable, rows, cols, px, py);
-            break;
-        // Repeat cell
-        case 4:
-            warning();
-            break;
+            case 1: // Explode
+                status("You Lose!");
+                return turn;
+            case 2: // Show cell
+                showCells(gameTable, minesTable, rows, cols, px, py);
+                break;
+            default: // Repeat cell
+                warning();
+                break;
         }
+
     }
 }
 
