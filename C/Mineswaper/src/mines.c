@@ -97,7 +97,7 @@ int captureConditional(int **table, int rows, int cols, int conditional){
 int **setMines(int rows, int cols, int mines){
     // Set table memory
     int **table = setTable(rows, cols);
-    getTable(table,rows,cols);
+    // getTable(table,rows,cols);
     // px, py random position for mines and
     // remainingMine is random bombs lefts to colocate in table
     int px, py, remainingMines = mines;
