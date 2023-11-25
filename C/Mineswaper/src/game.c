@@ -19,8 +19,8 @@ int runGame(int **gameTable, int **minesTable, int rows, int cols){
             status("You Win!");
             return turn*captureConditional(minesTable, rows, cols, -2);
         } 
-        getTable(gameTable,rows,cols);
-        getTable(minesTable,rows,cols);
+        // getTable(gameTable,rows,cols);
+        // getTable(minesTable,rows,cols);
         getMaskTable(gameTable, minesTable, rows, cols);
         // Question position cell
         px = getPX(cols);
