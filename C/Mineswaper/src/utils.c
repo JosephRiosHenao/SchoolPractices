@@ -32,6 +32,7 @@ int setCustomData(char *info, int min, int max){
 int comprobate(int px, int py, int** gameTable, int** mineTable){
     if (mineTable[py][px] == -1) return 1; // Explode
     if (gameTable[py][px] == 0) return 2; // Show cell
+    if (mineTable[py][px] == -2) return 4; // Capture cell
     return 3; // Repeat cell
 }
 

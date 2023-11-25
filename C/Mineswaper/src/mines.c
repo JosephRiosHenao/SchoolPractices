@@ -32,26 +32,31 @@ void detectCapture(int **gameTable, int **minesTable, int rows, int cols, int px
     if (px== -1 || py == -1){
         for (int i = 0; i < rows; i++){
             for (int j = 0; j < cols; j++){
-                if (minesTable[i][j] == -1) detectCapture(gameTable, minesTable, rows, cols, i, j);
+                if (minesTable[i][j] == -1) detectCapture(gameTable, minesTable, rows, cols, j, i);
             }
         }
     }else{
-        int aroundCells = 0;
-        int aroundPlay = 0;
+        int aroundCells = 0, aroundPlay = 0;
+
         for (int x = -1; x <= 1; x++){
             for (int y = -1; y <= 1; y++){
                 int ni = py + y;
                 int nj = px + x;
+
                 if (ni >= 0 && ni < rows && nj >= 0 && nj < cols){
+                    
                     aroundCells += 1;
-                    if (minesTable[ni][nj] < 1 || gameTable[ni][nj] == 1){
+                    if (minesTable[ni][nj] < 0 || gameTable[ni][nj] == 1){
+                        // printf("Ubicaciones %d-%d\n", nj, ni);
                         aroundPlay += 1;
                     }
                 }
             }
         }
-        printf("\nArround cells %d arround play %d", aroundCells, aroundPlay);
-        if (((aroundPlay-1) == aroundCells) && minesTable[py][px] == -1){
+
+        // printf("Valores %d-%d\n", aroundCells, aroundPlay);
+        if ((aroundPlay == aroundCells) && minesTable[py][px]==-1){
+            // printf("Mina detectada [%d, %d]\n\n", px, py);
             minesTable[py][px] = -2;
         } 
             
@@ -92,6 +97,7 @@ int captureConditional(int **table, int rows, int cols, int conditional){
 int **setMines(int rows, int cols, int mines){
     // Set table memory
     int **table = setTable(rows, cols);
+    getTable(table,rows,cols);
     // px, py random position for mines and
     // remainingMine is random bombs lefts to colocate in table
     int px, py, remainingMines = mines;

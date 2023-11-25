@@ -38,7 +38,9 @@ void getMaskTable(int **gameTable, int **mineTable , int rows, int cols){
             // If is a first col print decorator info to first column
             if (j == 0) firstColDecorator(i);
             // If is a reveal cell print value else print games cells
-            if (gameTable[i][j] == 1) printCells(mineTable[i][j]);
+            if (gameTable[i][j] == 1 && mineTable[i][j] == 0) printCells(mineTable[i][j]);
+            else if (gameTable[i][j] == 1) printCells(mineTable[i][j]);
+            else if (gameTable[i][j] == 0 && mineTable[i][j] == -2) printCells(mineTable[i][j]);
             else printCells(gameTable[i][j]);
         }
         printf("\n");
@@ -87,6 +89,8 @@ void printArrows(int cols){
 void printCells(int cell){
     // Is a no reveal cell
     if (cell == 0) printf("[ ■ ]");
+    // Is a blank cell
+    else if (cell == -3) printf("[   ]");
     // Is a mine capture
     else if (cell == -2) printf("[ c ]");
     // Is a mine

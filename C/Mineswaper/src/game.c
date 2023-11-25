@@ -14,9 +14,13 @@ int runGame(int **gameTable, int **minesTable, int rows, int cols){
         turn++;
         // Draw table with 2 tables for mask reveal cells
         detectCapture(gameTable, minesTable, rows, cols, -1, -1);
+        showStats(turn, gameTable, minesTable, rows, cols); 
+        if (captureConditional(minesTable, rows, cols, -1) == 0){
+            status("You Win!");
+            return turn*captureConditional(minesTable, rows, cols, -2);
+        } 
         getTable(gameTable,rows,cols);
         getTable(minesTable,rows,cols);
-        showStats(turn, gameTable, minesTable, rows, cols); 
         getMaskTable(gameTable, minesTable, rows, cols);
         // Question position cell
         px = getPX(cols);
@@ -27,6 +31,8 @@ int runGame(int **gameTable, int **minesTable, int rows, int cols){
             case 1: // Explode
                 status("You Lose!");
                 return turn;
+            case 4: // Capture Cell
+                status("This cell is capture!");
             case 2: // Show cell
                 showCells(gameTable, minesTable, rows, cols, px, py);
                 break;
@@ -39,7 +45,7 @@ int runGame(int **gameTable, int **minesTable, int rows, int cols){
 }
 
 // init game function
-void startGame(int rows, int cols, int mines){    
+int startGame(int rows, int cols, int mines){    
     // Set custom table if necessary
     if (mines==0){
         rows = setCustomData("Input table rows: ", 8, 50);
@@ -50,10 +56,11 @@ void startGame(int rows, int cols, int mines){
     int **gameTable = setTable(rows, cols);
     int **minesTable = setMines(rows, cols, mines);
     // Run game
-    runGame(gameTable,minesTable,rows,cols);
+    int score = runGame(gameTable,minesTable,rows,cols);
     // Delete space in memory for tables
     freeTable(gameTable, rows);
     freeTable(minesTable, rows);
+    return score;
 }
 
 
